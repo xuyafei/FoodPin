@@ -10,4 +10,9 @@
 
 @interface RestaurantTableViewCell : UITableViewCell
 
+@property (nonatomic, strong)UIImageView *thumbnailImageView;
+@property (nonatomic, strong)UILabel *nameLabel;
+@property (nonatomic, strong)UILabel *locationLabel;
+@property (nonatomic, strong)UILabel *typeLabel;
+
 @end

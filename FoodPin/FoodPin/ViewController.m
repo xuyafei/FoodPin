@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RestaurantTableViewCell.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *foodRestaurantsTableView;
@@ -50,18 +51,25 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
+
 #pragma mark -UITableViewDataSource-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"restaurantCell";
     
-    UITableViewCell *restaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    RestaurantTableViewCell *restaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!restaurantCell) {
-        restaurantCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        restaurantCell = [[RestaurantTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         restaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
-    restaurantCell.textLabel.text = self.restaurantArray[indexPath.row];
-    restaurantCell.imageView.image = [UIImage imageNamed:self.restaurantImages[indexPath.row]];
+    restaurantCell.nameLabel.text = self.restaurantArray[indexPath.row];
+    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:self.restaurantImages[indexPath.row]];
+    restaurantCell.locationLabel.text = @"location";
+    restaurantCell.typeLabel.text = @"type";
+    
     
     return restaurantCell;
 }
