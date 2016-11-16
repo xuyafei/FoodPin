@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSMutableArray *restaurantLocations;
 @property (nonatomic, strong) NSMutableArray *restaurantType;
 @property (nonatomic, strong) NSArray *restaurantIsVisited;
-@property (nonatomic, copy) NSMutableArray *mutableRestaurantIsVisited;
+@property (nonatomic, strong) NSMutableArray *mutableRestaurantIsVisited;
 @end
 
 @implementation ViewController

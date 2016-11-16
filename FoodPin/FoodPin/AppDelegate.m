@@ -20,7 +20,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.viewController = [[ViewController alloc] init];
     self.viewController.title = @"foodPin";
-    self.window.rootViewController = self.viewController;
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    self.navController.navigationBar.hidden = YES;
+    self.window.rootViewController = self.navController;
+    
     [self.window makeKeyAndVisible];
     
     return YES;
