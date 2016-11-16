@@ -12,6 +12,7 @@
 @interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_restaurantDetailView;
     UIImageView *_headView;
+    UIView *_footView;
     NSArray *_cellArray;
 }
 
@@ -36,6 +37,7 @@
     _restaurantDetailView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     _restaurantDetailView.delegate = self;
     _restaurantDetailView.dataSource = self;
+    _restaurantDetailView.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.2];
     [self.view addSubview:_restaurantDetailView];
     
     _headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300)];
@@ -44,6 +46,11 @@
     _headView.contentMode = UIViewContentModeScaleAspectFill;
     _headView.clipsToBounds = YES;
     _restaurantDetailView.tableHeaderView = _headView;
+    
+    _footView = [[UIView alloc] initWithFrame:CGRectZero];
+    _restaurantDetailView.tableFooterView = _footView;
+    
+    _restaurantDetailView.separatorColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.8];
 }
 
 - (void)dealloc {
@@ -73,6 +80,7 @@
         restaurantDetailCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
+    restaurantDetailCell.backgroundColor = [UIColor clearColor];
     restaurantDetailCell.nameLabel.text = _cellArray[indexPath.row];
     if(indexPath.row == 0) {
         restaurantDetailCell.filedLabel.text = self.restaurant.name;

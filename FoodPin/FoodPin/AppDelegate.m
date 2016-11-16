@@ -25,6 +25,8 @@
     
     [self.window makeKeyAndVisible];
     
+    UINavigationBar.UIAppearance.bar
+    
     return YES;
 }
 
