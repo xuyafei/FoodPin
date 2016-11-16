@@ -16,7 +16,7 @@
 
 @implementation Restaurant
 
-- (id)initWithNmae:(NSString *)name type:(NSString *)type location:(NSString *)location
+- (instancetype)initWithNmae:(NSString *)name type:(NSString *)type location:(NSString *)location
              image:(NSString *)image isVisited:(BOOL)isVisited {
     self = [super init];
     

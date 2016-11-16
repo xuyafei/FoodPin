@@ -8,15 +8,12 @@
 
 #import "ViewController.h"
 #import "RestaurantTableViewCell.h"
+#import "Restaurant.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource> 
-@property (nonatomic, strong)UITableView *foodRestaurantsTableView;
-@property (nonatomic, strong) NSMutableArray *restaurantArray;
-@property (nonatomic, strong) NSMutableArray *restaurantImages;
-@property (nonatomic, strong) NSMutableArray *restaurantLocations;
-@property (nonatomic, strong) NSMutableArray *restaurantType;
-@property (nonatomic, strong) NSArray *restaurantIsVisited;
-@property (nonatomic, strong) NSMutableArray *mutableRestaurantIsVisited;
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
+    NSMutableArray *_restaurants;
+}
+@property (nonatomic, strong) UITableView *foodRestaurantsTableView;
 @end
 
 @implementation ViewController
@@ -29,26 +26,28 @@
 }
 
 - (void)initRestaurantArray {
-    self.restaurantArray = [[NSMutableArray alloc] init];
-    self.restaurantImages = [[NSMutableArray alloc] init];
-    self.restaurantLocations = [[NSMutableArray alloc] init];
-    self.restaurantType = [[NSMutableArray alloc] init];
-    
-    self.restaurantArray = [NSMutableArray arrayWithObjects:@"Cafe Deadend", @"Homei", @"Teakha", @"Cafe Loisl", @"PetiteOyster", @"For Kee Restaurant", @"Po's Atelier", @"Bourke Street Bakery", @"Haigh'sChocolate", @"Palomino Espresso", @"Upstate", @"Traif", @"Graham Avenue Meats AndDeli", @"Waffle & Wolf", @"Five Leaves", @"Cafe Lore", @"Confessional",@"Barrafina", @"Donostia", @"Royal Oak", @"CASK Pub and Kitchen",nil];
-    
-    self.restaurantImages = [NSMutableArray arrayWithObjects:@"cafedeadend.jpg", @"homei.jpg", @"teakha.jpg",@"cafeloisl.jpg", @"petiteoyster.jpg", @"forkeerestaurant.jpg", @"posatelier.jpg",@"bourkestreetbakery.jpg", @"haighschocolate.jpg", @"palominoespresso.jpg",
-        @"upstate.jpg", @"traif.jpg", @"grahamavenuemeats.jpg", @"wafflewolf.jpg",@"fiveleaves.jpg", @"cafelore.jpg", @"confessional.jpg", @"barrafina.jpg",@"donostia.jpg", @"royaloak.jpg", @"thaicafe.jpg",nil];
-    
-    self.restaurantLocations = [NSMutableArray arrayWithObjects:@"Hong Kong", @"Hong Kong", @"Hong Kong", @"Hong Kong",
-        @"Hong Kong", @"Hong Kong", @"Hong Kong", @"Sydney", @"Sydney", @"Sydney", @"NewYork", @"New York", @"New York", @"New York", @"New York", @"New York", @"New York",@"London", @"London", @"London", @"London", nil];
-    
-    self.restaurantType = [NSMutableArray arrayWithObjects:@"Coffee & Tea Shop", @"Cafe", @"Tea House", @"Austrian Causual Drink", @"French", @"Bakery", @"Bakery", @"Chocolate", @"Cafe", @"American Seafood", @"American", @"American", @"Breakfast & Brunch", @"Coffee & Tea", @"Coffee& Tea", @"Latin American", @"Spanish", @"Spanish", @"Spanish", @"British", @"Thai",nil];
-    
-    //self.restaurantIsVisited = @[@NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO];
-    self.mutableRestaurantIsVisited = [NSMutableArray arrayWithObjects:@NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, nil];
-    
-//    self.mutableRestaurantIsVisited = [[NSMutableArray alloc] init];
-//    [self.mutableRestaurantIsVisited addObjectsFromArray:self.restaurantIsVisited];
+    _restaurants = [NSMutableArray arrayWithObjects:
+                    [Restaurant restaurantWithName:@"Cafe Deadend" type:@"Coffee & Tea Shop" location:@"Hong Kong" image:@"cafedeadend.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Homei" type:@"Cafe" location:@"Hong Kong" image:@"homei.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Teakha" type:@"Tea House" location:@"Hong Kong" image:@"teakha.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Cafe Loisl" type:@"Austrian Causual Drink" location:@"Hong Kong" image:@"cafeloisl.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"PetiteOyster" type:@"French" location:@"Hong Kong" image:@"petiteoyster.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"For Kee Restaurant" type:@"Bakery" location:@"Hong Kong" image:@"forkeerestaurant.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Po's Atelier" type:@"Bakery" location:@"Hong Kong" image:@"posatelier.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Bourke Street Bakery" type:@"Chocolate" location:@"Sydney" image:@"bourkestreetbakery.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Haigh'sChocolate" type:@"Cafe" location:@"Sydney" image:@"haighschocolate.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Palomino Espresso" type:@"American Seafood" location:@"Sydney" image:@"palominoespresso.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Upstate" type:@"American" location:@"NewYork" image:@"upstate.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Traif" type:@"American" location:@"NewYork" image:@"traif.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Graham Avenue Meats AndDeli" type:@"Breakfast & Brunch" location:@"NewYork" image:@"grahamavenuemeats.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Waffle & Wolf" type:@"Coffee & Tea" location:@"NewYork" image:@"wafflewolf.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Five Leaves" type:@"Coffee& Tea" location:@"NewYork" image:@"fiveleaves.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Cafe Lore" type:@"Latin American" location:@"NewYork" image:@"cafelore.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Confessional" type:@"Spanish" location:@"NewYork" image:@"confessional.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Barrafina" type:@"Spanish" location:@"London" image:@"barrafina.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Donostia" type:@"Spanish" location:@"London" image:@"donostia.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Royal Oak" type:@"British" location:@"London" image:@"royaloak.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"London" image:@"thaicafe.jpg" isVisited:NO],nil];
 }
 
 - (void)layoutTableView {
@@ -64,7 +63,7 @@
 
 #pragma mark -UITableViewDelegate-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.restaurantArray.count;
+    return _restaurants.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -106,10 +105,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if(editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.restaurantArray removeObjectAtIndex:indexPath.row];
-        [self.restaurantImages removeObjectAtIndex:indexPath.row];
-        [self.restaurantLocations removeObjectAtIndex:indexPath.row];
-        [self.restaurantType removeObjectAtIndex:indexPath.row];
+        [_restaurants removeObjectAtIndex:indexPath.row];
     }
     
     [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
@@ -117,16 +113,13 @@
 
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewRowAction *shareAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Share" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSString *defaultText =[NSString stringWithFormat:@"Just checking in at%@",self.restaurantArray[indexPath.row]];
+        NSString *defaultText =[NSString stringWithFormat:@"Just checking in at%@",((Restaurant*)_restaurants[indexPath.row]).name];
         UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObject:defaultText] applicationActivities:nil];
         [self presentViewController:activityController animated:YES completion:nil];
     }];
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        [self.restaurantArray removeObjectAtIndex:indexPath.row];
-        [self.restaurantImages removeObjectAtIndex:indexPath.row];
-        [self.restaurantLocations removeObjectAtIndex:indexPath.row];
-        [self.restaurantType removeObjectAtIndex:indexPath.row];
+        [_restaurants removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
     }];
     
@@ -146,13 +139,11 @@
         restaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
-    restaurantCell.nameLabel.text = self.restaurantArray[indexPath.row];
-    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:self.restaurantImages[indexPath.row]];
-    restaurantCell.locationLabel.text = self.restaurantLocations[indexPath.row];
-    restaurantCell.typeLabel.text = self.restaurantType[indexPath.row];
-    restaurantCell.accessoryType = self.mutableRestaurantIsVisited[indexPath.row] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    
-    restaurantCell.accessoryType = UITableViewCellAccessoryNone;
+    restaurantCell.nameLabel.text = ((Restaurant*)_restaurants[indexPath.row]).name;
+    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:((Restaurant*)_restaurants[indexPath.row]).iamge];
+    restaurantCell.locationLabel.text = ((Restaurant*)_restaurants[indexPath.row]).location;
+    restaurantCell.typeLabel.text = ((Restaurant*)_restaurants[indexPath.row]).type;
+    restaurantCell.accessoryType = ((Restaurant*)_restaurants[indexPath.row]).isVisited ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return restaurantCell;
 }

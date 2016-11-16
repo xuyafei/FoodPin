@@ -6,7 +6,6 @@
 //  Copyright © 2016年 永康范. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 @interface Restaurant : NSObject {
