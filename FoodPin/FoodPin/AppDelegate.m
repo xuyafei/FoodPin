@@ -18,10 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[ViewController alloc] init];
-    self.viewController.title = @"foodPin";
-    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    self.navController.navigationBar.hidden = YES;
+    self.restaurantViewController = [[RestaurantViewController alloc] init];
+    self.restaurantViewController.title = @"foodPin";
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.restaurantViewController];
     self.window.rootViewController = self.navController;
     
     [self.window makeKeyAndVisible];

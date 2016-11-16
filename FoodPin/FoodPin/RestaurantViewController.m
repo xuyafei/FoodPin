@@ -6,17 +6,18 @@
 //  Copyright © 2016年 永康范. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RestaurantViewController.h"
 #import "RestaurantTableViewCell.h"
 #import "Restaurant.h"
+#import "RestaurantDetailViewController.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_restaurants;
 }
 @property (nonatomic, strong) UITableView *foodRestaurantsTableView;
 @end
 
-@implementation ViewController
+@implementation RestaurantViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,7 +59,7 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 #pragma mark -UITableViewDelegate-
@@ -101,6 +102,13 @@
     [optionMenu addAction:isVisitedAction];
     
     [self presentViewController:optionMenu animated:YES completion:nil];*/
+    
+    
+    RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
+    detailViewController.restaurant = _restaurants[indexPath.row];
+    [detailViewController setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {

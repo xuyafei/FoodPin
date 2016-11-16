@@ -7,8 +7,14 @@
 //
 
 #import "RestaurantDetailViewController.h"
+#import "RestaurantDetailTableViewCell.h"
 
-@interface RestaurantDetailViewController ()
+@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource> {
+    UITableView *_restaurantDetailView;
+    UIImageView *_headView;
+    NSArray *_cellArray;
+}
+
 
 @end
 
@@ -16,7 +22,69 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initCellArray];
+    [self layoutTableView];
     // Do any additional setup after loading the view.
+}
+
+- (void)initCellArray {
+    _cellArray = @[@"Name", @"Type", @"Location", @"Been here"];
+}
+
+- (void)layoutTableView {
+    self.view.backgroundColor = [UIColor whiteColor];
+    _restaurantDetailView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    _restaurantDetailView.delegate = self;
+    _restaurantDetailView.dataSource = self;
+    [self.view addSubview:_restaurantDetailView];
+    
+    _headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300)];
+    _headView.backgroundColor = [UIColor redColor];
+    _headView.image = [UIImage imageNamed:self.restaurant.iamge];
+    _headView.contentMode = UIViewContentModeScaleAspectFill;
+    _headView.clipsToBounds = YES;
+    _restaurantDetailView.tableHeaderView = _headView;
+}
+
+- (void)dealloc {
+    NSLog(@"print the delloc");
+}
+
+#pragma mark -UITableViewDelegate-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 4;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 36;
+}
+
+#pragma mark -UITableViewDataSource-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"restaurantDetailCell";
+    
+    RestaurantDetailTableViewCell *restaurantDetailCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!restaurantDetailCell) {
+        restaurantDetailCell = [[RestaurantDetailTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        restaurantDetailCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
+    restaurantDetailCell.nameLabel.text = _cellArray[indexPath.row];
+    if(indexPath.row == 0) {
+        restaurantDetailCell.filedLabel.text = self.restaurant.name;
+    } else if(indexPath.row == 1) {
+        restaurantDetailCell.filedLabel.text = self.restaurant.type;
+    } else if(indexPath.row == 2) {
+        restaurantDetailCell.filedLabel.text = self.restaurant.location;
+    } else if(indexPath.row == 3) {
+        restaurantDetailCell.filedLabel.text = (self.restaurant.isVisited) ? @"Yes, I've been here before" : @"NO";
+    }
+    
+    return restaurantDetailCell;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,11 +10,6 @@
 #import "Masonry.h"
 @interface RestaurantTableViewCell()
 
-//@property (nonatomic, strong)UIImageView *thumbnailImageView;
-//@property (nonatomic, strong)UILabel *nameLabel;
-//@property (nonatomic, strong)UILabel *locationLabel;
-//@property (nonatomic, strong)UILabel *typeLabel;
-
 @end
 
 @implementation RestaurantTableViewCell
@@ -28,6 +23,8 @@
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.thumbnailImageView = [[UIImageView alloc] init];
         self.thumbnailImageView.contentMode = UIViewContentModeScaleToFill;
+        self.thumbnailImageView.layer.cornerRadius = 30.0;
+        self.thumbnailImageView.clipsToBounds = YES;
         [self.contentView addSubview:self.thumbnailImageView];
         
         self.nameLabel = [[UILabel alloc] init];
