@@ -19,13 +19,16 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.restaurantViewController = [[RestaurantViewController alloc] init];
-    self.restaurantViewController.title = @"foodPin";
+    self.restaurantViewController.title = @"FoodPin";
     self.navController = [[UINavigationController alloc] initWithRootViewController:self.restaurantViewController];
     self.window.rootViewController = self.navController;
     
     [self.window makeKeyAndVisible];
     
-    UINavigationBar.UIAppearance.bar
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0/255.0 green:116.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Avenir-Light" size:24.0], NSFontAttributeName, nil]];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }

@@ -23,9 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.restaurant.name;
     [self initCellArray];
     [self layoutTableView];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.hidesBarsOnSwipe = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)initCellArray {
