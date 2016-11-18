@@ -1,6 +1,6 @@
 # 我的第一个GitHub项目
 
-这是项目 [FoodPin](https://https://github.com/xuyafei/FoodPin) ，
+这是项目 [FoodPin](https://github.com/xuyafei/FoodPin.git) ，
 欢迎访问。
 
 这个项目的版本库是 **Git格式** ，在 Windows、Linux、Mac OS X
@@ -11,12 +11,12 @@
 
 支持三种访问协议：
 
-* HTTP协议: `https://github.com/gotgithub/FoodPin.git` 。
-* Git协议: `git://github.com/gotgithub/FoodPin.git` 。
-* SSH协议: `ssh://git@github.com/gotgithub/FoodPin.git` 。
+* HTTP协议: `https://github.com/xuyafei/FoodPin.git` 。
+* Git协议: `git://github.com/xuyafei/FoodPin.gitt` 。
+* SSH协议: `ssh://git@github.com/xuyafei/FoodPin.git` 。
 
 ## 克隆版本库
 
 操作示例：
 
-    $ git clone git://github.com/gotgithub/FoodPin.git
+    $ git clone git://github.com/xuyafei/FoodPin.git
