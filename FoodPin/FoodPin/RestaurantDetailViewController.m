@@ -8,11 +8,13 @@
 
 #import "RestaurantDetailViewController.h"
 #import "RestaurantDetailTableViewCell.h"
+#import "Masonry.h"
 
 @interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource> {
     UITableView *_restaurantDetailView;
     UIImageView *_headView;
     UIView *_footView;
+    UIButton *_reviewButton;
     NSArray *_cellArray;
 }
 
@@ -55,6 +57,21 @@
     _headView.contentMode = UIViewContentModeScaleAspectFill;
     _headView.clipsToBounds = YES;
     _restaurantDetailView.tableHeaderView = _headView;
+    
+    _reviewButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _reviewButton.layer.cornerRadius = 20;
+    [_reviewButton setBackgroundImage:[[UIImage imageNamed:@"rating"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    _reviewButton.backgroundColor = [UIColor redColor];
+    [_reviewButton setTintColor:[UIColor whiteColor]];
+    [_reviewButton addTarget:self action:@selector(clickReview:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_reviewButton];
+    
+    [_reviewButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).offset(72);
+        make.right.mas_equalTo(self.view.mas_right).offset(-7);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(40);
+    }];
     
     _footView = [[UIView alloc] initWithFrame:CGRectZero];
     _restaurantDetailView.tableFooterView = _footView;
@@ -103,6 +120,11 @@
     }
     
     return restaurantDetailCell;
+}
+
+#pragma mark -ButtonSender-
+- (void)clickReview:(UIButton *)sender {
+    NSLog(@"print some thing");
 }
 
 - (void)didReceiveMemoryWarning {
