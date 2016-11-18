@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */; };
 		0C97FE271DD9B33D0099113F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
 		0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
 		0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4AF1FD1DDEF2A100AB074F /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		0C97FE221DD9B33D0099113F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C97FE261DD9B33D0099113F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C97FE281DD9B33D0099113F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */,
 				0C97FE5C1DDC31720099113F /* RestaurantDetailViewController.h */,
 				0C97FE5D1DDC31720099113F /* RestaurantDetailViewController.m */,
+				0C4AF1FD1DDEF2A100AB074F /* ReviewViewController.h */,
+				0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */,
 				0C97FE5F1DDC335C0099113F /* RestaurantClass */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
 				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
@@ -383,6 +388,7 @@
 			files = (
 				0C97FE5B1DDAE65F0099113F /* RestaurantTableViewCell.m in Sources */,
 				0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */,
+				0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */,
 				0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */,
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,

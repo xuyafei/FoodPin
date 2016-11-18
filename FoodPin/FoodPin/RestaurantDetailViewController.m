@@ -8,6 +8,7 @@
 
 #import "RestaurantDetailViewController.h"
 #import "RestaurantDetailTableViewCell.h"
+#import "ReviewViewController.h"
 #import "Masonry.h"
 
 @interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource> {
@@ -125,6 +126,8 @@
 #pragma mark -ButtonSender-
 - (void)clickReview:(UIButton *)sender {
     NSLog(@"print some thing");
+    ReviewViewController *reviewViewController = [[ReviewViewController alloc] init];
+    [self presentViewController:reviewViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodPin/RestaurantDetailViewController.m"
-            timestampString = "501149812.438885"
+            timestampString = "501150754.017574"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-clickReview:"
             landmarkType = "5">
          </BreakpointContent>
