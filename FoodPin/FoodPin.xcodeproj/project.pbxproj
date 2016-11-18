@@ -129,13 +129,13 @@
 		0C97FE241DD9B33D0099113F /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
-				0C97FE5F1DDC335C0099113F /* RestaurantClass */,
 				0C97FE281DD9B33D0099113F /* AppDelegate.h */,
 				0C97FE291DD9B33D0099113F /* AppDelegate.m */,
 				0C97FE2B1DD9B33D0099113F /* RestaurantViewController.h */,
 				0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */,
 				0C97FE5C1DDC31720099113F /* RestaurantDetailViewController.h */,
 				0C97FE5D1DDC31720099113F /* RestaurantDetailViewController.m */,
+				0C97FE5F1DDC335C0099113F /* RestaurantClass */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
 				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
 				0C97FE311DD9B33D0099113F /* Assets.xcassets */,

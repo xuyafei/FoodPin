@@ -26,7 +26,8 @@
     self.title = self.restaurant.name;
     [self initCellArray];
     [self layoutTableView];
-    // Do any additional setup after loading the view.
+    _restaurantDetailView.estimatedRowHeight = 36.0;
+    _restaurantDetailView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -75,7 +76,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 36;
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark -UITableViewDataSource-
@@ -90,6 +91,7 @@
     
     restaurantDetailCell.backgroundColor = [UIColor clearColor];
     restaurantDetailCell.nameLabel.text = _cellArray[indexPath.row];
+    
     if(indexPath.row == 0) {
         restaurantDetailCell.filedLabel.text = self.restaurant.name;
     } else if(indexPath.row == 1) {

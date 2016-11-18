@@ -25,6 +25,8 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self initRestaurantArray];
     [self layoutTableView];
+    self.foodRestaurantsTableView.estimatedRowHeight = 80;
+    self.foodRestaurantsTableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -34,27 +36,27 @@
 
 - (void)initRestaurantArray {
     _restaurants = [NSMutableArray arrayWithObjects:
-                    [Restaurant restaurantWithName:@"Cafe Deadend" type:@"Coffee & Tea Shop" location:@"Hong Kong" image:@"cafedeadend.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Homei" type:@"Cafe" location:@"Hong Kong" image:@"homei.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Teakha" type:@"Tea House" location:@"Hong Kong" image:@"teakha.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Cafe Loisl" type:@"Austrian Causual Drink" location:@"Hong Kong" image:@"cafeloisl.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"PetiteOyster" type:@"French" location:@"Hong Kong" image:@"petiteoyster.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"For Kee Restaurant" type:@"Bakery" location:@"Hong Kong" image:@"forkeerestaurant.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Po's Atelier" type:@"Bakery" location:@"Hong Kong" image:@"posatelier.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Bourke Street Bakery" type:@"Chocolate" location:@"Sydney" image:@"bourkestreetbakery.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Haigh'sChocolate" type:@"Cafe" location:@"Sydney" image:@"haighschocolate.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Palomino Espresso" type:@"American Seafood" location:@"Sydney" image:@"palominoespresso.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Upstate" type:@"American" location:@"NewYork" image:@"upstate.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Traif" type:@"American" location:@"NewYork" image:@"traif.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Graham Avenue Meats AndDeli" type:@"Breakfast & Brunch" location:@"NewYork" image:@"grahamavenuemeats.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Waffle & Wolf" type:@"Coffee & Tea" location:@"NewYork" image:@"wafflewolf.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Five Leaves" type:@"Coffee& Tea" location:@"NewYork" image:@"fiveleaves.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Cafe Lore" type:@"Latin American" location:@"NewYork" image:@"cafelore.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Confessional" type:@"Spanish" location:@"NewYork" image:@"confessional.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Barrafina" type:@"Spanish" location:@"London" image:@"barrafina.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Donostia" type:@"Spanish" location:@"London" image:@"donostia.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"Royal Oak" type:@"British" location:@"London" image:@"royaloak.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"London" image:@"thaicafe.jpg" isVisited:NO],nil];
+                    [Restaurant restaurantWithName:@"Cafe Deadend" type:@"Coffee & Tea Shop" location:@"G/F,72 Po Hing Fong, Sheung Wan, Hong Kong" phoneNumber: @"232-923423" image:@"cafedeadend.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Homei" type:@"Cafe" location:@"Shop B, G/F, 22-24A Tai Ping San Street SOHO, Sheung Wan, Hong Kong" phoneNumber: @"348-233423" image:@"homei.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Teakha" type:@"Tea House" location:@"Shop B, 18 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong" phoneNumber: @"354-243523" image:@"teakha.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Cafe Loisl" type:@"Austrian Causual Drink" location:@"Shop B, 20 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong" phoneNumber: @"453-333423" image:@"cafeloisl.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"PetiteOyster" type:@"French" location:@"24 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong" phoneNumber: @"983-284334" image:@"petiteoyster.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"For Kee Restaurant" type:@"Bakery" location:@"Shop J-K., 200 Hollywood Road, SOHO, Sheung Wan, Hong Kong" phoneNumber:@"232-434222" image:@"forkeerestaurant.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Po's Atelier" type:@"Bakery" location:@"G/F, 62 Po Hing Fong, Sheung Wan, Hong Kong" phoneNumber:@"234-834322" image:@"posatelier.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Bourke Street Bakery" type:@"Chocolate" location:@"633 Bourke St Sydney New South Wales 2010 Surry Hills" phoneNumber:@"982-434343" image:@"bourkestreetbakery.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Haigh'sChocolate" type:@"Cafe" location:@"412-414 George St Sydney New South Wales" phoneNumber:@"734-232323" image:@"haighschocolate.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Palomino Espresso" type:@"American Seafood" location:@"Shop 1 61 York St Sydney New South Wales" phoneNumber: @"872-734343" image:@"palominoespresso.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Upstate" type:@"American" location:@"95 1st Ave New York, NY 10003" phoneNumber:@"343-233221" image:@"upstate.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Traif" type:@"American" location:@"229 S 4th St Brooklyn, NY 11211" phoneNumber:@"985-723623" image:@"traif.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Graham Avenue Meats AndDeli" type:@"Breakfast & Brunch" location:@"445 Graham Ave Brooklyn, NY 11211" phoneNumber: @"455-232345" image:@"grahamavenuemeats.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Waffle & Wolf" type:@"Coffee & Tea" location:@"413 Graham Ave Brooklyn, NY 11211" phoneNumber:@"434-232322" image:@"wafflewolf.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Five Leaves" type:@"Coffee& Tea" location:@"18 Bedford Ave Brooklyn, NY 11222" phoneNumber:@"343-234553" image:@"fiveleaves.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Cafe Lore" type:@"Latin American" location:@"Sunset Park 4601 4th Ave Brooklyn, NY 11220" phoneNumber:@"342-455433" image:@"cafelore.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Confessional" type:@"Spanish" location:@"308 E 6th St New York, NY 10003" phoneNumber:@"643-332323" image:@"confessional.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Barrafina" type:@"Spanish" location:@"54 Frith Street London W1D 4SL United Kingdom" phoneNumber:@"542-343434" image:@"barrafina.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Donostia" type:@"Spanish" location:@"10 Seymour Place London W1H 7ND United Kingdom" phoneNumber:@"722-232323" image:@"donostia.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"Royal Oak" type:@"British" location:@"2 Regency Street London SW1P 4BZ United Kingdom" phoneNumber:@"343-988834" image:@"royaloak.jpg" isVisited:NO],
+                    [Restaurant restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"22 Charlwood Street London SW1V 2DY Pimlico" phoneNumber:@"432-344050" image:@"thaicafe.jpg" isVisited:NO], nil];
 }
 
 - (void)layoutTableView {
@@ -78,7 +80,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return UITableViewAutomaticDimension;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
