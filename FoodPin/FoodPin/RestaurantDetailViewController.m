@@ -10,16 +10,16 @@
 #import "RestaurantDetailTableViewCell.h"
 #import "ReviewViewController.h"
 #import "Masonry.h"
+#import "MapViewController.h"
 
-@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate> {
     UITableView *_restaurantDetailView;
     UIImageView *_headView;
     UIView *_footView;
     UIButton *_reviewButton;
+    UIButton *_mapButton;
     NSArray *_cellArray;
 }
-
-
 @end
 
 @implementation RestaurantDetailViewController
@@ -67,8 +67,23 @@
     [_reviewButton addTarget:self action:@selector(clickReview:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_reviewButton];
     
+    _mapButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    _mapButton.layer.cornerRadius = 20;
+    [_mapButton setBackgroundImage:[[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    _mapButton.backgroundColor = [UIColor redColor];
+    [_mapButton setTintColor:[UIColor whiteColor]];
+    [_mapButton addTarget:self action:@selector(clickMap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_mapButton];
+    
     [_reviewButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(72);
+        make.right.mas_equalTo(self.view.mas_right).offset(-7);
+        make.width.mas_equalTo(40);
+        make.height.mas_equalTo(40);
+    }];
+    
+    [_mapButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(_reviewButton.mas_bottom).offset(10);
         make.right.mas_equalTo(self.view.mas_right).offset(-7);
         make.width.mas_equalTo(40);
         make.height.mas_equalTo(40);
@@ -127,7 +142,19 @@
 - (void)clickReview:(UIButton *)sender {
     NSLog(@"print some thing");
     ReviewViewController *reviewViewController = [[ReviewViewController alloc] init];
+    reviewViewController.delegate = self;
     [self presentViewController:reviewViewController animated:YES completion:nil];
+}
+
+- (void)clickMap:(UIButton *)sender {
+    NSLog(@"click the map");
+    MapViewController *mapViewController = [[MapViewController alloc] init];
+    [self.navigationController pushViewController:mapViewController animated:YES];
+}
+
+#pragma mark -ReviewViewDelegate-
+- (void)setButtonImage:(NSString *)buttonBackgoundImage {
+    [_reviewButton setBackgroundImage:[[UIImage imageNamed:buttonBackgoundImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

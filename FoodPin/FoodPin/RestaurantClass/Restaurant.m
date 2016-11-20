@@ -32,8 +32,7 @@
     return self;
 }
 
-+ (instancetype)restaurantWithName:(NSString *)name type:(NSString *)type location:(NSString *)location phoneNumber:(NSString *)phoneNumber
-                             image:(NSString *)image  isVisited:(BOOL)isVisited {
++ (instancetype)restaurantWithName:(NSString *)name type:(NSString *)type location:(NSString *)location phoneNumber:(NSString *)phoneNumber image:(NSString *)image  isVisited:(BOOL)isVisited {
     Restaurant *theRestaurant = [[Restaurant alloc] initWithNmae:name type:type location:location image:image phoneNumber:phoneNumber isVisited:isVisited];
     
     return theRestaurant;

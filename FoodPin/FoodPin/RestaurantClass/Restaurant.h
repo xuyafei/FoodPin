@@ -29,7 +29,6 @@
                           location:(NSString *)location
                        phoneNumber:(NSString *)phoneNumber
                              image:(NSString *)image
-
                          isVisited:(BOOL)isVisited;
 
 @end

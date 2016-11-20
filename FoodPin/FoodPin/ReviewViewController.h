@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReviewViewController : UIViewController
+@protocol ReviewViewDelegate <NSObject>
+- (void)setButtonImage:(NSString *)buttonBackgoundImage;
+@end
 
+@interface ReviewViewController : UIViewController
+@property(nonatomic, weak)id<ReviewViewDelegate> delegate;
 @end
