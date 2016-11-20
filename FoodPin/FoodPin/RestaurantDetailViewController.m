@@ -149,6 +149,7 @@
 - (void)clickMap:(UIButton *)sender {
     NSLog(@"click the map");
     MapViewController *mapViewController = [[MapViewController alloc] init];
+    mapViewController.theRestaurant = self.restaurant;
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
 

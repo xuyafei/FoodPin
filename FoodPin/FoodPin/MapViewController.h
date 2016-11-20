@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Restaurant.h"
 
 @interface MapViewController : UIViewController
+
+@property(nonatomic, strong) Restaurant *theRestaurant;
 
 @end
