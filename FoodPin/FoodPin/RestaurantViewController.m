@@ -23,6 +23,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(presentPhontViewController:)];
     [self initRestaurantArray];
     [self layoutTableView];
     self.foodRestaurantsTableView.estimatedRowHeight = 80;
@@ -164,6 +165,10 @@
     return restaurantCell;
 }
 
+#pragma mark -RightBarButtonItem-
+- (void)presentPhontViewController:(UIButton *)sender {
+    NSLog(@"present the photoViewController");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
