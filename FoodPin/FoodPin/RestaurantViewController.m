@@ -10,6 +10,7 @@
 #import "RestaurantTableViewCell.h"
 #import "Restaurant.h"
 #import "RestaurantDetailViewController.h"
+#import "AddRestaurantViewController.h"
 
 @interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_restaurants;
@@ -168,6 +169,8 @@
 #pragma mark -RightBarButtonItem-
 - (void)presentPhontViewController:(UIButton *)sender {
     NSLog(@"present the photoViewController");
+    AddRestaurantViewController *addRestaurantViewController = [[AddRestaurantViewController alloc] init];
+    [self presentViewController:addRestaurantViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
