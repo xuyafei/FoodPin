@@ -12,8 +12,10 @@
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
 
-@interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource> {
+@interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating> {
     NSMutableArray *_restaurants;
+    NSMutableArray *_searchResultRestaurants;
+    UISearchController *_searchController;
 }
 @property (nonatomic, strong) UITableView *foodRestaurantsTableView;
 @end
@@ -27,6 +29,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(presentPhontViewController:)];
     [self initRestaurantArray];
     [self layoutTableView];
+    [self initSearchContorller];
     self.foodRestaurantsTableView.estimatedRowHeight = 80;
     self.foodRestaurantsTableView.rowHeight = UITableViewAutomaticDimension;
 }
@@ -37,6 +40,7 @@
 }
 
 - (void)initRestaurantArray {
+    _searchResultRestaurants = [NSMutableArray array];
     _restaurants = [NSMutableArray arrayWithObjects:
                     [Restaurant restaurantWithName:@"Cafe Deadend" type:@"Coffee & Tea Shop" location:@"G/F,72 Po Hing Fong, Sheung Wan, Hong Kong" phoneNumber: @"232-923423" image:@"cafedeadend.jpg" isVisited:NO],
                     [Restaurant restaurantWithName:@"Homei" type:@"Cafe" location:@"Shop B, G/F, 22-24A Tai Ping San Street SOHO, Sheung Wan, Hong Kong" phoneNumber: @"348-233423" image:@"homei.jpg" isVisited:NO],
@@ -68,13 +72,27 @@
     [self.view addSubview:self.foodRestaurantsTableView];
 }
 
+- (void)initSearchContorller {
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.foodRestaurantsTableView.tableHeaderView = _searchController.searchBar;
+    _searchController.searchResultsUpdater = self;
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    _searchController.searchBar.placeholder = @"Search restaurants...";
+    _searchController.searchBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
+    _searchController.searchBar.barTintColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue: 240.0/255.0 alpha:0.6];
+}
+
 - (BOOL)prefersStatusBarHidden {
     return NO;
 }
 
 #pragma mark -UITableViewDelegate-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _restaurants.count;
+    if(_searchController.active) {
+        return _searchResultRestaurants.count;
+    } else {
+        return _restaurants.count;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -157,11 +175,12 @@
         restaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
-    restaurantCell.nameLabel.text = ((Restaurant*)_restaurants[indexPath.row]).name;
-    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:((Restaurant*)_restaurants[indexPath.row]).iamge];
-    restaurantCell.locationLabel.text = ((Restaurant*)_restaurants[indexPath.row]).location;
-    restaurantCell.typeLabel.text = ((Restaurant*)_restaurants[indexPath.row]).type;
-    restaurantCell.accessoryType = ((Restaurant*)_restaurants[indexPath.row]).isVisited ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+    Restaurant *restaurant = (_searchController.active) ? _searchResultRestaurants[indexPath.row] : _restaurants[indexPath.row];
+    restaurantCell.nameLabel.text = restaurant.name;
+    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:restaurant.iamge];
+    restaurantCell.locationLabel.text = restaurant.location;
+    restaurantCell.typeLabel.text = restaurant.type;
+    restaurantCell.accessoryType = restaurant.isVisited ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return restaurantCell;
 }
@@ -172,6 +191,20 @@
     AddRestaurantViewController *addRestaurantViewController = [[AddRestaurantViewController alloc] init];
     [self presentViewController:addRestaurantViewController animated:YES completion:nil];
 }
+
+#pragma mark -UISearchResultsUpdating-
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSString *text = _searchController.searchBar.text;
+
+    for (Restaurant *restaurant in _restaurants) {
+        if ([text length] != 0 && [restaurant.name containsString:text]) {
+            [_searchResultRestaurants addObject:restaurant];
+        }
+    }
+    NSLog(@"%@", _searchResultRestaurants);
+    [self.foodRestaurantsTableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
