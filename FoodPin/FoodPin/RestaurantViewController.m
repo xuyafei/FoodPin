@@ -11,11 +11,13 @@
 #import "Restaurant.h"
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
+#import "WalkthroughPageViewController.h"
 
 @interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating> {
     NSMutableArray *_restaurants;
     NSMutableArray *_searchResultRestaurants;
     UISearchController *_searchController;
+    UIPageViewController *_pageViewController;
 }
 @property (nonatomic, strong) UITableView *foodRestaurantsTableView;
 @end
@@ -37,6 +39,20 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.hidesBarsOnSwipe = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasViewedWalkthrough = [defaults boolForKey:@"hasViewedWalkthrough"];
+    
+    if(hasViewedWalkthrough) {
+        return;
+    }
+
+    WalkthroughPageViewController *pageViewController = [[WalkthroughPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    [self presentViewController: pageViewController animated:YES completion:nil];
 }
 
 - (void)initRestaurantArray {

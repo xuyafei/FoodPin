@@ -13,6 +13,8 @@
 		0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */; };
 		0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2091DE29D3800AB074F /* AddPhotoTableViewCell.m */; };
 		0C4AF20D1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20C1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m */; };
+		0C4AF2101DE4482F00AB074F /* WalkthroughContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */; };
+		0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */; };
 		0C97FE271DD9B33D0099113F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
 		0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
 		0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
@@ -57,6 +59,10 @@
 		0C4AF2091DE29D3800AB074F /* AddPhotoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPhotoTableViewCell.m; sourceTree = "<group>"; };
 		0C4AF20B1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRestaurantInfoTableViewCell.h; sourceTree = "<group>"; };
 		0C4AF20C1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRestaurantInfoTableViewCell.m; sourceTree = "<group>"; };
+		0C4AF20E1DE4482F00AB074F /* WalkthroughContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughContentViewController.h; sourceTree = "<group>"; };
+		0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughContentViewController.m; sourceTree = "<group>"; };
+		0C4AF2111DE4574F00AB074F /* WalkthroughPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughPageViewController.h; sourceTree = "<group>"; };
+		0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughPageViewController.m; sourceTree = "<group>"; };
 		0C97FE221DD9B33D0099113F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C97FE261DD9B33D0099113F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C97FE281DD9B33D0099113F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +165,10 @@
 				0C4AF2031DE1A1FB00AB074F /* MapViewController.m */,
 				0C4AF2051DE286F000AB074F /* AddRestaurantViewController.h */,
 				0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */,
+				0C4AF20E1DE4482F00AB074F /* WalkthroughContentViewController.h */,
+				0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */,
+				0C4AF2111DE4574F00AB074F /* WalkthroughPageViewController.h */,
+				0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */,
 				0C97FE5F1DDC335C0099113F /* RestaurantClass */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
 				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
@@ -416,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4AF20D1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m in Sources */,
+				0C4AF2101DE4482F00AB074F /* WalkthroughContentViewController.m in Sources */,
 				0C97FE5B1DDAE65F0099113F /* RestaurantTableViewCell.m in Sources */,
 				0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */,
 				0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */,
@@ -426,6 +437,7 @@
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
 				0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */,
 				0C97FE611DDC33960099113F /* Restaurant.m in Sources */,
+				0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */,
 				0C97FE271DD9B33D0099113F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
