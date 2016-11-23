@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "RestaurantViewController.h"
+#import "FoodPinRootViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) RestaurantViewController *restaurantViewController;
 @property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) FoodPinRootViewController *foodRootViewController;
 
 @end
 

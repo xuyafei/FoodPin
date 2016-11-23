@@ -20,8 +20,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.restaurantViewController = [[RestaurantViewController alloc] init];
     self.restaurantViewController.title = @"FoodPin";
-    self.navController = [[UINavigationController alloc] initWithRootViewController:self.restaurantViewController];
-    self.window.rootViewController = self.navController;
+    //self.navController = [[UINavigationController alloc] initWithRootViewController:self.restaurantViewController];
+    self.foodRootViewController = [[FoodPinRootViewController alloc] init];
+    self.window.rootViewController = self.foodRootViewController;
     
     [self.window makeKeyAndVisible];
     
@@ -30,7 +31,11 @@
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Avenir-Light" size:24.0], NSFontAttributeName, nil]];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    return YES;
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:244.0/255.0 green:136.0/255.0 blue:139.0/255.0 alpha:1.0]];
+    [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    //[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabitem-selected"]];
+     
+     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
