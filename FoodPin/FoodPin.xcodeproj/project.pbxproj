@@ -18,6 +18,8 @@
 		0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2151DE5D49700AB074F /* FoodPinRootViewController.m */; };
 		0C4AF2191DE5D6B000AB074F /* RestaurantDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */; };
 		0C4AF21C1DE5D6D200AB074F /* RestaurantAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21B1DE5D6D200AB074F /* RestaurantAboutViewController.m */; };
+		0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21E1DE7346500AB074F /* WebViewController.m */; };
+		0C4AF2211DE73E1B00AB074F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4AF2201DE73E1B00AB074F /* SafariServices.framework */; };
 		0C97FE271DD9B33D0099113F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
 		0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
 		0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
@@ -72,6 +74,9 @@
 		0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDiscoverViewController.m; sourceTree = "<group>"; };
 		0C4AF21A1DE5D6D200AB074F /* RestaurantAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantAboutViewController.h; sourceTree = "<group>"; };
 		0C4AF21B1DE5D6D200AB074F /* RestaurantAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantAboutViewController.m; sourceTree = "<group>"; };
+		0C4AF21D1DE7346500AB074F /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0C4AF21E1DE7346500AB074F /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		0C4AF2201DE73E1B00AB074F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		0C97FE221DD9B33D0099113F /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C97FE261DD9B33D0099113F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C97FE281DD9B33D0099113F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4AF2211DE73E1B00AB074F /* SafariServices.framework in Frameworks */,
 				0C4AF2011DE0392D00AB074F /* MapKit.framework in Frameworks */,
 				7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */,
 			);
@@ -184,6 +190,8 @@
 				0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */,
 				0C4AF2111DE4574F00AB074F /* WalkthroughPageViewController.h */,
 				0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */,
+				0C4AF21D1DE7346500AB074F /* WebViewController.h */,
+				0C4AF21E1DE7346500AB074F /* WebViewController.m */,
 				0C97FE5F1DDC335C0099113F /* RestaurantClass */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
 				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
@@ -248,6 +256,7 @@
 		80217D12571F311690B3643A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C4AF2201DE73E1B00AB074F /* SafariServices.framework */,
 				0C4AF2001DE0392D00AB074F /* MapKit.framework */,
 				33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */,
 			);
@@ -453,6 +462,7 @@
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
+				0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */,
 				0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */,
 				0C97FE611DDC33960099113F /* Restaurant.m in Sources */,
 				0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */,
