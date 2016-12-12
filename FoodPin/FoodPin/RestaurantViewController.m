@@ -6,9 +6,11 @@
 //  Copyright © 2016年 永康范. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
+#import "Restaurant+CoreDataClass.h"
 #import "RestaurantViewController.h"
 #import "RestaurantTableViewCell.h"
-#import "Restaurant.h"
+#import "Restaurant+CoreDataClass.h"
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
 #import "WalkthroughPageViewController.h"
@@ -20,6 +22,7 @@
     UIPageViewController *_pageViewController;
 }
 @property (nonatomic, strong) UITableView *foodRestaurantsTableView;
+@property (nonatomic, strong) NSManagedObjectContext *restaurantMOC;
 @end
 
 @implementation RestaurantViewController
@@ -57,8 +60,9 @@
 }
 
 - (void)initRestaurantArray {
+    _restaurants = [NSMutableArray array];
     _searchResultRestaurants = [NSMutableArray array];
-    _restaurants = [NSMutableArray arrayWithObjects:
+    /*_restaurants = [NSMutableArray arrayWithObjects:
                     [Restaurant restaurantWithName:@"Cafe Deadend" type:@"Coffee & Tea Shop" location:@"G/F,72 Po Hing Fong, Sheung Wan, Hong Kong" phoneNumber: @"232-923423" image:@"cafedeadend.jpg" isVisited:NO],
                     [Restaurant restaurantWithName:@"Homei" type:@"Cafe" location:@"Shop B, G/F, 22-24A Tai Ping San Street SOHO, Sheung Wan, Hong Kong" phoneNumber: @"348-233423" image:@"homei.jpg" isVisited:NO],
                     [Restaurant restaurantWithName:@"Teakha" type:@"Tea House" location:@"Shop B, 18 Tai Ping Shan Road SOHO, Sheung Wan, Hong Kong" phoneNumber: @"354-243523" image:@"teakha.jpg" isVisited:NO],
@@ -79,7 +83,7 @@
                     [Restaurant restaurantWithName:@"Barrafina" type:@"Spanish" location:@"54 Frith Street London W1D 4SL United Kingdom" phoneNumber:@"542-343434" image:@"barrafina.jpg" isVisited:NO],
                     [Restaurant restaurantWithName:@"Donostia" type:@"Spanish" location:@"10 Seymour Place London W1H 7ND United Kingdom" phoneNumber:@"722-232323" image:@"donostia.jpg" isVisited:NO],
                     [Restaurant restaurantWithName:@"Royal Oak" type:@"British" location:@"2 Regency Street London SW1P 4BZ United Kingdom" phoneNumber:@"343-988834" image:@"royaloak.jpg" isVisited:NO],
-                    [Restaurant restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"22 Charlwood Street London SW1V 2DY Pimlico" phoneNumber:@"432-344050" image:@"thaicafe.jpg" isVisited:NO], nil];
+                    [Restaurant restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"22 Charlwood Street London SW1V 2DY Pimlico" phoneNumber:@"432-344050" image:@"thaicafe.jpg" isVisited:NO], nil];*/
 }
 
 - (void)layoutTableView {
@@ -194,7 +198,7 @@
 
     Restaurant *restaurant = (_searchController.active) ? _searchResultRestaurants[indexPath.row] : _restaurants[indexPath.row];
     restaurantCell.nameLabel.text = restaurant.name;
-    restaurantCell.thumbnailImageView.image = [UIImage imageNamed:restaurant.iamge];
+    restaurantCell.thumbnailImageView.image = [UIImage imageWithData:restaurant.image];
     restaurantCell.locationLabel.text = restaurant.location;
     restaurantCell.typeLabel.text = restaurant.type;
     restaurantCell.accessoryType = restaurant.isVisited ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
@@ -221,6 +225,14 @@
     NSLog(@"%@", _searchResultRestaurants);
     [self.foodRestaurantsTableView reloadData];
 }
+
+#pragma mark -Create CoreData Context-
+- (NSManagedObjectContext *)contextWithModelName:(NSString *)modelName {
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    
+    NSURL *modelPath
+}
+
 
 
 - (void)didReceiveMemoryWarning {

@@ -73,7 +73,8 @@
     }
 
     UIImageView *leftView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 53, 53)];
-    leftView.image = [UIImage imageNamed:self.theRestaurant.iamge];
+    //leftView.image = [UIImage imageNamed:self.theRestaurant.iamge];
+    leftView.image = [UIImage imageWithData:self.theRestaurant.image];
     annotationView.leftCalloutAccessoryView = leftView;
     
     annotationView.annotation=annotation;

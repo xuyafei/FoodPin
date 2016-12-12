@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Restaurant.h"
-
+#import "Restaurant+CoreDataClass.h"
 @interface MapViewController : UIViewController
 
 @property(nonatomic, strong) Restaurant *theRestaurant;

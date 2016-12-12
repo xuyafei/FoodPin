@@ -54,7 +54,8 @@
     
     _headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300)];
     _headView.backgroundColor = [UIColor redColor];
-    _headView.image = [UIImage imageNamed:self.restaurant.iamge];
+    //_headView.image = [UIImage imageNamed:self.restaurant.iamge];
+    _headView.image = [UIImage imageWithData:self.restaurant.image];
     _headView.contentMode = UIViewContentModeScaleAspectFill;
     _headView.clipsToBounds = YES;
     _restaurantDetailView.tableHeaderView = _headView;
