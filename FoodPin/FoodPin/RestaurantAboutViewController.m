@@ -36,7 +36,7 @@
     _aboutTableView.delegate = self;
     _aboutTableView.dataSource = self;
     _aboutTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _aboutTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];//UIView(frame: CGRectZero)
+    _aboutTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:_aboutTableView];
 }
 

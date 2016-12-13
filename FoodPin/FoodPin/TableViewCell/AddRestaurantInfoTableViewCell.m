@@ -9,7 +9,13 @@
 #import "AddRestaurantInfoTableViewCell.h"
 #import "Masonry.h"
 
-@implementation AddRestaurantInfoTableViewCell
+@interface AddRestaurantInfoTableViewCell() <UITextFieldDelegate> {
+    
+}
+
+@end
+
+@implementation AddRestaurantInfoTableViewCell 
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -27,18 +33,25 @@
         self.detailTextField.textColor = [UIColor darkGrayColor];
         self.detailTextField.font = [UIFont systemFontOfSize:16.0];
         self.detailTextField.textAlignment = NSTextAlignmentLeft;
+        self.detailTextField.delegate = self;
+        self.detailTextField.tag = 101;
+        [self.detailTextField addTarget:self action:@selector(inputTextFieldResponse:) forControlEvents:UIControlEventEditingChanged];
         [self.contentView addSubview:self.detailTextField];
         
         self.yesButton = [UIButton buttonWithType:UIButtonTypeSystem];
         self.yesButton.backgroundColor = [UIColor redColor];
         [self.yesButton setTitle:@"YES" forState:UIControlStateNormal];// 添加文字
         [self.yesButton setTitleColor:[UIColor whiteColor]forState:UIControlStateNormal];
+        self.yesButton.tag = 102;
+        [self.yesButton addTarget:self action:@selector(toggleButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.yesButton];
         
         self.noButton = [UIButton buttonWithType:UIButtonTypeSystem];
         self.noButton.backgroundColor = [UIColor grayColor];
         [self.noButton setTitle:@"NO" forState:UIControlStateNormal];// 添加文字
         [self.noButton setTitleColor:[UIColor whiteColor]forState:UIControlStateNormal];
+        self.noButton.tag = 103;
+        [self.noButton addTarget:self action:@selector(toggleButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:self.noButton];
         
         [self.titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -72,6 +85,30 @@
     }
     
     return self;
+}
+
+- (void)inputTextFieldResponse:(UITextField *)textField {
+    if(textField.tag == 101) {
+        NSLog(@"%@", textField.text);
+        if(self.delegate && [self.delegate respondsToSelector:@selector(setTextFieldText:withTextTextString:)]) {
+            [self.delegate setTextFieldText:self.currentIndexPath withTextTextString:textField.text];
+        }
+    }
+}
+
+#pragma mark -ButtonSender-
+- (void)toggleButton:(UIButton *)sender {
+    BOOL isHaveBeenThere = NO;
+    
+    if(sender.tag == 102) {
+        isHaveBeenThere = YES;
+    } else if(sender.tag == 103) {
+        isHaveBeenThere = NO;
+    }
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(setButtonToggle:)]) {
+        [self.delegate setButtonToggle:isHaveBeenThere];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -7,15 +7,15 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "Restaurant+CoreDataClass.h"
+#import "Restaurant.h"
 #import "RestaurantViewController.h"
 #import "RestaurantTableViewCell.h"
-#import "Restaurant+CoreDataClass.h"
+#import "Restaurant.h"
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
 #import "WalkthroughPageViewController.h"
 
-@interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating> {
+@interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating,NSFetchedResultsControllerDelegate> {
     NSMutableArray *_restaurants;
     NSMutableArray *_searchResultRestaurants;
     UISearchController *_searchController;
@@ -23,6 +23,7 @@
 }
 @property (nonatomic, strong) UITableView *foodRestaurantsTableView;
 @property (nonatomic, strong) NSManagedObjectContext *restaurantMOC;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultController;
 @end
 
 @implementation RestaurantViewController
@@ -38,6 +39,24 @@
     [self initSearchContorller];
     self.foodRestaurantsTableView.estimatedRowHeight = 80;
     self.foodRestaurantsTableView.rowHeight = UITableViewAutomaticDimension;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Restaurant"];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    request.sortDescriptors = @[sortDescriptor];
+    
+    self.restaurantMOC = [self contextWithModelName:@"FoodPin"];
+    
+    if(self.restaurantMOC != nil) {
+        NSError *error = nil;
+        
+        self.fetchedResultController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.restaurantMOC sectionNameKeyPath:nil cacheName:nil];
+        self.fetchedResultController.delegate = self;
+        [self.fetchedResultController performFetch:&error];
+        
+        if(error) {
+            NSLog(@"NSFetchedResultsController init error : %@", error);
+        }
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -178,6 +197,14 @@
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         [_restaurants removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
+        
+        Restaurant *restaurant = [self.fetchedResultController objectAtIndexPath:indexPath];
+        [self.restaurantMOC deleteObject:restaurant];
+        
+        NSError *error = nil;
+        if(![self.restaurantMOC save:&error]) {
+            NSLog(@"tableView delete cell error : %@", error);
+        }
     }];
     
     shareAction.backgroundColor = [UIColor colorWithRed: 28.0/255.0 green:165.0/255.0 blue:253.0/255.0 alpha:1.0];
@@ -201,7 +228,7 @@
     restaurantCell.thumbnailImageView.image = [UIImage imageWithData:restaurant.image];
     restaurantCell.locationLabel.text = restaurant.location;
     restaurantCell.typeLabel.text = restaurant.type;
-    restaurantCell.accessoryType = restaurant.isVisited ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+    restaurantCell.accessoryType = [restaurant.isVisited boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     
     return restaurantCell;
 }
@@ -210,6 +237,7 @@
 - (void)presentPhontViewController:(UIButton *)sender {
     NSLog(@"present the photoViewController");
     AddRestaurantViewController *addRestaurantViewController = [[AddRestaurantViewController alloc] init];
+    addRestaurantViewController.restaurantMOC = self.restaurantMOC;
     [self presentViewController:addRestaurantViewController animated:YES completion:nil];
 }
 
@@ -230,9 +258,48 @@
 - (NSManagedObjectContext *)contextWithModelName:(NSString *)modelName {
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     
-    NSURL *modelPath
+    NSURL *modelPath = [[NSBundle mainBundle] URLForResource:modelName withExtension:@"momd"];
+    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelPath];
+    
+    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    
+    NSString *dataPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
+    dataPath = [dataPath stringByAppendingFormat:@"/%@.sqlite", modelName];
+    [coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:[NSURL fileURLWithPath:dataPath] options:nil error:nil];
+    
+    context.persistentStoreCoordinator = coordinator;
+    
+    return context;
 }
 
+#pragma mark -NSFetchedResultsControllerDelegate-
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.foodRestaurantsTableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(nullable NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(nullable NSIndexPath *)newIndexPath {
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.foodRestaurantsTableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.foodRestaurantsTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self.foodRestaurantsTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        default:
+            [self.foodRestaurantsTableView reloadData];
+            break;
+    }
+    
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithArray:self.fetchedResultController.fetchedObjects];
+    _restaurants = mutableArray;
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.foodRestaurantsTableView endUpdates];
+}
 
 
 - (void)didReceiveMemoryWarning {

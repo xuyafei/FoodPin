@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AddRestaurantViewController : UIViewController
-
+@property (nonatomic, strong) NSManagedObjectContext *restaurantMOC;
 @end

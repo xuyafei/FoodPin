@@ -1,10 +1,9 @@
 //
-//  Restaurant+CoreDataClass.h
+//  Restaurant.h
 //  
 //
-//  Created by polycom on 2016/12/12.
+//  Created by 永康范 on 16/12/12.
 //
-//  This file was automatically generated and should not be edited.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,6 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Restaurant : NSManagedObject
+
+// Insert code here to declare functionality of your managed object subclass
 
 @end
 
