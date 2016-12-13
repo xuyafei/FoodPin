@@ -195,8 +195,8 @@
     }];
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        [_restaurants removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
+//        [_restaurants removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
         
         Restaurant *restaurant = [self.fetchedResultController objectAtIndexPath:indexPath];
         [self.restaurantMOC deleteObject:restaurant];
@@ -301,7 +301,19 @@
     [self.foodRestaurantsTableView endUpdates];
 }
 
-
+- (void)createTestData {
+//    for (int i = 0; i < 15; i++) {
+//        User *user    = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.chatMOC];
+//        user.username    = [NSString stringWithFormat:@"lxz %d", i];
+//        user.age         = [NSString stringWithFormat:@"%d", i + 15];
+//        user.sectionName = [NSString stringWithFormat:@"%d", i % 5];
+//    }
+//    
+//    NSError *error = nil;
+//    if (self.chatMOC.hasChanges) {
+//        [self.chatMOC save:&error];
+//    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
