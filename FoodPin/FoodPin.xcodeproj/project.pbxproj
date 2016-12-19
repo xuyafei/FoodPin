@@ -619,7 +619,10 @@
 			baseConfigurationReference = 91B3E33A90B8E8063FE3C876 /* Pods-FoodPin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = FGLP2TZBR7;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
@@ -632,7 +635,9 @@
 			baseConfigurationReference = F39B8D5923C6EB1AC304E858 /* Pods-FoodPin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = FGLP2TZBR7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
