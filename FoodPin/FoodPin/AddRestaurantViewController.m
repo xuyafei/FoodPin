@@ -11,7 +11,7 @@
 #import "AddPhotoTableViewCell.h"
 #import "Restaurant.h"
 
-@interface AddRestaurantViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,AddRestaurantInfoTableViewCellDelegate> {
+@interface AddRestaurantViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,AddRestaurantInfoTableViewCellDelegate,UINavigationControllerDelegate> {
     UINavigationBar *_navigationBar;
     UITableView *_addRestaurantTableView;
     NSIndexPath *_currentIndexPath;

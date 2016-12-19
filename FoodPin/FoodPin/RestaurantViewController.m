@@ -10,7 +10,6 @@
 #import "Restaurant.h"
 #import "RestaurantViewController.h"
 #import "RestaurantTableViewCell.h"
-#import "Restaurant.h"
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
 #import "WalkthroughPageViewController.h"
@@ -259,6 +258,8 @@
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     
     NSURL *modelPath = [[NSBundle mainBundle] URLForResource:modelName withExtension:@"momd"];
+//    NSURL *modelPath = [NSURL fileURLWithPath:modelName isDirectory:NO];
+//    modelPath = [modelPath URLByAppendingPathComponent:@"momd"];
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelPath];
     
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];

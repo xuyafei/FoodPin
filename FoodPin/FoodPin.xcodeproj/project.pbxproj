@@ -34,7 +34,7 @@
 		0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE5D1DDC31720099113F /* RestaurantDetailViewController.m */; };
 		0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */; };
 		7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */; };
-		D193BB1D1DFE39B7004D1573 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
+		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +151,6 @@
 		0C684D151DFE931E00D61B78 /* RestaurantModel */ = {
 			isa = PBXGroup;
 			children = (
-				D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */,
 				0C684D161DFE931E00D61B78 /* Restaurant+CoreDataProperties.h */,
 				0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */,
 				0C684D181DFE931E00D61B78 /* Restaurant.h */,
@@ -163,6 +162,7 @@
 		0C97FE191DD9B33D0099113F = {
 			isa = PBXGroup;
 			children = (
+				D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */,
 				0C97FE241DD9B33D0099113F /* FoodPin */,
 				0C97FE3E1DD9B33D0099113F /* FoodPinTests */,
 				0C97FE491DD9B33D0099113F /* FoodPinUITests */,
@@ -383,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */,
 				0C97FE351DD9B33D0099113F /* LaunchScreen.storyboard in Resources */,
 				0C97FE321DD9B33D0099113F /* Assets.xcassets in Resources */,
 				0C97FE301DD9B33D0099113F /* Main.storyboard in Resources */,
@@ -467,7 +468,6 @@
 				0C4AF2191DE5D6B000AB074F /* RestaurantDiscoverViewController.m in Sources */,
 				0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */,
 				0C4AF2041DE1A1FB00AB074F /* MapViewController.m in Sources */,
-				D193BB1D1DFE39B7004D1573 /* FoodPin.xcdatamodeld in Sources */,
 				0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */,
 				0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */,
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
@@ -625,6 +625,15 @@
 				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -640,6 +649,15 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -740,7 +758,7 @@
 			);
 			currentVersion = D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */;
 			name = FoodPin.xcdatamodeld;
-			path = ../FoodPin.xcdatamodeld;
+			path = FoodPin/FoodPin.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
