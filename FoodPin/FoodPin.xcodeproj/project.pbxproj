@@ -35,6 +35,7 @@
 		0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */; };
 		7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
+		D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B173DA1E0922750019CBE0 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B3E33A90B8E8063FE3C876 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		D1B173D91E0922310019CBE0 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
+		D1B173DA1E0922750019CBE0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F39B8D5923C6EB1AC304E858 /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4AF2211DE73E1B00AB074F /* SafariServices.framework in Frameworks */,
+				D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */,
 				0C4AF2011DE0392D00AB074F /* MapKit.framework in Frameworks */,
 				7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */,
 			);
@@ -185,6 +189,7 @@
 		0C97FE241DD9B33D0099113F /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				D1B173D91E0922310019CBE0 /* FoodPin.entitlements */,
 				0C97FE281DD9B33D0099113F /* AppDelegate.h */,
 				0C97FE291DD9B33D0099113F /* AppDelegate.m */,
 				0C4AF2141DE5D49700AB074F /* FoodPinRootViewController.h */,
@@ -264,6 +269,7 @@
 		80217D12571F311690B3643A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1B173DA1E0922750019CBE0 /* CloudKit.framework */,
 				0C4AF2201DE73E1B00AB074F /* SafariServices.framework */,
 				0C4AF2001DE0392D00AB074F /* MapKit.framework */,
 				33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */,
@@ -341,9 +347,15 @@
 				TargetAttributes = {
 					0C97FE211DD9B33D0099113F = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = FGLP2TZBR7;
+						DevelopmentTeam = 27ALCQ36Q3;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -619,8 +631,9 @@
 			baseConfigurationReference = 91B3E33A90B8E8063FE3C876 /* Pods-FoodPin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = FGLP2TZBR7;
+				DEVELOPMENT_TEAM = 27ALCQ36Q3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -634,7 +647,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.SampleUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -644,8 +657,9 @@
 			baseConfigurationReference = F39B8D5923C6EB1AC304E858 /* Pods-FoodPin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = FGLP2TZBR7;
+				DEVELOPMENT_TEAM = 27ALCQ36Q3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -658,7 +672,7 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polycom.SampleUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

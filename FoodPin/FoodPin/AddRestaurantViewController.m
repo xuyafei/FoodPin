@@ -5,7 +5,7 @@
 //  Created by 永康范 on 16/11/21.
 //  Copyright © 2016年 永康范. All rights reserved.
 //
-
+#import <CloudKit/CloudKit.h>
 #import "AddRestaurantViewController.h"
 #import "AddRestaurantInfoTableViewCell.h"
 #import "AddPhotoTableViewCell.h"
@@ -223,8 +223,38 @@
         return;
     }
     
+    [self saveRecordToCloud:addRestaurant];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
 
+#pragma mark -CloudKit Methods-
+- (void) saveRecordToCloud:(Restaurant *)restaurant {
+    CKRecord *record = [[CKRecord alloc] initWithRecordType:@"Restaurant"];
+    [record setValue:restaurant.name forKey:@"name"];
+    [record setValue:restaurant.type forKey:@"type"];
+    [record setValue:restaurant.location forKey:@"location"];
+    [record setValue:restaurant.phoneNumber forKey:@"phone"];
+    
+    UIImage *originalImage = [UIImage imageWithData:restaurant.image];
+    CGFloat scalingFactor = originalImage.size.width > 1024 ? 1024 / originalImage.size.width : 1.0;
+    UIImage *scaledImage = [UIImage imageWithData:restaurant.image scale:scalingFactor];
+
+    NSString *imageFilePath = [NSTemporaryDirectory() stringByAppendingString:restaurant.name];
+    [UIImageJPEGRepresentation(scaledImage, 0.8) writeToFile:imageFilePath atomically:YES];
+    NSURL *imageFileURL = [NSURL fileURLWithPath:imageFilePath];
+    CKAsset *imageAsset = [[CKAsset alloc] initWithFileURL:imageFileURL];
+    [record setValue:imageAsset forKey:@"image"];
+    
+    CKContainer *defaultContainer = [CKContainer defaultContainer];
+    CKDatabase *publicDatabase = [defaultContainer publicCloudDatabase];
+    [publicDatabase saveRecord:record completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        if(error) {
+            NSLog(@"%@", error);
+            return;
+        } else {
+            [[NSFileManager defaultManager] removeItemAtPath:imageFilePath error:nil];
+        }
+    }];
 }
 
 
