@@ -6,11 +6,14 @@
 //  Copyright © 2016年 永康范. All rights reserved.
 //
 #import <CloudKit/CloudKit.h>
+#import "DiscoverTableViewCell.h"
 #import "RestaurantDiscoverViewController.h"
+#import "MJRefresh.h"
 
 @interface RestaurantDiscoverViewController () <UITableViewDelegate, UITableViewDataSource>{
     NSMutableArray *_recordID;
     NSCache *_imageCache;
+    MJRefreshGifHeader *_firstheader;
 }
 @property(nonatomic, strong) UITableView *discoverTableView;
 @end
@@ -24,7 +27,7 @@
     _recordID = [NSMutableArray array];
     _imageCache = [[NSCache alloc] init];
     [self layoutDiscoverTableView];
-    [self getRecordsFormCloud];
+    [self getRecordsFormCloud:NO];
 }
 
 - (void)layoutDiscoverTableView {
@@ -32,9 +35,14 @@
     self.discoverTableView.delegate = self;
     self.discoverTableView.dataSource = self;
     [self.view addSubview:self.discoverTableView];
+    
+    _firstheader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
+        [self getRecordsFormCloud:NO];
+    }];
+    self.discoverTableView.mj_header = _firstheader;
 }
 
-- (void)getRecordsFormCloud {
+- (void)getRecordsFormCloud:(BOOL)isMoreData {
     CKContainer *defaultContainer = [CKContainer defaultContainer];
     CKDatabase *publicDatabase = [defaultContainer publicCloudDatabase];
     
@@ -42,12 +50,17 @@
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Restaurant" predicate:predicate];
     query.sortDescriptors = @ [[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
-    queryOperation.desiredKeys = @[@"name"];
+    queryOperation.desiredKeys = @[@"name", @"type", @"location"];
     queryOperation.queuePriority = NSOperationQueuePriorityHigh;
     queryOperation.resultsLimit = 50;
+    
+    if(!isMoreData) {
+        [_recordID removeAllObjects];
+    }
     queryOperation.recordFetchedBlock = ^(CKRecord *record) {
         [_recordID addObject:record];
     };
+    
     queryOperation.queryCompletionBlock = ^(CKQueryCursor * _Nullable cursor, NSError * _Nullable operationError) {
         if(operationError) {
             NSLog(@"%@", operationError);
@@ -55,7 +68,9 @@
         }
         
         NSLog(@"Successfully retrieve the data from iCloud");
-        
+        if([_firstheader isRefreshing]) {
+            [_firstheader endRefreshing];
+        }
         dispatch_sync(dispatch_get_main_queue(), ^{
             [self.discoverTableView reloadData];
         });
@@ -76,20 +91,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"discoverRestaurantCell";
     
-    UITableViewCell *discoverRestaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    DiscoverTableViewCell *discoverRestaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!discoverRestaurantCell) {
-        discoverRestaurantCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        discoverRestaurantCell = [[DiscoverTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         discoverRestaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     CKRecord *restaurantRecord = _recordID[indexPath.row];
-    discoverRestaurantCell.textLabel.text = [restaurantRecord objectForKey:@"name"];
-    discoverRestaurantCell.imageView.image = [UIImage imageNamed:@"photoalbum"];
+    discoverRestaurantCell.nameLabel.text = [restaurantRecord objectForKey:@"name"];
+    discoverRestaurantCell.typeLabel.text = [restaurantRecord objectForKey:@"type"];
+    discoverRestaurantCell.locationLabel.text = [restaurantRecord objectForKey:@"location"];
     
     NSURL *imageFileURL = (NSURL *)[_imageCache objectForKey:restaurantRecord.recordID];
     if(imageFileURL) {
         NSLog(@"get image from cache");
-        discoverRestaurantCell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageFileURL]];
+        discoverRestaurantCell.bgImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageFileURL]];
     } else {
         CKFetchRecordsOperation *fetchRecordsImageOperation = [[CKFetchRecordsOperation alloc] initWithRecordIDs:@[restaurantRecord.recordID]];
         fetchRecordsImageOperation.desiredKeys = @[@"image"];
@@ -105,7 +121,7 @@
                     CKAsset *imageAsset = [record objectForKey:@"image"];
                     if(imageAsset != nil) {
                         NSLog(@"successfulley fetch the image");
-                        discoverRestaurantCell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageAsset.fileURL]];
+                        discoverRestaurantCell.bgImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageAsset.fileURL]];
                         [_imageCache setObject:imageAsset.fileURL forKey:restaurantRecord.recordID];
                     } else {
                         NSLog(@"failure fetch the image");
@@ -120,7 +136,9 @@
     return discoverRestaurantCell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 133;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
