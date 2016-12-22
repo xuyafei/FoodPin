@@ -2,7 +2,7 @@
 //  Restaurant+CoreDataProperties.m
 //  
 //
-//  Created by 永康范 on 16/12/12.
+//  Created by xuyafei on 16/12/12.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

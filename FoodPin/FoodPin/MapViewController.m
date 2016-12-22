@@ -2,8 +2,8 @@
 //  MapViewController.m
 //  FoodPin
 //
-//  Created by 永康范 on 16/11/20.
-//  Copyright © 2016年 永康范. All rights reserved.
+//  Created by xuyafei on 16/11/20.
+//  Copyright © 2016年 xuyafei. All rights reserved.
 //
 
 #import "MapViewController.h"

@@ -3,7 +3,7 @@
 //  FoodPin
 //
 //  Created by polycom on 2016/12/22.
-//  Copyright © 2016年 永康范. All rights reserved.
+//  Copyright © 2016年 xuyafei. All rights reserved.
 //
 
 #import "DiscoverTableViewCell.h"

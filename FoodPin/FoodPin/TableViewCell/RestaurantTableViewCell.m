@@ -2,8 +2,8 @@
 //  RestaurantTableViewCell.m
 //  FoodPin
 //
-//  Created by 永康范 on 16/11/15.
-//  Copyright © 2016年 永康范. All rights reserved.
+//  Created by xuyafei on 16/11/15.
+//  Copyright © 2016年 xuyafei. All rights reserved.
 //
 
 #import "RestaurantTableViewCell.h"
