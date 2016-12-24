@@ -51,14 +51,14 @@
         [self.locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-8);
             make.left.mas_equalTo(self.contentView.mas_left).offset(8);
-            make.width.mas_greaterThanOrEqualTo(0);
+            make.width.mas_equalTo(359);
             make.height.mas_greaterThanOrEqualTo(0);
         }];
         
         [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.mas_equalTo(self.locationLabel.mas_top).offset(-10);
+            make.bottom.mas_equalTo(self.locationLabel.mas_top).offset(-3);
             make.left.mas_equalTo(self.contentView.mas_left).offset(8);
-            make.width.mas_greaterThanOrEqualTo(0);
+            make.width.mas_equalTo(359);
             make.height.mas_greaterThanOrEqualTo(0);
         }];
         

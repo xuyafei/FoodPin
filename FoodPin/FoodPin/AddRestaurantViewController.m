@@ -11,6 +11,11 @@
 #import "AddPhotoTableViewCell.h"
 #import "Restaurant.h"
 
+typedef NS_ENUM(NSInteger, NavBarItemType) {
+    NavBarItemCancel,
+    NavBarItemSave
+};
+
 @interface AddRestaurantViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,AddRestaurantInfoTableViewCellDelegate,UINavigationControllerDelegate> {
     UINavigationBar *_navigationBar;
     UITableView *_addRestaurantTableView;
@@ -31,6 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.backBarButtonItem.customView.hidden = YES;
     [self initTitleView];
     [self initTableView];
     [self initSaveString];
@@ -38,21 +44,35 @@
 
 - (void)initTitleView {
     _navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
-    UINavigationItem *leftItem = [[UINavigationItem alloc] init];
-    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissModelView:)];
-    leftItem.leftBarButtonItem = leftBarButtonItem;
-    [_navigationBar pushNavigationItem:leftItem animated:NO];
     
-    UINavigationItem *rightItem = [[UINavigationItem alloc] init];
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(saveRestaurant:)];
-    rightItem.rightBarButtonItem = rightBarButtonItem;
-    [_navigationBar pushNavigationItem:rightItem animated:NO];
+    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancle" style:UIBarButtonItemStylePlain target:self action:@selector(navBarButtonItemDidClick:)];
+    cancelItem.tag = NavBarItemCancel;
     
+    UIBarButtonItem *saveItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStylePlain target:self action:@selector(navBarButtonItemDidClick:)];
+    saveItem.tag = NavBarItemSave;
+
+    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:@""];
+    navItem.leftBarButtonItem = cancelItem;
+    navItem.rightBarButtonItem = saveItem;
+    [_navigationBar pushNavigationItem:navItem animated:false];
     [self.view addSubview:_navigationBar];
 }
 
+-(void)navBarButtonItemDidClick: (UIBarButtonItem*)sender{
+    switch (sender.tag) {
+        case NavBarItemCancel:
+            [self dismissModelView];
+            break;
+        case NavBarItemSave:
+            [self saveRestaurant];
+            break;
+        default:
+            break;
+    }
+}
+
 - (void)initTableView {
-    _addRestaurantTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 65, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 64)];
+    _addRestaurantTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 64)];
     _addRestaurantTableView.delegate = self;
     _addRestaurantTableView.dataSource = self;
     [self.view addSubview:_addRestaurantTableView];
@@ -187,16 +207,12 @@
     NSLog(@"print something");
 }
 
-- (void)dismissModelView:(UIButton *)sender {
+- (void)dismissModelView {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)saveRestaurant:(UIButton *)sender {
+- (void)saveRestaurant {
     NSLog(@"save restaurant");
-    NSLog(@"%@", _name);
-    NSLog(@"%@", _type);
-    NSLog(@"%@", _location);
-    NSLog(@"%@", _phoneNumber);
 
     if([_name isEqualToString:@""] || [_type isEqualToString:@""] || [_location isEqualToString:@""] || [_phoneNumber isEqualToString:@""]) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." preferredStyle:UIAlertControllerStyleAlert];
