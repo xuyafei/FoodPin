@@ -76,7 +76,7 @@
 
 - (void)forward:(NSInteger)index {
     WalkthroughContentViewController *nextViewController = [self viewControllerAtIndex:index+1];
-    [self setViewControllers:/*@[nextViewController]*/[NSArray arrayWithObject:nextViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [self setViewControllers:[NSArray arrayWithObject:nextViewController] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 - (void)setButtonIndex:(NSInteger )buttonIndex {

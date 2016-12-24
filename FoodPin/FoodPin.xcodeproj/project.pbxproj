@@ -214,12 +214,9 @@
 				0C4AF2031DE1A1FB00AB074F /* MapViewController.m */,
 				0C4AF2051DE286F000AB074F /* AddRestaurantViewController.h */,
 				0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */,
-				0C4AF20E1DE4482F00AB074F /* WalkthroughContentViewController.h */,
-				0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */,
-				0C4AF2111DE4574F00AB074F /* WalkthroughPageViewController.h */,
-				0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */,
 				0C4AF21D1DE7346500AB074F /* WebViewController.h */,
 				0C4AF21E1DE7346500AB074F /* WebViewController.m */,
+				D1D9854B1E0EC022006F0B8C /* WalkthroughtPage */,
 				D1D985471E0E7953006F0B8C /* Restaurants */,
 				0C684D151DFE931E00D61B78 /* RestaurantModel */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
@@ -293,6 +290,17 @@
 				D1D9854A1E0E79C4006F0B8C /* Restaurants.h */,
 			);
 			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		D1D9854B1E0EC022006F0B8C /* WalkthroughtPage */ = {
+			isa = PBXGroup;
+			children = (
+				0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */,
+				0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */,
+				0C4AF2111DE4574F00AB074F /* WalkthroughPageViewController.h */,
+				0C4AF20E1DE4482F00AB074F /* WalkthroughContentViewController.h */,
+			);
+			name = WalkthroughtPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
