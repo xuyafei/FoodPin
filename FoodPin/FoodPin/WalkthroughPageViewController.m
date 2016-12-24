@@ -62,14 +62,14 @@
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSInteger index = ((WalkthroughContentViewController *)viewController).index;
-    index += 1;
+    index -= 1;
     
     return [self viewControllerAtIndex:index];
 }
 
 - (nullable UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     NSInteger index = ((WalkthroughContentViewController *)viewController).index;
-    index -= 1;
+    index += 1;
     
     return [self viewControllerAtIndex:index];
 }

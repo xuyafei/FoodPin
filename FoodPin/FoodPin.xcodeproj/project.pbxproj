@@ -37,6 +37,7 @@
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 		D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B173DA1E0922750019CBE0 /* CloudKit.framework */; };
 		D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
+		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,8 @@
 		D1B173DA1E0922750019CBE0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1B173DC1E0BADF30019CBE0 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
+		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
+		D1D9854A1E0E79C4006F0B8C /* Restaurants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurants.h; sourceTree = "<group>"; };
 		F39B8D5923C6EB1AC304E858 /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +220,7 @@
 				0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */,
 				0C4AF21D1DE7346500AB074F /* WebViewController.h */,
 				0C4AF21E1DE7346500AB074F /* WebViewController.m */,
+				D1D985471E0E7953006F0B8C /* Restaurants */,
 				0C684D151DFE931E00D61B78 /* RestaurantModel */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
 				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
@@ -280,6 +284,15 @@
 				33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1D985471E0E7953006F0B8C /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				D1D985481E0E79A9006F0B8C /* Restaurants.m */,
+				D1D9854A1E0E79C4006F0B8C /* Restaurants.h */,
+			);
+			path = Restaurants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +503,7 @@
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
+				D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */,
 				0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */,
 				0C684D1B1DFE931E00D61B78 /* Restaurant.m in Sources */,
 				D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */,
