@@ -46,7 +46,13 @@
     request.sortDescriptors = @[sortDescriptor];
     
     self.restaurantMOC = [self contextWithModelName:@"FoodPin"];
-    [self createTestCoreData];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasDidLoadCoreData = [defaults boolForKey:@"hasDidLoadCoreData"];
+    if(!hasDidLoadCoreData) {
+        [self createTestCoreData];
+    }
+    
     if(self.restaurantMOC != nil) {
         NSError *error = nil;
         
@@ -321,6 +327,9 @@
     if(self.restaurantMOC.hasChanges) {
         [self.restaurantMOC save:&error];
     }
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:@"hasDidLoadCoreData"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

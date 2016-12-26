@@ -38,6 +38,7 @@
 		D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B173DA1E0922750019CBE0 /* CloudKit.framework */; };
 		D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
 		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
+		D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
 		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
 		D1D9854A1E0E79C4006F0B8C /* Restaurants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurants.h; sourceTree = "<group>"; };
+		D1D9854C1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPhotoBrowseCollectionViewController.h; sourceTree = "<group>"; };
+		D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPhotoBrowseCollectionViewController.m; sourceTree = "<group>"; };
 		F39B8D5923C6EB1AC304E858 /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +228,8 @@
 				0C97FE331DD9B33D0099113F /* LaunchScreen.storyboard */,
 				0C97FE361DD9B33D0099113F /* Info.plist */,
 				0C97FE251DD9B33D0099113F /* Supporting Files */,
+				D1D9854C1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.h */,
+				D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -510,6 +515,7 @@
 				0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */,
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
+				D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */,
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
 				D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */,
 				0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */,

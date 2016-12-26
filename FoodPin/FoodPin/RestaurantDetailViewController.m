@@ -11,6 +11,7 @@
 #import "ReviewViewController.h"
 #import "Masonry.h"
 #import "MapViewController.h"
+#import "FoodPhotoBrowseCollectionViewController.h"
 
 @interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate> {
     UITableView *_restaurantDetailView;
@@ -29,6 +30,7 @@
     self.title = self.restaurant.name;
     [self initCellArray];
     [self layoutTableView];
+    [self addGesture];
     _restaurantDetailView.estimatedRowHeight = 36.0;
     _restaurantDetailView.rowHeight = UITableViewAutomaticDimension;
 }
@@ -54,10 +56,10 @@
     
     _headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300)];
     _headView.backgroundColor = [UIColor redColor];
-    //_headView.image = [UIImage imageNamed:self.restaurant.iamge];
     _headView.image = [UIImage imageWithData:self.restaurant.image];
     _headView.contentMode = UIViewContentModeScaleAspectFill;
     _headView.clipsToBounds = YES;
+    _headView.userInteractionEnabled=YES;
     _restaurantDetailView.tableHeaderView = _headView;
     
     _reviewButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -98,6 +100,19 @@
 
 - (void)dealloc {
     NSLog(@"print the delloc");
+}
+#pragma mark -UITapGestureRecognize-
+- (void)addGesture {
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
+    tapGesture.numberOfTapsRequired = 1;
+    tapGesture.numberOfTouchesRequired = 1;
+    [_headView addGestureRecognizer:tapGesture];
+}
+
+-(void)tapImage:(UITapGestureRecognizer *)gesture {
+    NSLog(@"tap the tableview headview");
+    FoodPhotoBrowseCollectionViewController *foodPhotoBrowse = [[FoodPhotoBrowseCollectionViewController alloc] init];
+    [self presentViewController:foodPhotoBrowse animated:YES completion:nil];
 }
 
 #pragma mark -UITableViewDelegate-
