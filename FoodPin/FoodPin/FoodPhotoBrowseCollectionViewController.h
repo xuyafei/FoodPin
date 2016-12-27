@@ -10,4 +10,6 @@
 
 @interface FoodPhotoBrowseCollectionViewController : UICollectionViewController
 
+@property(nonatomic, strong) NSData *image;
+
 @end

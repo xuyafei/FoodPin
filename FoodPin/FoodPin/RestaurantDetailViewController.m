@@ -112,6 +112,9 @@
 -(void)tapImage:(UITapGestureRecognizer *)gesture {
     NSLog(@"tap the tableview headview");
     FoodPhotoBrowseCollectionViewController *foodPhotoBrowse = [[FoodPhotoBrowseCollectionViewController alloc] init];
+    foodPhotoBrowse.image = self.restaurant.image;
+    foodPhotoBrowse.transitioningDelegate = self.modal
+    foodPhotoBrowse.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:foodPhotoBrowse animated:YES completion:nil];
 }
 
