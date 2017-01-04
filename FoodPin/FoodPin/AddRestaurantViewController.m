@@ -10,6 +10,7 @@
 #import "AddRestaurantInfoTableViewCell.h"
 #import "AddPhotoTableViewCell.h"
 #import "Restaurant.h"
+#import "FPAlertController.h"
 
 typedef NS_ENUM(NSInteger, NavBarItemType) {
     NavBarItemCancel,
@@ -215,9 +216,12 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
     NSLog(@"save restaurant");
 
     if([_name isEqualToString:@""] || [_type isEqualToString:@""] || [_location isEqualToString:@""] || [_phoneNumber isEqualToString:@""]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." preferredStyle:UIAlertControllerStyleAlert];
+        [self fp_showAlertWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." appearanceProcess:^(FPAlertController * _Nonnull alertMaker) {
+            alertMaker.addActionDestructiveTitle(@"OK");
+        } acitonsBlock:nil];
+        /*UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
+        [self presentViewController:alertController animated:YES completion:nil];*/
     }
     
     Restaurant *addRestaurant = [NSEntityDescription insertNewObjectForEntityForName:@"Restaurant" inManagedObjectContext:self.restaurantMOC];

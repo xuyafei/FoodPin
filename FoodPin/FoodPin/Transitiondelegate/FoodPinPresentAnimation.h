@@ -11,6 +11,8 @@
 
 @interface FoodPinPresentAnimation : NSObject<UIViewControllerAnimatedTransitioning>
 
+@property(nonatomic, assign) BOOL isPresentAnimationing;
+
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext;
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext;
 

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodPinPresentAnimation.h"
 
 @interface FoodPhotoBrowseCollectionViewController : UICollectionViewController
 
 @property(nonatomic, strong) NSData *image;
+@property(nonatomic, strong) FoodPinPresentAnimation *presentAnimation;
 
 @end

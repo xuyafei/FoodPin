@@ -13,9 +13,8 @@
 #import "MapViewController.h"
 #import "FoodPhotoBrowseCollectionViewController.h"
 
-@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate> {
+@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate,UIViewControllerTransitioningDelegate> {
     UITableView *_restaurantDetailView;
-    UIImageView *_headView;
     UIView *_footView;
     UIButton *_reviewButton;
     UIButton *_mapButton;
@@ -31,6 +30,7 @@
     [self initCellArray];
     [self layoutTableView];
     [self addGesture];
+    self.presentAnimation = [[FoodPinPresentAnimation alloc] init];
     _restaurantDetailView.estimatedRowHeight = 36.0;
     _restaurantDetailView.rowHeight = UITableViewAutomaticDimension;
 }
@@ -113,7 +113,7 @@
     NSLog(@"tap the tableview headview");
     FoodPhotoBrowseCollectionViewController *foodPhotoBrowse = [[FoodPhotoBrowseCollectionViewController alloc] init];
     foodPhotoBrowse.image = self.restaurant.image;
-    foodPhotoBrowse.transitioningDelegate = self.modal
+    foodPhotoBrowse.transitioningDelegate = self;
     foodPhotoBrowse.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:foodPhotoBrowse animated:YES completion:nil];
 }
@@ -175,6 +175,11 @@
 #pragma mark -ReviewViewDelegate-
 - (void)setButtonImage:(NSString *)buttonBackgoundImage {
     [_reviewButton setBackgroundImage:[[UIImage imageNamed:buttonBackgoundImage] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+}
+
+#pragma mark -UIViewControllerTransitioningDelegate-
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return self.presentAnimation;
 }
 
 - (void)didReceiveMemoryWarning {

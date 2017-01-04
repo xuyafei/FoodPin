@@ -9,7 +9,7 @@
 #import "FoodPhotoBrowseCollectionViewController.h"
 #import "FoodPhotoBrowserCollectionViewCell.h"
 
-@interface FoodPhotoBrowseCollectionViewController ()
+@interface FoodPhotoBrowseCollectionViewController () <UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -77,6 +77,10 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+/*- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    
+}*/
 #pragma mark <UICollectionViewDelegate>
 
 /*

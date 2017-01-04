@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "FoodPinPresentAnimation.h"
 
 @interface RestaurantDetailViewController : UIViewController
 
 @property(nonatomic, strong) Restaurant *restaurant;
+@property(nonatomic, strong) UIImageView *headView;
+@property(nonatomic, strong) FoodPinPresentAnimation *presentAnimation;
 
 @end
