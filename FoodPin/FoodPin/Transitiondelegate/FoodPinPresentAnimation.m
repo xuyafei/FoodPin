@@ -24,7 +24,7 @@
     return self;
 }
 
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
     return 1.0;
 }
 
@@ -39,49 +39,44 @@
 }
 
 - (void)presentViewAnimation:(id <UIViewControllerContextTransitioning>)transitionContext {
-    UIView *destinationView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    UIView *containerView = transitionContext.containerView;
-    
-    if(!containerView) {
-        return;
-    }
-    [containerView addSubview:destinationView];
-    
     FoodPinRootViewController *fromRootViewController = (FoodPinRootViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    RestaurantDetailViewController *fromViewController = fromRootViewController.favoritesNav.viewControllers[1];
+    RestaurantDetailViewController *fromeViewController = fromRootViewController.favoritesNav.viewControllers[1];
+    FoodPhotoBrowseCollectionViewController *toViewController = (FoodPhotoBrowseCollectionViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
-    UIImageView *currentImageView  = fromViewController.headView;
-    UIImageView *annimateView = [[UIImageView alloc] init];
-    annimateView.image = currentImageView.image;
-    annimateView.contentMode = UIViewContentModeScaleAspectFill;
-    annimateView.clipsToBounds = YES;
+    UIImageView *currentImageView = fromeViewController.headView;
+    UIView *containerView = [transitionContext containerView];
     
-    CGRect originFrame = [currentImageView convertRect:currentImageView.frame toView:[UIApplication sharedApplication].keyWindow];
-    annimateView.frame = originFrame;
-    [containerView addSubview:annimateView];
-    
+    //currentImageView.hidden = YES;
+    toViewController.view.alpha = 0.0;
     CGRect endFrame = coverImageFrameToFullScreenFrame(currentImageView.image);
-    destinationView.alpha = 0;
+    UIImageView *animateImageView = [[UIImageView alloc] init];
+    animateImageView.image = currentImageView.image;
+    animateImageView.contentMode = UIViewContentModeScaleAspectFill;
+    animateImageView.clipsToBounds = YES;
+    animateImageView.frame = [currentImageView convertRect:currentImageView.bounds toView:containerView];
+    [containerView addSubview:toViewController.view];
+    [containerView addSubview:animateImageView];
     
     [UIView animateWithDuration:1.0 animations:^{
-        annimateView.frame = endFrame;
+        animateImageView.frame = endFrame;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
+        
         [UIView animateWithDuration:0.5 animations:^{
-            destinationView.alpha = 1.0;
+            toViewController.view.alpha = 1.0;
         } completion:^(BOOL finished) {
-            [annimateView removeFromSuperview];
+            [animateImageView removeFromSuperview];
         }];
     }];
 }
 
 - (void) dissmissViewAnimation:(id <UIViewControllerContextTransitioning>)transitionContext {
-    UIView *transitionView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     UIView *contentView = transitionContext.containerView;
     
-    FoodPhotoBrowseCollectionViewController *destinationController = (FoodPhotoBrowseCollectionViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    UICollectionView *presentView = destinationController.collectionView;
-    FoodPhotoBrowserCollectionViewCell *dismissCell = (FoodPhotoBrowserCollectionViewCell *)presentView.visibleCells[0];
+    FoodPhotoBrowseCollectionViewController *fromViewController = (FoodPhotoBrowseCollectionViewController *)[transitionContext viewControllerForKey:UITransitionContextFromViewKey];
+    UICollectionView *fromView = fromViewController.collectionView;
+ 
+    FoodPhotoBrowserCollectionViewCell *dismissCell = (FoodPhotoBrowserCollectionViewCell *)fromView.visibleCells[0];
     UIImageView *animateImageView = [[UIImageView alloc] init];
     animateImageView.contentMode = UIViewContentModeScaleAspectFill;
     animateImageView.clipsToBounds = YES;
@@ -90,14 +85,13 @@
     [contentView addSubview:animateImageView];
     
     FoodPinRootViewController *fromRootViewController = (FoodPinRootViewController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    RestaurantDetailViewController *fromViewController = fromRootViewController.favoritesNav.viewControllers[1];
+    RestaurantDetailViewController *toViewController = fromRootViewController.favoritesNav.viewControllers[1];
     
-    UIView *originView = fromViewController.headView;
+    UIView *originView = toViewController.headView;
     CGRect originFrame = [originView convertRect:originView.frame toView:[UIApplication sharedApplication].keyWindow];
     
     [UIView animateWithDuration:1.0 animations:^{
         animateImageView.frame = originFrame;
-        transitionView.alpha = 1.0;
     } completion:^(BOOL finished) {
         [animateImageView removeFromSuperview];
         [transitionContext completeTransition:YES];

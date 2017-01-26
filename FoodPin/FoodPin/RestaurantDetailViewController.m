@@ -182,6 +182,11 @@
     return self.presentAnimation;
 }
 
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    self.presentAnimation.isPresentAnimationing = NO;
+    return self.presentAnimation;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
