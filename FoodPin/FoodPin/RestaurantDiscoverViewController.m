@@ -51,7 +51,8 @@
     query.sortDescriptors = @ [[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
     queryOperation.desiredKeys = @[@"name", @"type", @"location"];
-    queryOperation.queuePriority = NSOperationQueuePriorityHigh;
+    queryOperation.queuePriority = NSOperationQueuePriorityVeryHigh;
+    queryOperation.qualityOfService = NSQualityOfServiceUserInteractive;
     queryOperation.resultsLimit = 50;
     
     if(!isMoreData) {

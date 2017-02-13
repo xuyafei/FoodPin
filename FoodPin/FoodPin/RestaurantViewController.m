@@ -127,6 +127,7 @@
     self.foodRestaurantsTableView.tableHeaderView = _searchController.searchBar;
     _searchController.searchResultsUpdater = self;
     _searchController.dimsBackgroundDuringPresentation = NO;
+    self.definesPresentationContext = YES;
     _searchController.searchBar.placeholder = @"Search restaurants...";
     _searchController.searchBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
     _searchController.searchBar.barTintColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue: 240.0/255.0 alpha:0.6];
@@ -254,6 +255,9 @@
 
 #pragma mark -UISearchResultsUpdating-
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    if(_searchResultRestaurants.count != 0) {
+        [_searchResultRestaurants removeAllObjects];
+    }
     NSString *text = _searchController.searchBar.text;
 
     for (Restaurant *restaurant in _restaurants) {

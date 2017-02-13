@@ -37,8 +37,8 @@
 		D122EC401E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC3F1E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m */; };
 		D122EC441E124B9B00B8C08E /* FoodPinPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */; };
 		D122EC551E1C917600B8C08E /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
+		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
-		D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B173DA1E0922750019CBE0 /* CloudKit.framework */; };
 		D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
 		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
 		D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
@@ -121,8 +121,8 @@
 		D122EC531E1C915A00B8C08E /* FPAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPAlertController.h; sourceTree = "<group>"; };
 		D122EC541E1C917600B8C08E /* FPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPAlertController.m; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		D1AB40F41E4EF142006476E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1B173D91E0922310019CBE0 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
-		D1B173DA1E0922750019CBE0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1B173DC1E0BADF30019CBE0 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
 		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4AF2211DE73E1B00AB074F /* SafariServices.framework in Frameworks */,
-				D1B173DB1E0922750019CBE0 /* CloudKit.framework in Frameworks */,
+				D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */,
 				0C4AF2011DE0392D00AB074F /* MapKit.framework in Frameworks */,
 				7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */,
 			);
@@ -293,7 +293,7 @@
 		80217D12571F311690B3643A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D1B173DA1E0922750019CBE0 /* CloudKit.framework */,
+				D1AB40F41E4EF142006476E2 /* CloudKit.framework */,
 				0C4AF2201DE73E1B00AB074F /* SafariServices.framework */,
 				0C4AF2001DE0392D00AB074F /* MapKit.framework */,
 				33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */,
@@ -410,7 +410,7 @@
 					0C97FE211DD9B33D0099113F = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 5UUHKU5P3B;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -717,10 +717,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yafeixu.FoodSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yafeixu.FoodPinSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dedbf9e5-5e8e-45be-aacf-49e285542801";
-				PROVISIONING_PROFILE_SPECIFIER = FoodSearch_Develop;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -745,10 +745,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yafeixu.FoodSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yafeixu.FoodPinSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dedbf9e5-5e8e-45be-aacf-49e285542801";
-				PROVISIONING_PROFILE_SPECIFIER = FoodSearch_Develop;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
