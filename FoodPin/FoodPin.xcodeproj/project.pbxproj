@@ -25,7 +25,6 @@
 		0C97FE271DD9B33D0099113F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
 		0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
 		0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
-		0C97FE301DD9B33D0099113F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C97FE2E1DD9B33D0099113F /* Main.storyboard */; };
 		0C97FE321DD9B33D0099113F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C97FE311DD9B33D0099113F /* Assets.xcassets */; };
 		0C97FE351DD9B33D0099113F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C97FE331DD9B33D0099113F /* LaunchScreen.storyboard */; };
 		0C97FE401DD9B33D0099113F /* FoodPinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE3F1DD9B33D0099113F /* FoodPinTests.m */; };
@@ -96,7 +95,6 @@
 		0C97FE291DD9B33D0099113F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0C97FE2B1DD9B33D0099113F /* RestaurantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
 		0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
-		0C97FE2F1DD9B33D0099113F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C97FE311DD9B33D0099113F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C97FE341DD9B33D0099113F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C97FE361DD9B33D0099113F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				D1D985471E0E7953006F0B8C /* Restaurants */,
 				0C684D151DFE931E00D61B78 /* RestaurantModel */,
 				0C97FE581DDAE5FF0099113F /* TableViewCell */,
-				0C97FE2E1DD9B33D0099113F /* Main.storyboard */,
 				0C97FE311DD9B33D0099113F /* Assets.xcassets */,
 				0C97FE331DD9B33D0099113F /* LaunchScreen.storyboard */,
 				0C97FE361DD9B33D0099113F /* Info.plist */,
@@ -461,7 +458,6 @@
 				D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */,
 				0C97FE351DD9B33D0099113F /* LaunchScreen.storyboard in Resources */,
 				0C97FE321DD9B33D0099113F /* Assets.xcassets in Resources */,
-				0C97FE301DD9B33D0099113F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,14 +590,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0C97FE2E1DD9B33D0099113F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C97FE2F1DD9B33D0099113F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0C97FE331DD9B33D0099113F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
