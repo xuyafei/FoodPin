@@ -34,6 +34,8 @@
     self.discoverTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     self.discoverTableView.delegate = self;
     self.discoverTableView.dataSource = self;
+    self.discoverTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self.view addSubview:self.discoverTableView];
     
     _firstheader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
