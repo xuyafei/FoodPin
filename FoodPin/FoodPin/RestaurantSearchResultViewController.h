@@ -3,11 +3,12 @@
 //  FoodPin
 //
 //  Created by polycom on 2017/2/22.
-//  Copyright © 2017年 永康范. All rights reserved.
+//  Copyright © 2017年 xuyafei. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface RestaurantSearchResultViewController : UIViewController
-
+@property (nonatomic, strong) UITableView *searchResultTableView;
+@property (nonatomic, strong) NSMutableArray *searchResultRestaurants;
 @end

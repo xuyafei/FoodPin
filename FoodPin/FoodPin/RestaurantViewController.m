@@ -14,6 +14,7 @@
 #import "RestaurantDetailViewController.h"
 #import "AddRestaurantViewController.h"
 #import "WalkthroughPageViewController.h"
+#import "RestaurantSearchResultViewController.h"
 
 @interface RestaurantViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating,NSFetchedResultsControllerDelegate> {
     NSMutableArray *_restaurants;
@@ -123,10 +124,13 @@
 }
 
 - (void)initSearchContorller {
-    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    RestaurantSearchResultViewController *searchResultViewController = [[RestaurantSearchResultViewController alloc] init];
+    
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultViewController];
     self.foodRestaurantsTableView.tableHeaderView = _searchController.searchBar;
     _searchController.searchResultsUpdater = self;
     _searchController.dimsBackgroundDuringPresentation = YES;
+    _searchController.hidesNavigationBarDuringPresentation = YES;
     self.definesPresentationContext = YES;
     _searchController.searchBar.placeholder = @"Search restaurants...";
     _searchController.searchBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
@@ -139,11 +143,7 @@
 
 #pragma mark -UITableViewDelegate-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(_searchController.active) {
-        return _searchResultRestaurants.count;
-    } else {
-        return _restaurants.count;
-    }
+    return _restaurants.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -234,7 +234,7 @@
         restaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
 
-    Restaurant *restaurant = (_searchController.active) ? _searchResultRestaurants[indexPath.row] : _restaurants[indexPath.row];
+    Restaurant *restaurant = _restaurants[indexPath.row];
     restaurantCell.nameLabel.text = restaurant.name;
     restaurantCell.thumbnailImageView.image = [UIImage imageWithData:restaurant.image];
     restaurantCell.locationLabel.text = restaurant.location;
@@ -267,9 +267,9 @@
         }
     }
     NSLog(@"%@", _searchResultRestaurants);
-    if(_searchResultRestaurants.count != 0) {
-        [self.foodRestaurantsTableView reloadData];
-    }
+    RestaurantSearchResultViewController *searchResultsViewController = (RestaurantSearchResultViewController *)searchController.searchResultsController;
+    searchResultsViewController.searchResultRestaurants = [NSMutableArray arrayWithArray:_searchResultRestaurants];
+    [searchResultsViewController.searchResultTableView reloadData];
 }
 
 #pragma mark -Create CoreData Context-
