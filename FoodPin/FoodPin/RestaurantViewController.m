@@ -71,7 +71,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.hidesBarsOnSwipe = YES;
+    //self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -126,7 +126,7 @@
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.foodRestaurantsTableView.tableHeaderView = _searchController.searchBar;
     _searchController.searchResultsUpdater = self;
-    _searchController.dimsBackgroundDuringPresentation = NO;
+    _searchController.dimsBackgroundDuringPresentation = YES;
     self.definesPresentationContext = YES;
     _searchController.searchBar.placeholder = @"Search restaurants...";
     _searchController.searchBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
@@ -255,6 +255,7 @@
 
 #pragma mark -UISearchResultsUpdating-
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSLog(@"qqqqq%ld", _searchResultRestaurants.count);
     if(_searchResultRestaurants.count != 0) {
         [_searchResultRestaurants removeAllObjects];
     }
@@ -266,7 +267,9 @@
         }
     }
     NSLog(@"%@", _searchResultRestaurants);
-    [self.foodRestaurantsTableView reloadData];
+    if(_searchResultRestaurants.count != 0) {
+        [self.foodRestaurantsTableView reloadData];
+    }
 }
 
 #pragma mark -Create CoreData Context-
