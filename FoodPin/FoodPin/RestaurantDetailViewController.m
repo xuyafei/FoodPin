@@ -101,6 +101,7 @@
 - (void)dealloc {
     NSLog(@"print the delloc");
 }
+
 #pragma mark -UITapGestureRecognize-
 - (void)addGesture {
     UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];

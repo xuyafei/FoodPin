@@ -18,19 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self layoutTableView];
     // Do any additional setup after loading the view.
 }
 
 - (void)layoutTableView {
-    self.searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    self.searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
     self.searchResultTableView.delegate = self;
     self.searchResultTableView.dataSource = self;
     [self.view addSubview:self.searchResultTableView];
     self.searchResultTableView.estimatedRowHeight = 80;
     self.searchResultTableView.rowHeight = UITableViewAutomaticDimension;
-    self.searchResultTableView.backgroundColor = [UIColor yellowColor];
+    //self.searchResultTableView.backgroundColor = [UIColor yellowColor];
     self.definesPresentationContext = YES;
 }
 - (void)didReceiveMemoryWarning {
@@ -76,7 +76,7 @@
     restaurantCell.locationLabel.text = restaurant.location;
     restaurantCell.typeLabel.text = restaurant.type;
     restaurantCell.accessoryType = [restaurant.isVisited boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    restaurantCell.backgroundColor = [UIColor redColor];
+    //restaurantCell.backgroundColor = [UIColor redColor];
     return restaurantCell;
 }
 
