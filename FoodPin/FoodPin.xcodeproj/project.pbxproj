@@ -43,6 +43,14 @@
 		D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */; };
 		D1C880851E6FFC5B00947FFA /* FPTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */; };
 		D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */; };
+		D1C8808C1E6FFF8600947FFA /* FPSectionDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8808B1E6FFF8600947FFA /* FPSectionDataMetric.m */; };
+		D1C880921E7001CA00947FFA /* FPGlobalDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880911E7001CA00947FFA /* FPGlobalDataMetric.m */; };
+		D1C880991E70098A00947FFA /* FPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880981E70098A00947FFA /* FPDataSource.m */; };
+		D1C8809F1E700BC700947FFA /* FPDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8809E1E700BC700947FFA /* FPDelegate.m */; };
+		D1C880A51E700D2300947FFA /* FPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880A41E700D2300947FFA /* FPHelper.m */; };
+		D1C880AE1E700EB200947FFA /* ResuableView+FPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880AD1E700EB200947FFA /* ResuableView+FPExtension.m */; };
+		D1C880B11E70132F00947FFA /* NSObject+FPIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */; };
+		D1C880B41E7013FE00947FFA /* FPDefaultSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */; };
 		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
 		D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
 /* End PBXBuildFile section */
@@ -135,6 +143,27 @@
 		D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewDelegate.m; sourceTree = "<group>"; };
 		D1C880861E6FFC8D00947FFA /* FPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTableViewCell.h; sourceTree = "<group>"; };
 		D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewCell.m; sourceTree = "<group>"; };
+		D1C8808A1E6FFF8600947FFA /* FPSectionDataMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPSectionDataMetric.h; sourceTree = "<group>"; };
+		D1C8808B1E6FFF8600947FFA /* FPSectionDataMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPSectionDataMetric.m; sourceTree = "<group>"; };
+		D1C8808D1E70008700947FFA /* FPSectionDataMetric+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPSectionDataMetric+Private.h"; sourceTree = "<group>"; };
+		D1C880901E7001CA00947FFA /* FPGlobalDataMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPGlobalDataMetric.h; sourceTree = "<group>"; };
+		D1C880911E7001CA00947FFA /* FPGlobalDataMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPGlobalDataMetric.m; sourceTree = "<group>"; };
+		D1C880931E70048700947FFA /* FPGlobalDataMetric+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPGlobalDataMetric+Private.h"; sourceTree = "<group>"; };
+		D1C880961E70081400947FFA /* FPDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDataSourceProtocol.h; sourceTree = "<group>"; };
+		D1C880971E70098A00947FFA /* FPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDataSource.h; sourceTree = "<group>"; };
+		D1C880981E70098A00947FFA /* FPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDataSource.m; sourceTree = "<group>"; };
+		D1C8809A1E700B2900947FFA /* FPDataSource+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPDataSource+Private.h"; sourceTree = "<group>"; };
+		D1C8809D1E700BC700947FFA /* FPDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDelegate.h; sourceTree = "<group>"; };
+		D1C8809E1E700BC700947FFA /* FPDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDelegate.m; sourceTree = "<group>"; };
+		D1C880A01E700CB000947FFA /* FPDelegate+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FPDelegate+Private.h"; sourceTree = "<group>"; };
+		D1C880A31E700D2300947FFA /* FPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPHelper.h; sourceTree = "<group>"; };
+		D1C880A41E700D2300947FFA /* FPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPHelper.m; sourceTree = "<group>"; };
+		D1C880AC1E700EB200947FFA /* ResuableView+FPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ResuableView+FPExtension.h"; sourceTree = "<group>"; };
+		D1C880AD1E700EB200947FFA /* ResuableView+FPExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResuableView+FPExtension.m"; sourceTree = "<group>"; };
+		D1C880AF1E70132F00947FFA /* NSObject+FPIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FPIdentifier.h"; sourceTree = "<group>"; };
+		D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FPIdentifier.m"; sourceTree = "<group>"; };
+		D1C880B21E7013FE00947FFA /* FPDefaultSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDefaultSupplementaryView.h; sourceTree = "<group>"; };
+		D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDefaultSupplementaryView.m; sourceTree = "<group>"; };
 		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
 		D1D9854A1E0E79C4006F0B8C /* Restaurants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurants.h; sourceTree = "<group>"; };
 		D1D9854C1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPhotoBrowseCollectionViewController.h; sourceTree = "<group>"; };
@@ -340,8 +369,37 @@
 				D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */,
 				D1C880861E6FFC8D00947FFA /* FPTableViewCell.h */,
 				D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */,
+				D1C880891E6FFF4400947FFA /* FPBaseTableView */,
 			);
 			path = FPBaseTableViewController;
+			sourceTree = "<group>";
+		};
+		D1C880891E6FFF4400947FFA /* FPBaseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D1C8808A1E6FFF8600947FFA /* FPSectionDataMetric.h */,
+				D1C8808B1E6FFF8600947FFA /* FPSectionDataMetric.m */,
+				D1C8808D1E70008700947FFA /* FPSectionDataMetric+Private.h */,
+				D1C880901E7001CA00947FFA /* FPGlobalDataMetric.h */,
+				D1C880911E7001CA00947FFA /* FPGlobalDataMetric.m */,
+				D1C880931E70048700947FFA /* FPGlobalDataMetric+Private.h */,
+				D1C880961E70081400947FFA /* FPDataSourceProtocol.h */,
+				D1C880971E70098A00947FFA /* FPDataSource.h */,
+				D1C880981E70098A00947FFA /* FPDataSource.m */,
+				D1C8809A1E700B2900947FFA /* FPDataSource+Private.h */,
+				D1C8809D1E700BC700947FFA /* FPDelegate.h */,
+				D1C8809E1E700BC700947FFA /* FPDelegate.m */,
+				D1C880A01E700CB000947FFA /* FPDelegate+Private.h */,
+				D1C880A31E700D2300947FFA /* FPHelper.h */,
+				D1C880A41E700D2300947FFA /* FPHelper.m */,
+				D1C880AC1E700EB200947FFA /* ResuableView+FPExtension.h */,
+				D1C880AD1E700EB200947FFA /* ResuableView+FPExtension.m */,
+				D1C880AF1E70132F00947FFA /* NSObject+FPIdentifier.h */,
+				D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */,
+				D1C880B21E7013FE00947FFA /* FPDefaultSupplementaryView.h */,
+				D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */,
+			);
+			path = FPBaseTableView;
 			sourceTree = "<group>";
 		};
 		D1D985471E0E7953006F0B8C /* Restaurants */ = {
@@ -558,15 +616,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C880AE1E700EB200947FFA /* ResuableView+FPExtension.m in Sources */,
 				0C4AF21C1DE5D6D200AB074F /* RestaurantAboutViewController.m in Sources */,
 				0C4AF20D1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m in Sources */,
 				0C4AF2101DE4482F00AB074F /* WalkthroughContentViewController.m in Sources */,
 				D122EC551E1C917600B8C08E /* FPAlertController.m in Sources */,
 				0C684D1A1DFE931E00D61B78 /* Restaurant+CoreDataProperties.m in Sources */,
+				D1C880B41E7013FE00947FFA /* FPDefaultSupplementaryView.m in Sources */,
+				D1C880921E7001CA00947FFA /* FPGlobalDataMetric.m in Sources */,
 				0C97FE5B1DDAE65F0099113F /* RestaurantTableViewCell.m in Sources */,
 				0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */,
 				0C4AF2191DE5D6B000AB074F /* RestaurantDiscoverViewController.m in Sources */,
 				0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */,
+				D1C880991E70098A00947FFA /* FPDataSource.m in Sources */,
 				0C4AF2041DE1A1FB00AB074F /* MapViewController.m in Sources */,
 				0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */,
 				0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */,
@@ -575,7 +637,9 @@
 				D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
 				D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */,
+				D1C8808C1E6FFF8600947FFA /* FPSectionDataMetric.m in Sources */,
 				D122EC401E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m in Sources */,
+				D1C880A51E700D2300947FFA /* FPHelper.m in Sources */,
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
 				D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */,
 				D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */,
@@ -584,7 +648,9 @@
 				0C684D1B1DFE931E00D61B78 /* Restaurant.m in Sources */,
 				D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */,
 				D122EC441E124B9B00B8C08E /* FoodPinPresentAnimation.m in Sources */,
+				D1C880B11E70132F00947FFA /* NSObject+FPIdentifier.m in Sources */,
 				0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */,
+				D1C8809F1E700BC700947FFA /* FPDelegate.m in Sources */,
 				0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */,
 				0C97FE271DD9B33D0099113F /* main.m in Sources */,
 			);
