@@ -40,6 +40,9 @@
 		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 		D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
+		D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */; };
+		D1C880851E6FFC5B00947FFA /* FPTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */; };
+		D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */; };
 		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
 		D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +129,12 @@
 		D1B173D91E0922310019CBE0 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		D1B173DC1E0BADF30019CBE0 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
+		D1C880801E6FFC0F00947FFA /* FPTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTableViewDataSource.h; sourceTree = "<group>"; };
+		D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewDataSource.m; sourceTree = "<group>"; };
+		D1C880831E6FFC5B00947FFA /* FPTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTableViewDelegate.h; sourceTree = "<group>"; };
+		D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewDelegate.m; sourceTree = "<group>"; };
+		D1C880861E6FFC8D00947FFA /* FPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTableViewCell.h; sourceTree = "<group>"; };
+		D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewCell.m; sourceTree = "<group>"; };
 		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
 		D1D9854A1E0E79C4006F0B8C /* Restaurants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurants.h; sourceTree = "<group>"; };
 		D1D9854C1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPhotoBrowseCollectionViewController.h; sourceTree = "<group>"; };
@@ -208,6 +217,7 @@
 		0C97FE241DD9B33D0099113F /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				D1C8807F1E6FF9D600947FFA /* FPBaseTableViewController */,
 				D122EC521E1C90EE00B8C08E /* PublicUI */,
 				D122EC411E124A4400B8C08E /* Transitiondelegate */,
 				D1B173D91E0922310019CBE0 /* FoodPin.entitlements */,
@@ -319,6 +329,19 @@
 				D122EC541E1C917600B8C08E /* FPAlertController.m */,
 			);
 			path = PublicUI;
+			sourceTree = "<group>";
+		};
+		D1C8807F1E6FF9D600947FFA /* FPBaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D1C880801E6FFC0F00947FFA /* FPTableViewDataSource.h */,
+				D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */,
+				D1C880831E6FFC5B00947FFA /* FPTableViewDelegate.h */,
+				D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */,
+				D1C880861E6FFC8D00947FFA /* FPTableViewCell.h */,
+				D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */,
+			);
+			path = FPBaseTableViewController;
 			sourceTree = "<group>";
 		};
 		D1D985471E0E7953006F0B8C /* Restaurants */ = {
@@ -549,11 +572,14 @@
 				0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */,
 				D1658B8D1E5D5AEC00757693 /* RestaurantSearchResultViewController.m in Sources */,
 				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
+				D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */,
 				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
 				D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */,
 				D122EC401E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m in Sources */,
 				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
 				D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */,
+				D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */,
+				D1C880851E6FFC5B00947FFA /* FPTableViewDelegate.m in Sources */,
 				0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */,
 				0C684D1B1DFE931E00D61B78 /* Restaurant.m in Sources */,
 				D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */,

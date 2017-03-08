@@ -38,8 +38,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.navigationController.hidesBarsOnSwipe = NO;
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    //self.navigationController.hidesBarsOnSwipe = NO;
+    //[self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)initCellArray {

@@ -30,8 +30,6 @@
     [self.view addSubview:self.searchResultTableView];
     self.searchResultTableView.estimatedRowHeight = 80;
     self.searchResultTableView.rowHeight = UITableViewAutomaticDimension;
-    //self.searchResultTableView.backgroundColor = [UIColor yellowColor];
-    self.definesPresentationContext = YES;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,8 +53,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
     detailViewController.restaurant = _searchResultRestaurants[indexPath.row];
+    self.navigationController.definesPresentationContext = YES;
+    //self.definesPresentationContext = YES;
     [detailViewController setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    NSLog(@"%@", self.navigationController);
+    [self.presentingViewController.navigationController pushViewController:detailViewController animated:YES];
+    //[self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 
@@ -66,7 +68,7 @@
     
     RestaurantTableViewCell *restaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!restaurantCell) {
-        restaurantCell = [[RestaurantTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        restaurantCell = [[RestaurantTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         restaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
