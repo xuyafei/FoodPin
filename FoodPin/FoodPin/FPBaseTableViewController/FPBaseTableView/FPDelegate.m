@@ -14,7 +14,6 @@
 
 @interface FPDelegate ()
 @property (nonatomic, weak, readwrite) UITableView *tableView;
-@property (nonatomic, weak, readwrite) UICollectionView *collectionView;
 
 @property (nonatomic, assign) BOOL scrollingToTop;
 @property (nonatomic, strong, readwrite, nullable) NSValue *targetRect;
@@ -41,27 +40,10 @@
     return self;
 }
 
-- (instancetype)initWithCollectionView:(UICollectionView *)collectionView {
-    NSAssert(collectionView, NSLocalizedString(@"CollectionView can not be nil", nil));
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    _collectionView = collectionView;
-    
-    return self;
-}
-
-
 #pragma mark - Accessor
 
 - (nonnull FPDataSource *)dataSource {
-    if (self.tableView) {
-        return (FPDataSource *)self.tableView.dataSource;
-    }
-    
-    return (FPDataSource *)self.collectionView.dataSource;
+   return (FPDataSource *)self.tableView.dataSource;
 }
 
 - (nonnull FPGlobalDataMetric *)globalDataMetric {
@@ -96,9 +78,9 @@
     if (!lazyLoadable) {
         return;
     }
-    NSArray *visibleIndexPaths = self.tableView ? [self.tableView indexPathsForVisibleRows] : [self.collectionView indexPathsForVisibleItems];
+    NSArray *visibleIndexPaths = self.tableView.indexPathsForVisibleRows;
     for (NSIndexPath *indexPath in visibleIndexPaths) {
-        id cell = self.tableView ? [self.tableView cellForRowAtIndexPath:indexPath] : [self.collectionView cellForItemAtIndexPath:indexPath];
+        id cell =  [self.tableView cellForRowAtIndexPath:indexPath];
         id data = [self.dataSource.globalDataMetric dataForItemAtIndexPath:indexPath];
         if (cell && data) {
             [lazyLoadable lazyLoadImagesData:data forReusableCell:cell];
@@ -126,12 +108,7 @@
         return;
     }
     
-    if (self.tableView) {
-        [self loadContentForTableView];
-    }
-    else {
-        [self loadConentForCollectionView];
-    }
+   [self loadContentForTableView];
 }
 
 - (void)loadContentForTableView {
@@ -141,13 +118,7 @@
     [self.tableView reloadData];
 }
 
-- (void)loadConentForCollectionView {
-    if (self.collectionView.indexPathsForVisibleItems.count <= 0) {
-        return;
-    }
-    [self.collectionView reloadData];
-    
-}
+
 
 
 #pragma mark - UITableViewDelegate helper methods
@@ -156,31 +127,5 @@
     return [self.dataSource _heightForRowAtIndexPath:indexPath];
 }
 
-- (CGFloat)heightForHeaderInSection:(NSInteger)section {
-    return [self.dataSource _heightForHeaderInSection:section];
-}
-
-- (nullable UIView *)viewForHeaderInSection:(NSInteger)section {
-    return [self.dataSource _viewForHeaderInSection:section];
-}
-
-- (CGFloat)heightForFooterInSection:(NSInteger)section {
-    return [self.dataSource _heightForFooterInSection:section];
-}
-
-- (nullable UIView *)viewForFooterInSection:(NSInteger)section {
-    return [self.dataSource _viewForFooterInSection:section];
-}
-
-
-#pragma mark - UICollectionViewDelegate helper methods
-
-- (CGSize)sizeForItemAtIndexPath:(nonnull NSIndexPath *)indexPath preferredLayoutSizeFittingSize:(CGSize)fittingSize cellType:(nonnull Class)type {
-    return [self.dataSource _sizeForItemAtIndexPath:indexPath preferredLayoutSizeFittingSize:fittingSize cellType:type];
-}
-
-- (CGSize)sizeForSupplementaryViewAtIndexPath:(nonnull NSIndexPath *)indexPath preferredLayoutSizeFittingSize:(CGSize)fittingSize cellType:(nonnull Class)type ofKind:(nonnull NSString *)kind {
-    return [self.dataSource _sizeForSupplementaryViewAtIndexPath:indexPath preferredLayoutSizeFittingSize:fittingSize cellType:type ofKind:kind];
-}
 
 @end

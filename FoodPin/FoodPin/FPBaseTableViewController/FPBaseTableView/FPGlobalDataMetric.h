@@ -12,9 +12,6 @@
 @interface FPGlobalDataMetric : NSObject
 /// NSArray parameter must contains all instance kinda `TCSectionDataMetric`.
 - (nullable instancetype)initWithSectionDataMetrics:(nonnull NSArray<FPSectionDataMetric *> *)sectionDataMetrics;
-/// UITableView only.
-- (nullable instancetype)initWithSectionDataMetrics:(nonnull NSArray<FPSectionDataMetric *> *)sectionDataMetrics dataForHeader:(nonnull id)dataForHeader dataForFooter:(nonnull id)dataForFooter;
-
 /// Return empty instance
 + (nullable instancetype)empty;
 
@@ -44,40 +41,6 @@
 
 /// All data.
 - (nullable NSArray *)allData;
-
-
-/// UITableView only, return the specific section header title
-- (nullable NSString *)titleForHeaderInSection:(NSInteger)section;
-
-/// UITableView only, return the specific section footer title
-- (nullable NSString *)titleForFooterInSection:(NSInteger)section;
-
-/// UITableView only, return the specific section header data
-- (nullable id)dataForHeaderInSection:(NSInteger)section;
-
-/// UITableView only, return the specific section header data
-- (nullable id)dataForFooterInSection:(NSInteger)section;
-
-/// UITableView only, return the specific header index
-- (NSInteger)indexOfHeaderData:(nonnull id)data;
-
-/// UITableView only, return the specific footer index
-- (NSInteger)indexOfFooterData:(nonnull id)data;
-
-/// UITableView only, return the table view header data
-- (nullable id)dataForHeader;
-
-/// UITableView only, return the table view footer data
-- (nullable id)dataForFooter;
-
-/// UICollectionView only, the data for specific kind at indexPath
-- (nullable id)dataForSupplementaryHeaderAtIndexPath:(nonnull NSIndexPath *)indexPath;
-
-/// UICollectionView only, the data for specific kind at indexPath
-- (nullable id)dataForSupplementaryFooterAtIndexPath:(nonnull NSIndexPath *)indexPath;
-
-/// UICollectionView only,
-- (nullable id)dataForSupplementaryElementOfKind:(nonnull NSString *)kind atIndexPath:(nonnull NSIndexPath *)indexPath __attribute__((deprecated("use `dataForSupplementaryHeaderAtIndexPath:` or `dataForSupplementaryFooterAtIndexPath` instead.")));
 
 /// Private: Section index titles.
 - (nullable NSArray<NSString *> *)sectionIndexTitles;
@@ -172,10 +135,5 @@
 
 - (void)invalidateCachedCellHeightForIndexPath:(nonnull NSIndexPath *)indexPath;
 - (void)invalidateCachedCellSizeForIndexPath:(nonnull NSIndexPath *)indexPath;
-- (void)invalidateCachedHeightForHeaderInSection:(NSInteger)section;
-- (void)invalidateCachedHeightForFooterInSection:(NSInteger)section;
-- (void)invalidateCachedSizeForHeaderInSection:(NSInteger)section;
-- (void)invalidateCachedSizeForFooterInSection:(NSInteger)section;
-
 @end
 

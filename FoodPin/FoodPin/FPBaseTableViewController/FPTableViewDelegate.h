@@ -6,8 +6,8 @@
 //  Copyright © 2017年 永康范. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "FPDelegate.h"
 
-@interface FPTableViewDelegate : NSObject
+@interface FPTableViewDelegate : FPDelegate
 
 @end

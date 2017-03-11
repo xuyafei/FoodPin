@@ -7,52 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */; };
 		0C4AF2011DE0392D00AB074F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4AF2001DE0392D00AB074F /* MapKit.framework */; };
-		0C4AF2041DE1A1FB00AB074F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2031DE1A1FB00AB074F /* MapViewController.m */; };
-		0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */; };
-		0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2091DE29D3800AB074F /* AddPhotoTableViewCell.m */; };
-		0C4AF20D1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20C1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m */; };
-		0C4AF2101DE4482F00AB074F /* WalkthroughContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */; };
-		0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */; };
-		0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2151DE5D49700AB074F /* FoodPinRootViewController.m */; };
-		0C4AF2191DE5D6B000AB074F /* RestaurantDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */; };
-		0C4AF21C1DE5D6D200AB074F /* RestaurantAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21B1DE5D6D200AB074F /* RestaurantAboutViewController.m */; };
-		0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21E1DE7346500AB074F /* WebViewController.m */; };
 		0C4AF2211DE73E1B00AB074F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4AF2201DE73E1B00AB074F /* SafariServices.framework */; };
-		0C684D1A1DFE931E00D61B78 /* Restaurant+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */; };
-		0C684D1B1DFE931E00D61B78 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D191DFE931E00D61B78 /* Restaurant.m */; };
-		0C97FE271DD9B33D0099113F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
-		0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
-		0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
 		0C97FE321DD9B33D0099113F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C97FE311DD9B33D0099113F /* Assets.xcassets */; };
 		0C97FE351DD9B33D0099113F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C97FE331DD9B33D0099113F /* LaunchScreen.storyboard */; };
 		0C97FE401DD9B33D0099113F /* FoodPinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE3F1DD9B33D0099113F /* FoodPinTests.m */; };
 		0C97FE4B1DD9B33D0099113F /* FoodPinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE4A1DD9B33D0099113F /* FoodPinUITests.m */; };
-		0C97FE5B1DDAE65F0099113F /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE5A1DDAE65F0099113F /* RestaurantTableViewCell.m */; };
-		0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE5D1DDC31720099113F /* RestaurantDetailViewController.m */; };
-		0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */; };
 		7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */; };
-		D122EC401E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC3F1E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m */; };
-		D122EC441E124B9B00B8C08E /* FoodPinPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */; };
-		D122EC551E1C917600B8C08E /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
-		D1658B8D1E5D5AEC00757693 /* RestaurantSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */; };
 		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
-		D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
-		D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */; };
-		D1C880851E6FFC5B00947FFA /* FPTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */; };
-		D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */; };
-		D1C8808C1E6FFF8600947FFA /* FPSectionDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8808B1E6FFF8600947FFA /* FPSectionDataMetric.m */; };
-		D1C880921E7001CA00947FFA /* FPGlobalDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880911E7001CA00947FFA /* FPGlobalDataMetric.m */; };
-		D1C880991E70098A00947FFA /* FPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880981E70098A00947FFA /* FPDataSource.m */; };
-		D1C8809F1E700BC700947FFA /* FPDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8809E1E700BC700947FFA /* FPDelegate.m */; };
-		D1C880A51E700D2300947FFA /* FPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880A41E700D2300947FFA /* FPHelper.m */; };
-		D1C880AE1E700EB200947FFA /* ResuableView+FPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880AD1E700EB200947FFA /* ResuableView+FPExtension.m */; };
-		D1C880B11E70132F00947FFA /* NSObject+FPIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */; };
-		D1C880B41E7013FE00947FFA /* FPDefaultSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */; };
-		D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
-		D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
+		D1C880C31E73A1DD00947FFA /* FPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880811E6FFC0F00947FFA /* FPTableViewDataSource.m */; };
+		D1C880C41E73A1DD00947FFA /* FPTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */; };
+		D1C880C51E73A1DD00947FFA /* FPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */; };
+		D1C880C61E73A1DD00947FFA /* FPTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B61E70E75E00947FFA /* FPTableViewHeaderFooterView.m */; };
+		D1C880C71E73A1DD00947FFA /* FPSectionDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8808B1E6FFF8600947FFA /* FPSectionDataMetric.m */; };
+		D1C880C81E73A1DD00947FFA /* FPGlobalDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880911E7001CA00947FFA /* FPGlobalDataMetric.m */; };
+		D1C880C91E73A1DD00947FFA /* FPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880981E70098A00947FFA /* FPDataSource.m */; };
+		D1C880CA1E73A1DD00947FFA /* FPDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C8809E1E700BC700947FFA /* FPDelegate.m */; };
+		D1C880CB1E73A1DD00947FFA /* FPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880A41E700D2300947FFA /* FPHelper.m */; };
+		D1C880CC1E73A1DD00947FFA /* ResuableView+FPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880AD1E700EB200947FFA /* ResuableView+FPExtension.m */; };
+		D1C880CD1E73A1DD00947FFA /* NSObject+FPIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */; };
+		D1C880CE1E73A1DD00947FFA /* FPDefaultSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */; };
+		D1C880CF1E73A1DD00947FFA /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
+		D1C880D01E73A1DD00947FFA /* FoodPinPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */; };
+		D1C880D11E73A1DD00947FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE291DD9B33D0099113F /* AppDelegate.m */; };
+		D1C880D21E73A1DD00947FFA /* FoodPinRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2151DE5D49700AB074F /* FoodPinRootViewController.m */; };
+		D1C880D31E73A1DD00947FFA /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */; };
+		D1C880D41E73A1DD00947FFA /* RestaurantDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */; };
+		D1C880D51E73A1DD00947FFA /* RestaurantAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21B1DE5D6D200AB074F /* RestaurantAboutViewController.m */; };
+		D1C880D61E73A1DD00947FFA /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE5D1DDC31720099113F /* RestaurantDetailViewController.m */; };
+		D1C880D71E73A1DD00947FFA /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */; };
+		D1C880D81E73A1DD00947FFA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2031DE1A1FB00AB074F /* MapViewController.m */; };
+		D1C880D91E73A1DD00947FFA /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */; };
+		D1C880DA1E73A1DD00947FFA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF21E1DE7346500AB074F /* WebViewController.m */; };
+		D1C880DB1E73A1DD00947FFA /* WalkthroughContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20F1DE4482F00AB074F /* WalkthroughContentViewController.m */; };
+		D1C880DC1E73A1DD00947FFA /* WalkthroughPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2121DE4574F00AB074F /* WalkthroughPageViewController.m */; };
+		D1C880DD1E73A1DD00947FFA /* Restaurants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D985481E0E79A9006F0B8C /* Restaurants.m */; };
+		D1C880DE1E73A1DD00947FFA /* Restaurant+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */; };
+		D1C880DF1E73A1DD00947FFA /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D191DFE931E00D61B78 /* Restaurant.m */; };
+		D1C880E01E73A1DD00947FFA /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE5A1DDAE65F0099113F /* RestaurantTableViewCell.m */; };
+		D1C880E11E73A1DD00947FFA /* RestaurantDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */; };
+		D1C880E21E73A1DD00947FFA /* AddPhotoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF2091DE29D3800AB074F /* AddPhotoTableViewCell.m */; };
+		D1C880E31E73A1DD00947FFA /* AddRestaurantInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4AF20C1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m */; };
+		D1C880E41E73A1DD00947FFA /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */; };
+		D1C880E51E73A1DD00947FFA /* FoodPhotoBrowserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC3F1E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m */; };
+		D1C880E61E73A22400947FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE261DD9B33D0099113F /* main.m */; };
+		D1C880E71E73A22400947FFA /* FoodPhotoBrowseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D9854D1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m */; };
+		D1C880E81E73A22400947FFA /* RestaurantSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +165,8 @@
 		D1C880B01E70132F00947FFA /* NSObject+FPIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FPIdentifier.m"; sourceTree = "<group>"; };
 		D1C880B21E7013FE00947FFA /* FPDefaultSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPDefaultSupplementaryView.h; sourceTree = "<group>"; };
 		D1C880B31E7013FE00947FFA /* FPDefaultSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPDefaultSupplementaryView.m; sourceTree = "<group>"; };
+		D1C880B51E70E75E00947FFA /* FPTableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		D1C880B61E70E75E00947FFA /* FPTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		D1D985481E0E79A9006F0B8C /* Restaurants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurants.m; sourceTree = "<group>"; };
 		D1D9854A1E0E79C4006F0B8C /* Restaurants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurants.h; sourceTree = "<group>"; };
 		D1D9854C1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPhotoBrowseCollectionViewController.h; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				D1C880841E6FFC5B00947FFA /* FPTableViewDelegate.m */,
 				D1C880861E6FFC8D00947FFA /* FPTableViewCell.h */,
 				D1C880871E6FFC8D00947FFA /* FPTableViewCell.m */,
+				D1C880B51E70E75E00947FFA /* FPTableViewHeaderFooterView.h */,
+				D1C880B61E70E75E00947FFA /* FPTableViewHeaderFooterView.m */,
 				D1C880891E6FFF4400947FFA /* FPBaseTableView */,
 			);
 			path = FPBaseTableViewController;
@@ -430,11 +435,11 @@
 			buildConfigurationList = 0C97FE4F1DD9B33D0099113F /* Build configuration list for PBXNativeTarget "FoodPin" */;
 			buildPhases = (
 				26A4BFCB0495BC39905E8147 /* [CP] Check Pods Manifest.lock */,
-				0C97FE1E1DD9B33D0099113F /* Sources */,
 				0C97FE1F1DD9B33D0099113F /* Frameworks */,
 				0C97FE201DD9B33D0099113F /* Resources */,
 				8F04B8D6FB46D0027126FFDA /* [CP] Embed Pods Frameworks */,
 				009E21C9349420235739CC57 /* [CP] Copy Pods Resources */,
+				D1C880C21E739F0800947FFA /* Sources */,
 			);
 			buildRules = (
 			);
@@ -612,50 +617,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C97FE1E1DD9B33D0099113F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1C880AE1E700EB200947FFA /* ResuableView+FPExtension.m in Sources */,
-				0C4AF21C1DE5D6D200AB074F /* RestaurantAboutViewController.m in Sources */,
-				0C4AF20D1DE29E3F00AB074F /* AddRestaurantInfoTableViewCell.m in Sources */,
-				0C4AF2101DE4482F00AB074F /* WalkthroughContentViewController.m in Sources */,
-				D122EC551E1C917600B8C08E /* FPAlertController.m in Sources */,
-				0C684D1A1DFE931E00D61B78 /* Restaurant+CoreDataProperties.m in Sources */,
-				D1C880B41E7013FE00947FFA /* FPDefaultSupplementaryView.m in Sources */,
-				D1C880921E7001CA00947FFA /* FPGlobalDataMetric.m in Sources */,
-				0C97FE5B1DDAE65F0099113F /* RestaurantTableViewCell.m in Sources */,
-				0C97FE651DDC9CD50099113F /* RestaurantDetailTableViewCell.m in Sources */,
-				0C4AF2191DE5D6B000AB074F /* RestaurantDiscoverViewController.m in Sources */,
-				0C4AF1FF1DDEF2A100AB074F /* ReviewViewController.m in Sources */,
-				D1C880991E70098A00947FFA /* FPDataSource.m in Sources */,
-				0C4AF2041DE1A1FB00AB074F /* MapViewController.m in Sources */,
-				0C97FE5E1DDC31720099113F /* RestaurantDetailViewController.m in Sources */,
-				0C4AF2161DE5D49700AB074F /* FoodPinRootViewController.m in Sources */,
-				D1658B8D1E5D5AEC00757693 /* RestaurantSearchResultViewController.m in Sources */,
-				0C97FE2D1DD9B33D0099113F /* RestaurantViewController.m in Sources */,
-				D1C880821E6FFC0F00947FFA /* FPTableViewDataSource.m in Sources */,
-				0C97FE2A1DD9B33D0099113F /* AppDelegate.m in Sources */,
-				D1D9854E1E11656D006F0B8C /* FoodPhotoBrowseCollectionViewController.m in Sources */,
-				D1C8808C1E6FFF8600947FFA /* FPSectionDataMetric.m in Sources */,
-				D122EC401E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m in Sources */,
-				D1C880A51E700D2300947FFA /* FPHelper.m in Sources */,
-				0C4AF2071DE286F000AB074F /* AddRestaurantViewController.m in Sources */,
-				D1D985491E0E79A9006F0B8C /* Restaurants.m in Sources */,
-				D1C880881E6FFC8D00947FFA /* FPTableViewCell.m in Sources */,
-				D1C880851E6FFC5B00947FFA /* FPTableViewDelegate.m in Sources */,
-				0C4AF21F1DE7346500AB074F /* WebViewController.m in Sources */,
-				0C684D1B1DFE931E00D61B78 /* Restaurant.m in Sources */,
-				D1B173DE1E0BADF30019CBE0 /* DiscoverTableViewCell.m in Sources */,
-				D122EC441E124B9B00B8C08E /* FoodPinPresentAnimation.m in Sources */,
-				D1C880B11E70132F00947FFA /* NSObject+FPIdentifier.m in Sources */,
-				0C4AF20A1DE29D3800AB074F /* AddPhotoTableViewCell.m in Sources */,
-				D1C8809F1E700BC700947FFA /* FPDelegate.m in Sources */,
-				0C4AF2131DE4574F00AB074F /* WalkthroughPageViewController.m in Sources */,
-				0C97FE271DD9B33D0099113F /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0C97FE371DD9B33D0099113F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -669,6 +630,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C97FE4B1DD9B33D0099113F /* FoodPinUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1C880C21E739F0800947FFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C880E61E73A22400947FFA /* main.m in Sources */,
+				D1C880E71E73A22400947FFA /* FoodPhotoBrowseCollectionViewController.m in Sources */,
+				D1C880E81E73A22400947FFA /* RestaurantSearchResultViewController.m in Sources */,
+				D1C880C31E73A1DD00947FFA /* FPTableViewDataSource.m in Sources */,
+				D1C880C41E73A1DD00947FFA /* FPTableViewDelegate.m in Sources */,
+				D1C880C51E73A1DD00947FFA /* FPTableViewCell.m in Sources */,
+				D1C880C61E73A1DD00947FFA /* FPTableViewHeaderFooterView.m in Sources */,
+				D1C880C71E73A1DD00947FFA /* FPSectionDataMetric.m in Sources */,
+				D1C880C81E73A1DD00947FFA /* FPGlobalDataMetric.m in Sources */,
+				D1C880C91E73A1DD00947FFA /* FPDataSource.m in Sources */,
+				D1C880CA1E73A1DD00947FFA /* FPDelegate.m in Sources */,
+				D1C880CB1E73A1DD00947FFA /* FPHelper.m in Sources */,
+				D1C880CC1E73A1DD00947FFA /* ResuableView+FPExtension.m in Sources */,
+				D1C880CD1E73A1DD00947FFA /* NSObject+FPIdentifier.m in Sources */,
+				D1C880CE1E73A1DD00947FFA /* FPDefaultSupplementaryView.m in Sources */,
+				D1C880CF1E73A1DD00947FFA /* FPAlertController.m in Sources */,
+				D1C880D01E73A1DD00947FFA /* FoodPinPresentAnimation.m in Sources */,
+				D1C880D11E73A1DD00947FFA /* AppDelegate.m in Sources */,
+				D1C880D21E73A1DD00947FFA /* FoodPinRootViewController.m in Sources */,
+				D1C880D31E73A1DD00947FFA /* RestaurantViewController.m in Sources */,
+				D1C880D41E73A1DD00947FFA /* RestaurantDiscoverViewController.m in Sources */,
+				D1C880D51E73A1DD00947FFA /* RestaurantAboutViewController.m in Sources */,
+				D1C880D61E73A1DD00947FFA /* RestaurantDetailViewController.m in Sources */,
+				D1C880D71E73A1DD00947FFA /* ReviewViewController.m in Sources */,
+				D1C880D81E73A1DD00947FFA /* MapViewController.m in Sources */,
+				D1C880D91E73A1DD00947FFA /* AddRestaurantViewController.m in Sources */,
+				D1C880DA1E73A1DD00947FFA /* WebViewController.m in Sources */,
+				D1C880DB1E73A1DD00947FFA /* WalkthroughContentViewController.m in Sources */,
+				D1C880DC1E73A1DD00947FFA /* WalkthroughPageViewController.m in Sources */,
+				D1C880DD1E73A1DD00947FFA /* Restaurants.m in Sources */,
+				D1C880DE1E73A1DD00947FFA /* Restaurant+CoreDataProperties.m in Sources */,
+				D1C880DF1E73A1DD00947FFA /* Restaurant.m in Sources */,
+				D1C880E01E73A1DD00947FFA /* RestaurantTableViewCell.m in Sources */,
+				D1C880E11E73A1DD00947FFA /* RestaurantDetailTableViewCell.m in Sources */,
+				D1C880E21E73A1DD00947FFA /* AddPhotoTableViewCell.m in Sources */,
+				D1C880E31E73A1DD00947FFA /* AddRestaurantInfoTableViewCell.m in Sources */,
+				D1C880E41E73A1DD00947FFA /* DiscoverTableViewCell.m in Sources */,
+				D1C880E51E73A1DD00947FFA /* FoodPhotoBrowserCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

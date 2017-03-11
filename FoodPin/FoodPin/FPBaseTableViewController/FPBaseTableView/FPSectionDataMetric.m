@@ -13,15 +13,7 @@
 
 @interface FPSectionDataMetric ()
 @property (nonatomic, strong, readwrite, nonnull) NSMutableArray *itemsData;
-@property (nonatomic, copy, nonnull) NSString *titleForHeader;
-@property (nonatomic, copy, nonnull) NSString *titleForFooter;
-@property (nonatomic, strong, nonnull) id dataForHeader;
-@property (nonatomic, strong, nonnull) id dataForFooter;
 @property (nonatomic, copy, nonnull) NSString *indexTitle;
-
-@property (nonatomic, strong, nonnull) NSArray *dataForSupplementaryHeader;
-@property (nonatomic, strong, nonnull) NSArray *dataForSupplementaryFooter;
-
 @property (nonatomic, strong) NSMutableArray<NSNumber *> *cachedHeightForCell;
 @property (nonatomic, strong) NSMutableArray<NSValue *> *cachedSizeForCell;
 
@@ -43,11 +35,6 @@
     }
     
     _itemsData = [itemsData mutableCopy];
-    _cachedHeightForHeader = UITableViewAutomaticDimension;
-    _cachedHeightForFooter = UITableViewAutomaticDimension;
-    _cachedSizeForHeader = CGSizeZero;
-    _cachedSizeForFooter = CGSizeZero;
-    
     return self;
 }
 
@@ -55,47 +42,6 @@
     self = [self initWithItemsData:itemsData];
     
     _indexTitle = indexTitle;
-    
-    return self;
-}
-
-- (nullable instancetype)initWithItemsData:(nonnull NSArray *)itemsData titleForHeader:(nonnull NSString *)titleForHeader titleForFooter:(nonnull NSString *)titleForFooter {
-    self = [self initWithItemsData:itemsData];
-    
-    _titleForHeader = titleForHeader;
-    _titleForFooter = titleForFooter;
-    
-    return self;
-}
-
-- (nullable instancetype)initWithItemsData:(nonnull NSArray *)itemsData titleForHeader:(nonnull NSString *)titleForHeader titleForFooter:(nonnull NSString *)titleForFooter indexTitle:(nonnull NSString *)indexTitle {
-    self = [self initWithItemsData:itemsData titleForHeader:titleForHeader titleForFooter:titleForFooter];
-    
-    _indexTitle = indexTitle;
-    
-    return self;
-}
-
-- (nullable instancetype)initWithItemsData:(nonnull NSArray *)itemsData dataForHeader:(nonnull id)dataForHeader dataForFooter:(nonnull id)dataForFooter {
-    self = [self initWithItemsData:itemsData];
-    
-    _dataForHeader = dataForHeader;
-    _dataForFooter = dataForFooter;
-    
-    return self;
-}
-
-- (nullable instancetype)initWithItemsData:(nonnull NSArray *)itemsData dataForHeader:(nonnull id)dataForHeader dataForFooter:(nonnull id)dataForFooter indexTitle:(nonnull NSString *)indexTitle {
-    self = [self initWithItemsData:itemsData dataForHeader:dataForHeader dataForFooter:dataForFooter];
-    _indexTitle = indexTitle;
-    return self;
-}
-
-- (nullable instancetype)initWithItemsData:(nonnull NSArray *)itemsData dataForSupplementaryHeader:(nonnull NSArray *)dataForSupplementaryHeader dataForSupplementaryFooter:(nonnull NSArray *)dataForSupplementaryFooter {
-    self = [self initWithItemsData:itemsData];
-    
-    _dataForSupplementaryHeader = dataForSupplementaryHeader;
-    _dataForSupplementaryFooter = dataForSupplementaryFooter;
     
     return self;
 }
@@ -147,42 +93,10 @@
     return self.itemsData[index];
 }
 
-- (nullable NSString *)titleForHeader {
-    return _titleForHeader;
-}
-
-- (nullable NSString *)titleForFooter {
-    return _titleForFooter;
-}
-
-- (nullable id)dataForHeader {
-    return _dataForHeader;
-}
-
-- (nullable id)dataForFooter {
-    return _dataForFooter;
-}
 
 - (nullable NSString *)indexTitle {
     return _indexTitle;
 }
-
-- (nullable id)dataForSupplementaryHeaderAtIndex:(NSInteger)index {
-    if (self.dataForSupplementaryHeader.count <= index) {
-        return nil;
-    }
-    
-    return self.dataForSupplementaryHeader[index];
-}
-
-- (nullable id)dataForSupplementaryFooterAtIndex:(NSInteger)index {
-    if (self.dataForSupplementaryFooter.count <= index) {
-        return nil;
-    }
-    
-    return self.dataForSupplementaryFooter[index];
-}
-
 
 #pragma mark - Modify
 
@@ -378,23 +292,6 @@
     validateNoneInsertElementArgumentIndex(self.itemsData, index, __FILE__, __LINE__, __FUNCTION__);
     self.cachedSizeForCell[index] = [NSValue valueWithCGSize:CGSizeZero];
 }
-
-- (void)invalidateCachedHeightForHeader {
-    self.cachedHeightForHeader = 0.0f;
-}
-
-- (void)invalidateCachedHeightForFooter {
-    self.cachedHeightForFooter = 0.0f;
-}
-
-- (void)invalidateCachedSizeForHeader {
-    self.cachedSizeForHeader = CGSizeZero;
-}
-
-- (void)invalidateCachedSizeForFooter {
-    self.cachedSizeForFooter = CGSizeZero;
-}
-
 
 #pragma mark - Description
 

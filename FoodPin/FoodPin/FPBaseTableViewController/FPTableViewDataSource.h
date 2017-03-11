@@ -6,8 +6,8 @@
 //  Copyright © 2017年 永康范. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "FPDataSource.h"
 
-@interface FPTableViewDataSource : NSObject
+@interface FPTableViewDataSource : FPDataSource <FPDataSourceable, FPTableViewEditable>
 
 @end

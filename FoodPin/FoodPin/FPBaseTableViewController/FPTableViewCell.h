@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FPTableViewCell : UITableViewCell
-
+- (void)setupData:(id)data;
 @end

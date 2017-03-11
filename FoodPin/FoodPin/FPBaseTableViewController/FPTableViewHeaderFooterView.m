@@ -1,22 +1,24 @@
 //
-//  FPTableViewCell.m
+//  FPTableViewHeaderFooterView.m
 //  FoodPin
 //
-//  Created by polycom on 2017/3/8.
+//  Created by polycom on 2017/3/9.
 //  Copyright © 2017年 永康范. All rights reserved.
 //
 
-#import "FPTableViewCell.h"
+#import "FPTableViewHeaderFooterView.h"
 #import <Masonry/Masonry.h>
 
-@interface FPTableViewCell ()
+
+@interface FPTableViewHeaderFooterView ()
 @property (nonatomic, strong) UILabel *nameLabel;
 @end
 
-@implementation FPTableViewCell
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+@implementation FPTableViewHeaderFooterView
+
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithReuseIdentifier:reuseIdentifier];
     if (!self) {
         return nil;
     }
@@ -31,7 +33,7 @@
     [super layoutSubviews];
     [self.contentView setNeedsLayout];
     [self.contentView layoutIfNeeded];
-    self.nameLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.nameLabel.bounds);
+    self.nameLabel.preferredMaxLayoutWidth = CGRectGetWidth(self.nameLabel.bounds) - 16;
 }
 
 - (void)setupUserInterface {
@@ -58,6 +60,7 @@
     if (!_nameLabel) {
         _nameLabel = [UILabel new];
         _nameLabel.numberOfLines = 0;
+        _nameLabel.backgroundColor = [UIColor yellowColor];
     }
     return _nameLabel;
 }
