@@ -15,7 +15,6 @@
 
 @property (nonatomic, weak, readonly, nullable) UITableView *tableView;
 - (nullable instancetype)initWithTableView:(nonnull UITableView *)tableView;
-/// The tableview or collction view data metric.
 @property (nonatomic, strong, nonnull) FPGlobalDataMetric *globalDataMetric;
 
 - (nullable FPDelegate *)delegate;

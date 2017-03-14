@@ -21,7 +21,6 @@
 @interface FPDataSource ()
 
 @property (nonatomic, weak, readwrite) UITableView *tableView;
-@property (nonatomic, weak, readwrite) UICollectionView *collectionView;
 
 @property (nonatomic, weak, nullable) id<FPDataSourceable> sourceable;
 @property (nonatomic, weak, nullable, readwrite) id<FPImageLazyLoadable> lazyLoadable;
@@ -77,10 +76,6 @@
     if (self.tableView) {
         return (FPDelegate *)self.tableView.delegate;
     }
-    else if (self.collectionView) {
-        return (FPDelegate *)self.collectionView.delegate;
-    }
-    
     return nil;
 }
 
@@ -195,42 +190,6 @@
     
     return height;
 }
-#pragma mark - TCDataSourceable
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return [self.globalDataMetric numberOfSections];
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.globalDataMetric numberOfItemsInSection:section];
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *identifier = [self.sourceable reusableCellIdentifierForIndexPath:indexPath];
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    [cell prepareForReuse];
-    
-    id data = [self.globalDataMetric dataForItemAtIndexPath:indexPath];
-    if (data && !self.delegate.scrollingToTop) {
-        [self.sourceable loadData:data forReusableCell:cell];
-        
-        if ([self conformsToProtocol:@protocol(FPImageLazyLoadable)]) {
-            CGRect targetRect = self.delegate.targetRect.CGRectValue;
-            if (CGRectIntersectsRect(targetRect, cell.frame)) {
-                id lazyLoadable = (id<FPImageLazyLoadable>)self;
-                [lazyLoadable lazyLoadImagesData:data forReusableCell:cell];
-            }
-        }
-    }
-    
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
-    
-    return cell;
-}
-
-
-
 
 @end
 

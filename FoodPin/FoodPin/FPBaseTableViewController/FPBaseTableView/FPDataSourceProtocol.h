@@ -27,45 +27,6 @@
 @end
 
 
-#pragma mark TCTableViewHeaderFooterViewibility
-
-@protocol FPTableViewHeaderFooterViewibility <NSObject>
-
-/// UITableView only, register the reuse header or footer view
-- (void)registerReusableHeaderFooterView;
-
-/// UITableView only, return the HeaderFooterView header reuse identifier for section
-- (nullable NSString *)reusableHeaderViewIdentifierInSection:(NSInteger)section;
-/// UITableView only, load data for specific UITableViewHeaderFooterView header
-- (void)loadData:(nonnull id)data forReusableHeaderView:(nonnull UITableViewHeaderFooterView *)headerView;
-
-/// UITableView only, return the HeaderFooterView footer reuse identifier for section
-- (nullable NSString *)reusableFooterViewIdentifierInSection:(NSInteger)section;
-/// UITableView only, load data for specific UITableViewHeaderFooterView footer
-- (void)loadData:(nonnull id)data forReusableFooterView:(nonnull UITableViewHeaderFooterView *)footerView;
-
-@end
-
-
-#pragma mark TCCollectionSupplementaryViewibility
-
-@protocol FPCollectionSupplementaryViewibility <NSObject>
-
-/// UICollectionView only, regiseter the supplementary class for reuse
-- (void)registerReusableSupplementaryView;
-
-/// UICollectionView only, return the supplementary header view reuse identifier for indexPath.
-- (nullable NSString *)reusableSupplementaryHeaderViewIdentifierForIndexPath:(nonnull NSIndexPath *)indexPath;
-/// UICollectionView only, load data for flow layout specific supplementary header view.
-- (void)loadData:(nonnull id)data forReusableSupplementaryHeaderView:(nonnull UICollectionReusableView *)reusableView;
-
-/// UICollectionView only, return the supplementary footer view reuse identifier for indexPath.
-- (nullable NSString *)reusableSupplementaryFooterViewIdentifierForIndexPath:(nonnull NSIndexPath *)indexPath;
-/// UICollectionView only, load data for flow layout specific supplementary footer view.
-- (void)loadData:(nonnull id)data forReusableSupplementaryFooterView:(nonnull UICollectionReusableView *)reusableView;
-
-@end
-
 
 #pragma mark TCTableViewEditable
 
