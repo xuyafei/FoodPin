@@ -9,29 +9,28 @@
 #import "ReviewViewController.h"
 #import "Masonry.h"
 
-@interface ReviewViewController () {
-    UIImageView *_backgroundImageView;
-    UIButton *_closeButton;
-    UILabel *_questionLabel;
-    UIButton *_dislikeButton;
-    UIButton *_greatButton;
-    UIButton *_goodButton;
-}
-@property(nonatomic, strong)NSString *imageString;
+@interface ReviewViewController ()
+@property(nonatomic, strong) NSString *imageString;
+@property(nonatomic, weak) UIImageView *backgroundImageView;
+@property(nonatomic, weak) UIButton *closeButton;
+@property(nonatomic, weak) UILabel *questionLabel;
+@property(nonatomic, weak) UIButton *dislikeButton;
+@property(nonatomic, weak) UIButton *greatButton;
+@property(nonatomic, weak) UIButton *goodButton;
 @end
 
 @implementation ReviewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self layoutSubViews];
+    [self configView];
     
     CGAffineTransform scale = CGAffineTransformMakeScale(0.0, 0.0);
     CGAffineTransform tranlate = CGAffineTransformMakeTranslation(0, 500);
     
-    _dislikeButton.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(0.0, 0.0), CGAffineTransformMakeTranslation(0, 500));
-    _goodButton.transform = CGAffineTransformConcat(scale, tranlate);
-    _greatButton.transform = CGAffineTransformConcat(scale, tranlate);
+    self.dislikeButton.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(0.0, 0.0), CGAffineTransformMakeTranslation(0, 500));
+    self.goodButton.transform = CGAffineTransformConcat(scale, tranlate);
+    self.greatButton.transform = CGAffineTransformConcat(scale, tranlate);
     
     self.imageString = @"";
 }
@@ -43,94 +42,129 @@
         _dislikeButton.transform = CGAffineTransformIdentity;
         _goodButton.transform = CGAffineTransformIdentity;
         _greatButton.transform = CGAffineTransformIdentity;
-    }
- completion:nil];
-    
+    } completion:nil];
 }
 
-- (void)layoutSubViews {
-    _backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    _backgroundImageView.image = [UIImage imageNamed:@"barrafina"];
-    [self.view addSubview:_backgroundImageView];
-    
+- (UIImageView *)backgroundImageView {
+    if(!_backgroundImageView) {
+        UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+        [self.view addSubview:backgroundImageView];
+        backgroundImageView.image = [UIImage imageNamed:@"barrafina"];
+        _backgroundImageView = backgroundImageView;
+    }
+    return _backgroundImageView;
+}
+
+- (UIButton *)closeButton {
+    if(!_closeButton) {
+       UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        closeButton.layer.cornerRadius = 15;
+        [closeButton setBackgroundImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [closeButton setTintColor:[UIColor whiteColor]];
+        [closeButton addTarget:self action:@selector(clickClose:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:closeButton];
+        _closeButton = closeButton;
+    }
+    return _closeButton;
+}
+
+- (UILabel *)questionLabel {
+    if(!_questionLabel) {
+        UILabel *questionLabel = [[UILabel alloc] init];
+        questionLabel.numberOfLines = 2;
+        questionLabel.text = @"You've dined here. What do you think?";
+        questionLabel.font = [UIFont systemFontOfSize:30.0];
+        questionLabel.textAlignment = NSTextAlignmentCenter;
+        [questionLabel setTextColor:[UIColor whiteColor]];
+        [self.view addSubview:questionLabel];
+        _questionLabel = questionLabel;
+    }
+    return _questionLabel;
+}
+
+- (UIButton *)dislikeButton {
+    if(!_dislikeButton) {
+        UIButton *dislikeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        dislikeButton.layer.cornerRadius = 35;
+        [dislikeButton setBackgroundImage:[[UIImage imageNamed:@"dislike"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        dislikeButton.backgroundColor = [UIColor redColor];
+        [dislikeButton setTintColor:[UIColor whiteColor]];
+        dislikeButton.tag = 101;
+        [dislikeButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:dislikeButton];
+        _dislikeButton = dislikeButton;
+    }
+    return _dislikeButton;
+}
+
+- (UIButton *)goodButton {
+    if(!_goodButton) {
+        UIButton *goodButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        goodButton.layer.cornerRadius = 35;
+        [goodButton setBackgroundImage:[[UIImage imageNamed:@"good"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        goodButton.backgroundColor = [UIColor redColor];
+        [goodButton setTintColor:[UIColor whiteColor]];
+        goodButton.tag = 102;
+        [goodButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:goodButton];
+        _goodButton = goodButton;
+    }
+    return _goodButton;
+}
+
+- (UIButton *)greatButton {
+    if(!_greatButton) {
+        UIButton *greatButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        greatButton.layer.cornerRadius = 35;
+        [greatButton setBackgroundImage:[[UIImage imageNamed:@"great"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        greatButton.backgroundColor = [UIColor redColor];
+        [greatButton setTintColor:[UIColor whiteColor]];
+        greatButton.tag = 103;
+        [greatButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:greatButton];
+        _greatButton = greatButton;
+    }
+    return _greatButton;
+}
+
+
+- (void)configView {
     UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
     blurEffectView.frame = self.view.bounds;
-    [_backgroundImageView addSubview:blurEffectView];
+    [self.backgroundImageView addSubview:blurEffectView];
     
-    _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _closeButton.layer.cornerRadius = 15;
-    [_closeButton setBackgroundImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    [_closeButton setTintColor:[UIColor whiteColor]];
-    [_closeButton addTarget:self action:@selector(clickClose:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_closeButton];
-    
-    _questionLabel = [[UILabel alloc] init];
-    _questionLabel.numberOfLines = 2;
-    _questionLabel.text = @"You've dined here. What do you think?";
-    _questionLabel.font = [UIFont systemFontOfSize:30.0];
-    _questionLabel.textAlignment = NSTextAlignmentCenter;
-    [_questionLabel setTextColor:[UIColor whiteColor]];
-    [self.view addSubview:_questionLabel];
-    
-    _dislikeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _dislikeButton.layer.cornerRadius = 35;
-    [_dislikeButton setBackgroundImage:[[UIImage imageNamed:@"dislike"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    _dislikeButton.backgroundColor = [UIColor redColor];
-    [_dislikeButton setTintColor:[UIColor whiteColor]];
-    _dislikeButton.tag = 101;
-    [_dislikeButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_dislikeButton];
-    
-    _goodButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _goodButton.layer.cornerRadius = 35;
-    [_goodButton setBackgroundImage:[[UIImage imageNamed:@"good"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    _goodButton.backgroundColor = [UIColor redColor];
-    [_goodButton setTintColor:[UIColor whiteColor]];
-    _goodButton.tag = 102;
-    [_goodButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_goodButton];
-    
-    _greatButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    _greatButton.layer.cornerRadius = 35;
-    [_greatButton setBackgroundImage:[[UIImage imageNamed:@"great"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    _greatButton.backgroundColor = [UIColor redColor];
-    [_greatButton setTintColor:[UIColor whiteColor]];
-    _greatButton.tag = 103;
-    [_greatButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_greatButton];
-    
-    [_closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(25);
         make.right.mas_equalTo(self.view.mas_right).offset(-7);
         make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
     }];
     
-    [_questionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.questionLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).offset(100);
         make.centerX.mas_equalTo(self.view);
         make.width.mas_equalTo(287);
         make.height.mas_equalTo(72);
     }];
     
-    [_dislikeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(_questionLabel.mas_bottom).offset(20);
+    [self.dislikeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.questionLabel.mas_bottom).offset(20);
         make.centerX.mas_equalTo(self.view);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(70);
     }];
     
-    [_goodButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(_questionLabel.mas_bottom).offset(20);
-        make.right.mas_equalTo(_dislikeButton.mas_left).offset(-10);
+    [self.goodButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.questionLabel.mas_bottom).offset(20);
+        make.right.mas_equalTo(self.dislikeButton.mas_left).offset(-10);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(70);
     }];
     
-    [_greatButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(_questionLabel.mas_bottom).offset(20);
-        make.left.mas_equalTo(_dislikeButton.mas_right).offset(10);
+    [self.greatButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.questionLabel.mas_bottom).offset(20);
+        make.left.mas_equalTo(self.dislikeButton.mas_right).offset(10);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(70);
     }];
