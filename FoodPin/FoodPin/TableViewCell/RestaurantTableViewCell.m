@@ -7,9 +7,8 @@
 //
 
 #import "RestaurantTableViewCell.h"
-#import "Masonry.h"
-@interface RestaurantTableViewCell()
 
+@interface RestaurantTableViewCell()
 @end
 
 @implementation RestaurantTableViewCell
@@ -41,32 +40,26 @@
 
 - (UILabel *)nameLabel {
     if(!_nameLabel) {
-        UILabel *nameLabel = [[UILabel alloc] init];
-        _nameLabel = nameLabel;
-        UIFontDescriptor *bodyFontDesciptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline];
-        nameLabel.font = [UIFont fontWithDescriptor:bodyFontDesciptor size:0.0];
+        UILabel *nameLabel = [FPPublicUIKit labelTextColor:nil labelFont:[UIFont fontWithDescriptor:[UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleHeadline] size:0.0]];
         [self.contentView addSubview:nameLabel];
+        _nameLabel = nameLabel;
     }
     return _nameLabel;
 }
 
 - (UILabel *)typeLabel {
     if(!_typeLabel) {
-        UILabel *typeLabel = [[UILabel alloc] init];
-        _typeLabel = typeLabel;
-        typeLabel.font = [UIFont fontWithName:@"Systom-Light" size:13.0];
+        UILabel *typeLabel = [FPPublicUIKit labelTextColor:nil labelFont:[UIFont fontWithName:@"Systom-Light" size:13.0]];
         [self.contentView addSubview:typeLabel];
+        _typeLabel = typeLabel;
     }
     return _typeLabel;
 }
 
 - (UILabel *)locationLabel {
     if(!_locationLabel) {
-        UILabel *locationLabel = [[UILabel alloc] init];
+        UILabel *locationLabel = [FPPublicUIKit labelWithTextColor:[UIColor darkGrayColor] numberOfLines:0 text:nil labelFont:[UIFont fontWithName:@"Systom-Light" size:14.0]];
         _locationLabel = locationLabel;
-        locationLabel.font = [UIFont fontWithName:@"Systom-Light" size:14.0];
-        locationLabel.textColor = [UIColor darkGrayColor];
-        locationLabel.numberOfLines = 0;
         CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 60 - 10 - 5 - 14;
         locationLabel.preferredMaxLayoutWidth = preferredMaxWidth;
         [self.contentView addSubview:self.locationLabel];

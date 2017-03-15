@@ -15,6 +15,7 @@
 #import "Masonry.h"
 //#import "MBProgressHUD.h"
 #import "FPPublicUIKit.h"
+#import "FPAlertController.h"
 #import "MJRefresh.h"
 #endif
 #define ScreenHeigth [UIScreen mainScreen].bounds.size.height

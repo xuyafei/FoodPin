@@ -7,7 +7,7 @@
 //
 
 #import "AddPhotoTableViewCell.h"
-#import "Masonry.h"
+//#import "Masonry.h"
 
 @implementation AddPhotoTableViewCell
 
@@ -18,19 +18,28 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        self.photoImageView = [[UIImageView alloc] init];
-        self.photoImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.photoImageView.clipsToBounds = YES;
-        [self.contentView addSubview:self.photoImageView];
-        
-        [self.photoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(self.contentView);
-            make.width.mas_equalTo(84);
-            make.height.mas_equalTo(84);
-        }];
+        [self configCellView];
     }
-    
     return self;
+}
+
+- (UIImageView *)photoImageView {
+    if(!_photoImageView) {
+        UIImageView *photoImageView = [[UIImageView alloc] init];
+        photoImageView.contentMode = UIViewContentModeScaleAspectFill;
+        photoImageView.clipsToBounds = YES;
+        [self.contentView addSubview:photoImageView];
+        _photoImageView = photoImageView;
+    }
+    return _photoImageView;
+}
+
+- (void)configCellView {
+    [self.photoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.contentView);
+        make.width.mas_equalTo(84);
+        make.height.mas_equalTo(84);
+    }];
 }
 
 - (void)updateContentViewConstraints {
@@ -38,7 +47,6 @@
         make.width.mas_equalTo(self.contentView.mas_width);
         make.height.mas_equalTo(self.contentView.mas_height);
     }];
-    
     // 更新约束
     [self.contentView layoutIfNeeded];
 }

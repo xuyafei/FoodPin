@@ -19,7 +19,6 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
 
 @interface AddRestaurantViewController ()<UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,AddRestaurantInfoTableViewCellDelegate,UINavigationControllerDelegate> {
     UINavigationBar *_navigationBar;
-    UITableView *_addRestaurantTableView;
     NSIndexPath *_currentIndexPath;
     NSIndexPath *_titleTextIndexPath;
     NSString *_name;
@@ -29,7 +28,7 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
     UIImage *_image;
     NSNumber *_isVisited;
 }
-
+@property(nonatomic, weak) UITableView *addRestaurantTableView;
 @end
 
 @implementation AddRestaurantViewController
@@ -39,7 +38,8 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.backBarButtonItem.customView.hidden = YES;
     [self initTitleView];
-    [self initTableView];
+    self.addRestaurantTableView.delegate = self;
+    self.addRestaurantTableView.dataSource = self;
     [self initSaveString];
 }
 
@@ -72,11 +72,13 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
     }
 }
 
-- (void)initTableView {
-    _addRestaurantTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 64)];
-    _addRestaurantTableView.delegate = self;
-    _addRestaurantTableView.dataSource = self;
-    [self.view addSubview:_addRestaurantTableView];
+- (UITableView *)addRestaurantTableView {
+    if(!_addRestaurantTableView) {
+        UITableView *addRestaurantTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height - 64)];
+        [self.view addSubview:addRestaurantTableView];
+        _addRestaurantTableView = addRestaurantTableView;
+    }
+    return _addRestaurantTableView;
 }
 
 - (void)initSaveString {
@@ -219,9 +221,6 @@ typedef NS_ENUM(NSInteger, NavBarItemType) {
         [self fp_showAlertWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." appearanceProcess:^(FPAlertController * _Nonnull alertMaker) {
             alertMaker.addActionDestructiveTitle(@"OK");
         } acitonsBlock:nil];
-        /*UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:@"We can't proceed because one of the fields is blank. Please note that all fields are required." preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];*/
     }
     
     Restaurant *addRestaurant = [NSEntityDescription insertNewObjectForEntityForName:@"Restaurant" inManagedObjectContext:self.restaurantMOC];

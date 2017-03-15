@@ -10,7 +10,7 @@
 
 @interface AddPhotoTableViewCell : UITableViewCell
 
-@property(strong, nonatomic) UIImageView *photoImageView;
+@property(weak, nonatomic) UIImageView *photoImageView;
 
 - (void)updateContentViewConstraints;
 
