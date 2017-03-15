@@ -23,7 +23,7 @@
     UISearchController *_searchController;
     UIPageViewController *_pageViewController;
 }
-@property (nonatomic, strong) UITableView *foodRestaurantsTableView;
+@property (nonatomic, weak) UITableView *foodRestaurantsTableView;
 @property (nonatomic, strong) NSManagedObjectContext *restaurantMOC;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultController;
 @end
@@ -37,7 +37,7 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(presentPhontViewController:)];
     [self initRestaurantArray];
-    [self layoutTableView];
+
     [self initSearchContorller];
     self.foodRestaurantsTableView.estimatedRowHeight = 80;
     self.foodRestaurantsTableView.rowHeight = UITableViewAutomaticDimension;
@@ -116,11 +116,15 @@
                     [Restaurants restaurantWithName:@"CASK Pub and Kitchen" type:@"Thai" location:@"22 Charlwood Street London SW1V 2DY Pimlico" phoneNumber:@"432-344050" image:@"thaicafe.jpg" isVisited:NO], nil];
 }
 
-- (void)layoutTableView {
-    self.foodRestaurantsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    self.foodRestaurantsTableView.delegate = self;
-    self.foodRestaurantsTableView.dataSource = self;
-    [self.view addSubview:self.foodRestaurantsTableView];
+- (UITableView *)foodRestaurantsTableView {
+    if(!_foodRestaurantsTableView) {
+        UITableView *foodRestaurantsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        foodRestaurantsTableView.delegate = self;
+        foodRestaurantsTableView.dataSource = self;
+        _foodRestaurantsTableView = foodRestaurantsTableView;
+        [self.view addSubview:foodRestaurantsTableView];
+    }
+    return _foodRestaurantsTableView;
 }
 
 - (void)initSearchContorller {

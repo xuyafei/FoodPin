@@ -15,7 +15,7 @@
     NSCache *_imageCache;
     MJRefreshGifHeader *_firstheader;
 }
-@property(nonatomic, strong) UITableView *discoverTableView;
+@property(nonatomic, weak) UITableView *discoverTableView;
 @end
 
 @implementation RestaurantDiscoverViewController
@@ -30,19 +30,24 @@
     [self getRecordsFormCloud:NO];
 }
 
+- (UITableView *)discoverTableView {
+    if(!_discoverTableView) {
+        UITableView *discoverTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        discoverTableView.delegate = self;
+        discoverTableView.dataSource = self;
+        _discoverTableView = discoverTableView;
+        [self.view addSubview:discoverTableView];
+    }
+    return _discoverTableView;
+}
+
 - (void)layoutDiscoverTableView {
-    self.discoverTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    self.discoverTableView.delegate = self;
-    self.discoverTableView.dataSource = self;
-    self.discoverTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    [self.view addSubview:self.discoverTableView];
-    
     _firstheader = [MJRefreshGifHeader headerWithRefreshingBlock:^{
         [self getRecordsFormCloud:NO];
     }];
     self.discoverTableView.mj_header = _firstheader;
 }
+
 
 - (void)getRecordsFormCloud:(BOOL)isMoreData {
     CKContainer *defaultContainer = [CKContainer defaultContainer];

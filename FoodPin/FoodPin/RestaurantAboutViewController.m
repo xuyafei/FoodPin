@@ -11,13 +11,17 @@
 
 @import SafariServices;
 @interface RestaurantAboutViewController () <UITableViewDelegate, UITableViewDataSource> {
-    UITableView *_aboutTableView;
-    UIImageView *_aboutHeadView;
     NSArray *_sectionTitle;
     NSArray *_secitonContentOne;
     NSArray *_secitonContentTwo;
     NSArray *_links;
 }
+@property (nonatomic, copy) NSArray *sectionTitle;
+@property (nonatomic, copy) NSArray *secitonContentOne;
+@property (nonatomic, copy) NSArray *secitonContentTwo;
+@property (nonatomic, copy) NSArray *links;
+@property (nonatomic, weak) UITableView *aboutTableView;
+@property (nonatomic, weak) UIImageView *aboutHeadView;;
 @end
 
 @implementation RestaurantAboutViewController
@@ -27,31 +31,38 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"About";
     [self initArrays];
-    [self initAboutTableView];
-    [self initAboutTableHeadView];
+
+    self.aboutTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.aboutTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.aboutHeadView.image = [UIImage imageNamed:@"about-logo"];
 }
 
-- (void)initAboutTableView {
-    _aboutTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    _aboutTableView.delegate = self;
-    _aboutTableView.dataSource = self;
-    _aboutTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    _aboutTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [self.view addSubview:_aboutTableView];
+- (UITableView *)aboutTableView {
+    if(!_aboutTableView) {
+        UITableView *aboutTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        aboutTableView.delegate = self;
+        aboutTableView.dataSource = self;
+        _aboutTableView = aboutTableView;
+        [self.view addSubview:aboutTableView];
+    }
+    return _aboutTableView;
 }
 
-- (void)initAboutTableHeadView {
-    _aboutHeadView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 170)];
-    _aboutHeadView.image = [UIImage imageNamed:@"about-logo"];
-    _aboutTableView.tableHeaderView = _aboutHeadView;
+- (UIImageView *)aboutHeadView {
+    if(!_aboutHeadView) {
+        UIImageView *aboutHeadView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 170)];
+        self.aboutTableView.tableHeaderView = aboutHeadView;
+        _aboutHeadView = aboutHeadView;
+    }
+    return _aboutHeadView;
 }
 
 - (void)initArrays {
-    _sectionTitle = @[@"Leave Feedback", @"Follow Us"];
-    _secitonContentOne = @[@"Rate us on App Store", @"Tell us your feedback"];
-    _secitonContentTwo = @[@"Twitter", @"Facebook", @"Pinterest"];
-    _links = @[@"https://twitter.com/appcodamobile",
-               @"https://facebook.com/appcodamobile", @"https://www.pinterest.com/appcoda/"];
+    _sectionTitle = [@[@"Leave Feedback", @"Follow Us"] copy];
+    _secitonContentOne = [@[@"Rate us on App Store", @"Tell us your feedback"] copy];
+    _secitonContentTwo = [@[@"Twitter", @"Facebook", @"Pinterest"] copy];
+    _links = [@[@"https://twitter.com/appcodamobile",
+               @"https://facebook.com/appcodamobile", @"https://www.pinterest.com/appcoda/"] copy];
 }
 
 #pragma mark UITableViewDelegate
