@@ -134,6 +134,7 @@
 		D122EC541E1C917600B8C08E /* FPAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPAlertController.m; sourceTree = "<group>"; };
 		D150EAB81E77CAC4004289B3 /* FPPublicUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPublicUIKit.h; sourceTree = "<group>"; };
 		D150EAB91E77CAC4004289B3 /* FPPublicUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPublicUIKit.m; sourceTree = "<group>"; };
+		D150EABE1E794DE5004289B3 /* FPUtilsMacro.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPUtilsMacro.pch; sourceTree = "<group>"; };
 		D1658B8B1E5D5AEC00757693 /* RestaurantSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantSearchResultViewController.h; sourceTree = "<group>"; };
 		D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchResultViewController.m; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
@@ -296,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				0C97FE261DD9B33D0099113F /* main.m */,
+				D150EABE1E794DE5004289B3 /* FPUtilsMacro.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -804,6 +806,7 @@
 				DEVELOPMENT_TEAM = 5UUHKU5P3B;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
+				GCC_PREFIX_HEADER = /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPUtilsMacro.pch;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -832,6 +835,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5UUHKU5P3B;
 				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPUtilsMacro.pch;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

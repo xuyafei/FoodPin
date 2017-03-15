@@ -29,6 +29,13 @@
                             labelFont:(UIFont *)font;
 
 #pragma mark ------------- UIButton ---------------
+
++ (UIButton *)buttonWithBackGroundColor:(UIColor *)backGroundColor
+                             buttonType:(UIButtonType)buttonType
+                        buttonTintColor:(UIColor *)tintColor
+                     buttonCornerRadius:(NSInteger)radius
+                        buttonWithImage:(UIImage *)image;
+
 + (UIButton *)buttonWithBackGroundColor:(UIColor *)backGroundColor
                              buttonType:(UIButtonType)buttonType
                         buttonWithTitle:(NSString *)buttonTitle

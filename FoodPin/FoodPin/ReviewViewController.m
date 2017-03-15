@@ -57,10 +57,7 @@
 
 - (UIButton *)closeButton {
     if(!_closeButton) {
-       UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        closeButton.layer.cornerRadius = 15;
-        [closeButton setBackgroundImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        [closeButton setTintColor:[UIColor whiteColor]];
+        UIButton *closeButton = [FPPublicUIKit buttonWithBackGroundColor:nil buttonType:UIButtonTypeCustom buttonTintColor:[UIColor whiteColor] buttonCornerRadius:15 buttonWithImage:[[UIImage imageNamed:@"close"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [closeButton addTarget:self action:@selector(clickClose:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:closeButton];
         _closeButton = closeButton;
@@ -70,12 +67,7 @@
 
 - (UILabel *)questionLabel {
     if(!_questionLabel) {
-        UILabel *questionLabel = [[UILabel alloc] init];
-        questionLabel.numberOfLines = 2;
-        questionLabel.text = @"You've dined here. What do you think?";
-        questionLabel.font = [UIFont systemFontOfSize:30.0];
-        questionLabel.textAlignment = NSTextAlignmentCenter;
-        [questionLabel setTextColor:[UIColor whiteColor]];
+        UILabel *questionLabel = [FPPublicUIKit labelWithBackgroundColor:[UIColor clearColor] textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter numberOfLines:2 text:@"You've dined here. What do you think?" labelFont:[UIFont systemFontOfSize:30.0]];
         [self.view addSubview:questionLabel];
         _questionLabel = questionLabel;
     }
@@ -84,11 +76,7 @@
 
 - (UIButton *)dislikeButton {
     if(!_dislikeButton) {
-        UIButton *dislikeButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        dislikeButton.layer.cornerRadius = 35;
-        [dislikeButton setBackgroundImage:[[UIImage imageNamed:@"dislike"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        dislikeButton.backgroundColor = [UIColor redColor];
-        [dislikeButton setTintColor:[UIColor whiteColor]];
+        UIButton *dislikeButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:35 buttonWithImage:[[UIImage imageNamed:@"dislike"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         dislikeButton.tag = 101;
         [dislikeButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:dislikeButton];
@@ -99,11 +87,7 @@
 
 - (UIButton *)goodButton {
     if(!_goodButton) {
-        UIButton *goodButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        goodButton.layer.cornerRadius = 35;
-        [goodButton setBackgroundImage:[[UIImage imageNamed:@"good"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        goodButton.backgroundColor = [UIColor redColor];
-        [goodButton setTintColor:[UIColor whiteColor]];
+        UIButton *goodButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:35 buttonWithImage:[[UIImage imageNamed:@"good"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         goodButton.tag = 102;
         [goodButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:goodButton];
@@ -114,11 +98,7 @@
 
 - (UIButton *)greatButton {
     if(!_greatButton) {
-        UIButton *greatButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        greatButton.layer.cornerRadius = 35;
-        [greatButton setBackgroundImage:[[UIImage imageNamed:@"great"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        greatButton.backgroundColor = [UIColor redColor];
-        [greatButton setTintColor:[UIColor whiteColor]];
+        UIButton *greatButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:35 buttonWithImage:[[UIImage imageNamed:@"great"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         greatButton.tag = 103;
         [greatButton addTarget:self action:@selector(tapThreeButton:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:greatButton];

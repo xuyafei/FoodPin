@@ -62,6 +62,20 @@
     return button;
 }
 
++ (UIButton *)buttonWithBackGroundColor:(UIColor *)backGroundColor
+                             buttonType:(UIButtonType)buttonType
+                        buttonTintColor:(UIColor *)tintColor
+                     buttonCornerRadius:(NSInteger)radius
+                        buttonWithImage:(UIImage *)image{
+    UIButton *button = [UIButton buttonWithType:buttonType];
+    button.layer.cornerRadius = radius;
+    [button setImage:image forState:UIControlStateNormal];
+    [button setTintColor:tintColor];
+    button.backgroundColor = backGroundColor;
+    
+    return button;
+}
+
 #pragma mark ------------- UITextField -----------
 + (UITextField *)textFieldColor:(UIColor *)textColor
                        fontSize:(CGFloat)size {
