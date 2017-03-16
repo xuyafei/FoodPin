@@ -15,18 +15,26 @@
     self = [super initWithFrame:frame];
     
     if(self) {
-        self.photoImageView = [[UIImageView alloc] init];
-        self.photoImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.photoImageView.clipsToBounds = YES;
-        [self.contentView addSubview:self.photoImageView];
-        
-        [self.photoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(self.contentView);
-            make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width);
-            make.height.mas_equalTo([UIScreen mainScreen].bounds.size.height/2);
-        }];
+       [self configView];
     }
     
     return self;
+}
+
+- (UIImageView *)photoImageView {
+    if(!_photoImageView) {
+        UIImageView *photoImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewBackGroundColor:nil imageViewClipsToBounds:YES imageViewUserInteractionEnabled:NO];
+        _photoImageView = photoImageView;
+        [self.contentView addSubview:photoImageView];
+    }
+    return _photoImageView;
+}
+
+- (void)configView {
+    [self.photoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.contentView);
+        make.width.mas_equalTo(ScreenWidth);
+        make.height.mas_equalTo(ScreenHeigth/2);
+    }];
 }
 @end

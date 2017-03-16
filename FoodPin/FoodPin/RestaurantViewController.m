@@ -118,7 +118,7 @@
 
 - (UITableView *)foodRestaurantsTableView {
     if(!_foodRestaurantsTableView) {
-        UITableView *foodRestaurantsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        UITableView *foodRestaurantsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
         foodRestaurantsTableView.delegate = self;
         foodRestaurantsTableView.dataSource = self;
         _foodRestaurantsTableView = foodRestaurantsTableView;

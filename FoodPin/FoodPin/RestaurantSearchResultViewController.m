@@ -19,18 +19,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self layoutTableView];
+    [self configLayOutTableview];
     // Do any additional setup after loading the view.
 }
 
-- (void)layoutTableView {
-    self.searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    self.searchResultTableView.delegate = self;
-    self.searchResultTableView.dataSource = self;
-    [self.view addSubview:self.searchResultTableView];
+- (void)configLayOutTableview {
     self.searchResultTableView.estimatedRowHeight = 80;
     self.searchResultTableView.rowHeight = UITableViewAutomaticDimension;
 }
+
+- (UITableView *)searchResultTableView {
+    if(!_searchResultTableView) {
+        UITableView *searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
+        searchResultTableView.delegate = self;
+        searchResultTableView.dataSource = self;
+        [self.view addSubview:searchResultTableView];
+        _searchResultTableView = searchResultTableView;
+    }
+    return _searchResultTableView;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -54,11 +62,9 @@
     RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
     detailViewController.restaurant = _searchResultRestaurants[indexPath.row];
     self.navigationController.definesPresentationContext = YES;
-    //self.definesPresentationContext = YES;
     [detailViewController setHidesBottomBarWhenPushed:YES];
     NSLog(@"%@", self.navigationController);
     [self.presentingViewController.navigationController pushViewController:detailViewController animated:YES];
-    //[self.navigationController pushViewController:detailViewController animated:YES];
     
 }
 

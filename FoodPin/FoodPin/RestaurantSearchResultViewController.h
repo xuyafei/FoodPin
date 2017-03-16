@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RestaurantSearchResultViewController : UIViewController
-@property (nonatomic, strong) UITableView *searchResultTableView;
+@property (nonatomic, weak) UITableView *searchResultTableView;
 @property (nonatomic, strong) NSMutableArray *searchResultRestaurants;
 @end

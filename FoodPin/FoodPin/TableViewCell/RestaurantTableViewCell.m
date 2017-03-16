@@ -28,11 +28,8 @@
 
 - (UIImageView *)thumbnailImageView {
     if(!_thumbnailImageView) {
-        UIImageView *thumbnailImageView = [[UIImageView alloc] init];
+        UIImageView *thumbnailImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleToFill imageViewCornerRadius:30.0 imageViewClipsToBounds:YES];
         _thumbnailImageView = thumbnailImageView;
-        thumbnailImageView.contentMode = UIViewContentModeScaleToFill;
-        thumbnailImageView.layer.cornerRadius = 30.0;
-        thumbnailImageView.clipsToBounds = YES;
         [self.contentView addSubview:thumbnailImageView];
     }
     return _thumbnailImageView;

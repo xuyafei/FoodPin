@@ -9,7 +9,6 @@
 #import "RestaurantDetailViewController.h"
 #import "RestaurantDetailTableViewCell.h"
 #import "ReviewViewController.h"
-#import "Masonry.h"
 #import "MapViewController.h"
 #import "FoodPhotoBrowseCollectionViewController.h"
 
@@ -34,8 +33,7 @@
     self.restaurantDetailView.estimatedRowHeight = 36.0;
     self.restaurantDetailView.rowHeight = UITableViewAutomaticDimension;
     self.footView.frame = CGRectZero;
-    self.headView.image = [UIImage imageWithData:self.restaurant.image];
-    
+    self.headView.frame = CGRectMake(0, 0, ScreenWidth, 300);
     [self addGesture];
     [self configView];
 }
@@ -53,7 +51,7 @@
 
 - (UITableView *)restaurantDetailView {
     if(!_restaurantDetailView) {
-        UITableView *restaurantDetailView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        UITableView *restaurantDetailView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
         restaurantDetailView.delegate = self;
         restaurantDetailView.dataSource = self;
         restaurantDetailView.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.2];
@@ -66,11 +64,9 @@
 
 - (UIImageView *)headView {
     if(!_headView) {
-        UIImageView *headView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300)];
-        headView.backgroundColor = [UIColor redColor];
-        headView.contentMode = UIViewContentModeScaleAspectFill;
-        headView.clipsToBounds = YES;
-        headView.userInteractionEnabled=YES;
+        UIImageView *headView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewBackGroundColor:[UIColor redColor] imageViewClipsToBounds:YES imageViewUserInteractionEnabled:YES];
+        headView.image = [UIImage imageWithData:self.restaurant.image];
+       
         self.restaurantDetailView.tableHeaderView = headView;
         _headView = headView;
     }
@@ -79,11 +75,7 @@
 
 - (UIButton *)reviewButton {
     if(!_reviewButton) {
-        UIButton *reviewButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        reviewButton.layer.cornerRadius = 20;
-        [reviewButton setBackgroundImage:[[UIImage imageNamed:@"rating"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        reviewButton.backgroundColor = [UIColor redColor];
-        [reviewButton setTintColor:[UIColor whiteColor]];
+        UIButton *reviewButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:20 buttonWithImage:[[UIImage imageNamed:@"rating"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [reviewButton addTarget:self action:@selector(clickReview:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:reviewButton];
         _reviewButton = reviewButton;
@@ -93,11 +85,7 @@
 
 - (UIButton *)mapButton {
     if(!_mapButton) {
-        UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        mapButton.layer.cornerRadius = 20;
-        [mapButton setBackgroundImage:[[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        mapButton.backgroundColor = [UIColor redColor];
-        [mapButton setTintColor:[UIColor whiteColor]];
+        UIButton *mapButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:20 buttonWithImage:[[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [mapButton addTarget:self action:@selector(clickMap:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:mapButton];
         _mapButton = mapButton;
@@ -108,7 +96,7 @@
 - (UIView *)footView {
     if(!_footView) {
         UIView *footView = [[UIView alloc] init];
-        _restaurantDetailView.tableFooterView = footView;
+        self.restaurantDetailView.tableFooterView = footView;
         _footView = footView;
     }
     return _footView;

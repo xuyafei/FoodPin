@@ -22,7 +22,7 @@
 }
 
 - (void)initAboutWebview {
-    _aboutWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    _aboutWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
     [self.view addSubview:_aboutWebView];
 }
 

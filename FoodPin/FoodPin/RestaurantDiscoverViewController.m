@@ -32,7 +32,7 @@
 
 - (UITableView *)discoverTableView {
     if(!_discoverTableView) {
-        UITableView *discoverTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        UITableView *discoverTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
         discoverTableView.delegate = self;
         discoverTableView.dataSource = self;
         _discoverTableView = discoverTableView;

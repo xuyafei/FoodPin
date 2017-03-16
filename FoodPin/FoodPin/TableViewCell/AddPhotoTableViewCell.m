@@ -25,9 +25,7 @@
 
 - (UIImageView *)photoImageView {
     if(!_photoImageView) {
-        UIImageView *photoImageView = [[UIImageView alloc] init];
-        photoImageView.contentMode = UIViewContentModeScaleAspectFill;
-        photoImageView.clipsToBounds = YES;
+        UIImageView *photoImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewCornerRadius:0 imageViewClipsToBounds:YES];
         [self.contentView addSubview:photoImageView];
         _photoImageView = photoImageView;
     }

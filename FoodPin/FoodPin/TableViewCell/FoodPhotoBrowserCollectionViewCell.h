@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodPhotoBrowserCollectionViewCell : UICollectionViewCell
-@property(nonatomic, strong)UIImageView *photoImageView;
+@property(nonatomic, weak)UIImageView *photoImageView;
 @end

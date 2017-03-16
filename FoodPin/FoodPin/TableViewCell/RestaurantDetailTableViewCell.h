@@ -10,7 +10,7 @@
 
 @interface RestaurantDetailTableViewCell : UITableViewCell
 
-@property(nonatomic, strong) UILabel *nameLabel;
-@property(nonatomic, strong) UILabel *filedLabel;
+@property(nonatomic, weak) UILabel *nameLabel;
+@property(nonatomic, weak) UILabel *filedLabel;
 
 @end

@@ -77,4 +77,16 @@
                           textAlignment:(NSTextAlignment)textAlignment
                                fontSize:(CGFloat)size;
 
+#pragma mark ------------- UIImageView -----------
++ (UIImageView *)imageViewContentMode:(UIViewContentMode)contentMode
+                imageViewCornerRadius:(CGFloat)radius
+               imageViewClipsToBounds:(BOOL)clipsToBounds;
+
++ (UIImageView *)imageViewContentMode:(UIViewContentMode)contentMode
+                imageViewBackGroundColor:(UIColor *)color
+               imageViewClipsToBounds:(BOOL)clipsToBounds
+      imageViewUserInteractionEnabled:(BOOL)userInteractionEnable;
+
+
+
 @end

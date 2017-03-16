@@ -10,12 +10,7 @@
 #import "WebViewController.h"
 
 @import SafariServices;
-@interface RestaurantAboutViewController () <UITableViewDelegate, UITableViewDataSource> {
-    NSArray *_sectionTitle;
-    NSArray *_secitonContentOne;
-    NSArray *_secitonContentTwo;
-    NSArray *_links;
-}
+@interface RestaurantAboutViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, copy) NSArray *sectionTitle;
 @property (nonatomic, copy) NSArray *secitonContentOne;
 @property (nonatomic, copy) NSArray *secitonContentTwo;
@@ -39,7 +34,7 @@
 
 - (UITableView *)aboutTableView {
     if(!_aboutTableView) {
-        UITableView *aboutTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+        UITableView *aboutTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
         aboutTableView.delegate = self;
         aboutTableView.dataSource = self;
         _aboutTableView = aboutTableView;
@@ -58,10 +53,10 @@
 }
 
 - (void)initArrays {
-    _sectionTitle = [@[@"Leave Feedback", @"Follow Us"] copy];
-    _secitonContentOne = [@[@"Rate us on App Store", @"Tell us your feedback"] copy];
-    _secitonContentTwo = [@[@"Twitter", @"Facebook", @"Pinterest"] copy];
-    _links = [@[@"https://twitter.com/appcodamobile",
+    self.sectionTitle = [@[@"Leave Feedback", @"Follow Us"] copy];
+    self.secitonContentOne = [@[@"Rate us on App Store", @"Tell us your feedback"] copy];
+    self.secitonContentTwo = [@[@"Twitter", @"Facebook", @"Pinterest"] copy];
+    self.links = [@[@"https://twitter.com/appcodamobile",
                @"https://facebook.com/appcodamobile", @"https://www.pinterest.com/appcoda/"] copy];
 }
 

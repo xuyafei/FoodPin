@@ -181,4 +181,28 @@
     return textField;
 }
 
+#pragma mark ------------- UIImageView -----------
++ (UIImageView *)imageViewContentMode:(UIViewContentMode)contentMode
+                imageViewCornerRadius:(CGFloat)radius
+               imageViewClipsToBounds:(BOOL)clipsToBounds {
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.contentMode = contentMode;
+    imageView.layer.cornerRadius = radius;
+    imageView.clipsToBounds = clipsToBounds;
+    
+    return imageView;
+}
+
++ (UIImageView *)imageViewContentMode:(UIViewContentMode)contentMode
+             imageViewBackGroundColor:(UIColor *)color
+               imageViewClipsToBounds:(BOOL)clipsToBounds
+      imageViewUserInteractionEnabled:(BOOL)userInteractionEnable {
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.contentMode = contentMode;
+    imageView.clipsToBounds = clipsToBounds;
+    imageView.userInteractionEnabled = userInteractionEnable;
+    
+    return imageView;
+}
+
 @end

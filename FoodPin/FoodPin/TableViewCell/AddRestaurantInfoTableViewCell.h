@@ -15,10 +15,10 @@
 
 @interface AddRestaurantInfoTableViewCell : UITableViewCell
 
-@property(nonatomic, strong)UILabel *titleLable;
-@property(nonatomic, strong)UITextField *detailTextField;
-@property(nonatomic, strong)UIButton *yesButton;
-@property(nonatomic, strong)UIButton *noButton;
+@property(nonatomic, weak)UILabel *titleLable;
+@property(nonatomic, weak)UITextField *detailTextField;
+@property(nonatomic, weak)UIButton *yesButton;
+@property(nonatomic, weak)UIButton *noButton;
 @property(nonatomic, strong)NSIndexPath *currentIndexPath;
 @property(nonatomic, weak)id<AddRestaurantInfoTableViewCellDelegate> delegate;
 @end
