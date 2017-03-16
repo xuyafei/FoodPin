@@ -84,7 +84,6 @@
     restaurantCell.locationLabel.text = restaurant.location;
     restaurantCell.typeLabel.text = restaurant.type;
     restaurantCell.accessoryType = [restaurant.isVisited boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-    //restaurantCell.backgroundColor = [UIColor redColor];
     return restaurantCell;
 }
 
