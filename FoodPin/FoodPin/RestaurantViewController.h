@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FPBaseViewController.h"
 
 @interface RestaurantViewController : UIViewController
 

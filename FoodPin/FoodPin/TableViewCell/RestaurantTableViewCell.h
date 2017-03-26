@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FPTableViewBaseCell.h"
 
-@interface RestaurantTableViewCell : UITableViewCell
+@interface RestaurantTableViewCell : FPTableViewBaseCell
 
 @property (nonatomic, weak) UIImageView *thumbnailImageView;
 @property (nonatomic, weak) UILabel *nameLabel;

@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantTableViewCell.h"
+#import "FPTableViewBaseItem.h"
 
 @interface RestaurantTableViewCell()
 @end
@@ -92,6 +93,18 @@
         make.width.mas_equalTo(60);
         make.height.mas_equalTo(60);
     }];
+}
+
+- (void)setObject:(FPTableViewBaseItem *)object { // 子类在这个方法中解析数据
+    self.nameLabel.text = object.name;
+    self.thumbnailImageView.image = [UIImage imageWithData:object.image];
+    self.locationLabel.text = object.location;
+    self.typeLabel.text = object.type;
+    self.accessoryType = [object.isVisited boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+}
+
++ (CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(FPTableViewBaseItem *)object {
+    return UITableViewAutomaticDimension;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

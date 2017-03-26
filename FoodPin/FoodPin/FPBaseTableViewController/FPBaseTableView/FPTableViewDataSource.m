@@ -10,6 +10,8 @@
 #import "FPTableViewBaseItem.h"
 #import "FPTableViewSectionObject.h"
 #import "FPTableViewBaseCell.h"
+#import "RestaurantTableViewCell.h"
+
 
 #import <objc/runtime.h>
 
@@ -28,7 +30,7 @@
 }
 
 - (Class)tableView:(UITableView *)tableView cellClassForObject:(FPTableViewBaseItem *)object {
-    return [FPTableViewBaseCell class];
+    return [RestaurantTableViewCell class];
 }
 
 - (void)clearAllItems {
@@ -59,6 +61,7 @@
     FPTableViewBaseCell* cell = (FPTableViewBaseCell*)[tableView dequeueReusableCellWithIdentifier:className];
     if (!cell) {
         cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:className];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [cell setObject:object];
     

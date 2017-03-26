@@ -14,12 +14,13 @@ FOUNDATION_EXPORT CGFloat const CellInvalidHeight;
 @interface FPTableViewBaseItem : NSObject
 
 @property (nonatomic, assign) CGFloat cellHeight;
-@property (nonatomic, copy)   NSString *itemIdentifier;
-@property (nonatomic, strong) UIImage *itemImage;
-@property (nonatomic, copy)   NSString *itemTitle;
-@property (nonatomic, copy)   NSString *itemSubtitle;
-@property (nonatomic, strong) UIImage *itemAccessoryImage;
+@property (nonatomic, strong) NSData *image;
+@property (nonatomic, strong) NSNumber *isVisited;
+@property (nonatomic, copy) NSString *location;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *phoneNumber;
+@property (nonatomic, copy) NSString *type;
 
-- (instancetype)initWithImage:(UIImage *)image Title:(NSString *)title SubTitle:(NSString *)subTitle AccessoryImage:
-    (UIImage *)accessoryImage;
+- (instancetype)initWithImage:(NSData *)image isVisited:(NSNumber *)visited location:(NSString *)location name:
+(NSString *)name phoneNumber:(NSString *)phoneNumber type:(NSString *)type;
 @end

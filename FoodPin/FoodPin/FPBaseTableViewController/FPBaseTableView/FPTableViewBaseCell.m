@@ -24,10 +24,7 @@
 
 //子类在这个方法中解析数据
 - (void)setObject:(FPTableViewBaseItem *)object {
-    self.imageView.image = object.itemImage;
-    self.textLabel.text = object.itemTitle;
-    self.detailTextLabel.text = object.itemSubtitle;
-    self.accessoryView = [[UIImageView alloc] initWithImage:object.itemAccessoryImage];
+    
 }
 
 + (CGFloat)tableView:(UITableView *)tableView rowHeightForObject:(FPTableViewBaseItem *)object {

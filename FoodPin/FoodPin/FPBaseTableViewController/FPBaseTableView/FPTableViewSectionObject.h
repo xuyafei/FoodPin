@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *headerTitle;
 @property (nonatomic, copy) NSString *footerTitle;
 
-@property (nonatomic, copy) NSMutableArray *items;
+@property (nonatomic, strong) NSMutableArray *items;
 
 - (instancetype)initWithItemArray: (NSMutableArray *)items;
 

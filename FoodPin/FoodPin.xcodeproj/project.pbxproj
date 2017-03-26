@@ -21,6 +21,8 @@
 		D150EAC81E7A7784004289B3 /* FPTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAC71E7A7784004289B3 /* FPTableViewBaseCell.m */; };
 		D150EACB1E7A79F4004289B3 /* FPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EACA1E7A79F4004289B3 /* FPTableViewDataSource.m */; };
 		D150EACE1E7A84D7004289B3 /* FPBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EACD1E7A84D7004289B3 /* FPBaseTableView.m */; };
+		D150EAD41E7A917B004289B3 /* FPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD31E7A917B004289B3 /* FPBaseViewController.m */; };
+		D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */; };
 		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 		D1C880CF1E73A1DD00947FFA /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
@@ -138,6 +140,10 @@
 		D150EACA1E7A79F4004289B3 /* FPTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTableViewDataSource.m; sourceTree = "<group>"; };
 		D150EACC1E7A84D7004289B3 /* FPBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPBaseTableView.h; sourceTree = "<group>"; };
 		D150EACD1E7A84D7004289B3 /* FPBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPBaseTableView.m; sourceTree = "<group>"; };
+		D150EAD21E7A917B004289B3 /* FPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPBaseViewController.h; sourceTree = "<group>"; };
+		D150EAD31E7A917B004289B3 /* FPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPBaseViewController.m; sourceTree = "<group>"; };
+		D150EAD51E7BD2A0004289B3 /* RestaurantHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantHelper.h; sourceTree = "<group>"; };
+		D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantHelper.m; sourceTree = "<group>"; };
 		D1658B8B1E5D5AEC00757693 /* RestaurantSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantSearchResultViewController.h; sourceTree = "<group>"; };
 		D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchResultViewController.m; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
@@ -197,6 +203,8 @@
 				0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */,
 				0C684D181DFE931E00D61B78 /* Restaurant.h */,
 				0C684D191DFE931E00D61B78 /* Restaurant.m */,
+				D150EAD51E7BD2A0004289B3 /* RestaurantHelper.h */,
+				D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */,
 			);
 			path = RestaurantModel;
 			sourceTree = "<group>";
@@ -348,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				D1C880891E6FFF4400947FFA /* FPBaseTableView */,
+				D150EAD21E7A917B004289B3 /* FPBaseViewController.h */,
+				D150EAD31E7A917B004289B3 /* FPBaseViewController.m */,
 			);
 			path = FPBaseTableViewController;
 			sourceTree = "<group>";
@@ -616,6 +626,7 @@
 				D1C880D61E73A1DD00947FFA /* RestaurantDetailViewController.m in Sources */,
 				D1C880D71E73A1DD00947FFA /* ReviewViewController.m in Sources */,
 				D1C880D81E73A1DD00947FFA /* MapViewController.m in Sources */,
+				D150EAD41E7A917B004289B3 /* FPBaseViewController.m in Sources */,
 				D1C880D91E73A1DD00947FFA /* AddRestaurantViewController.m in Sources */,
 				D1C880DA1E73A1DD00947FFA /* WebViewController.m in Sources */,
 				D150EABF1E7A6F8D004289B3 /* Restaurant+CoreDataProperties.m in Sources */,
@@ -624,6 +635,7 @@
 				D1C880DC1E73A1DD00947FFA /* WalkthroughPageViewController.m in Sources */,
 				D150EAC21E7A7013004289B3 /* FPTableViewBaseItem.m in Sources */,
 				D1C880DD1E73A1DD00947FFA /* Restaurants.m in Sources */,
+				D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */,
 				D1C880DF1E73A1DD00947FFA /* Restaurant.m in Sources */,
 				D1C880E01E73A1DD00947FFA /* RestaurantTableViewCell.m in Sources */,
 				D1C880E11E73A1DD00947FFA /* RestaurantDetailTableViewCell.m in Sources */,
