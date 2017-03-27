@@ -237,13 +237,12 @@
 			children = (
 				D13A2C091E88F13400FF6D90 /* FoodPinDelegate */,
 				D1C8807F1E6FF9D600947FFA /* FPBaseTableViewController */,
+				D13A2C0E1E88F21B00FF6D90 /* RestaurantViewController */,
 				D122EC521E1C90EE00B8C08E /* PublicUI */,
 				D122EC411E124A4400B8C08E /* Transitiondelegate */,
 				D1B173D91E0922310019CBE0 /* FoodPin.entitlements */,
 				0C4AF2141DE5D49700AB074F /* FoodPinRootViewController.h */,
 				0C4AF2151DE5D49700AB074F /* FoodPinRootViewController.m */,
-				0C97FE2B1DD9B33D0099113F /* RestaurantViewController.h */,
-				0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */,
 				0C4AF2171DE5D6B000AB074F /* RestaurantDiscoverViewController.h */,
 				0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */,
 				0C4AF21A1DE5D6D200AB074F /* RestaurantAboutViewController.h */,
@@ -254,8 +253,6 @@
 				0C4AF1FE1DDEF2A100AB074F /* ReviewViewController.m */,
 				0C4AF2021DE1A1FB00AB074F /* MapViewController.h */,
 				0C4AF2031DE1A1FB00AB074F /* MapViewController.m */,
-				0C4AF2051DE286F000AB074F /* AddRestaurantViewController.h */,
-				0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */,
 				0C4AF21D1DE7346500AB074F /* WebViewController.h */,
 				0C4AF21E1DE7346500AB074F /* WebViewController.m */,
 				D1D9854B1E0EC022006F0B8C /* WalkthroughtPage */,
@@ -358,6 +355,17 @@
 				D13A2C0B1E88F13400FF6D90 /* AppDelegate.m */,
 			);
 			path = FoodPinDelegate;
+			sourceTree = "<group>";
+		};
+		D13A2C0E1E88F21B00FF6D90 /* RestaurantViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C97FE2B1DD9B33D0099113F /* RestaurantViewController.h */,
+				0C97FE2C1DD9B33D0099113F /* RestaurantViewController.m */,
+				0C4AF2051DE286F000AB074F /* AddRestaurantViewController.h */,
+				0C4AF2061DE286F000AB074F /* AddRestaurantViewController.m */,
+			);
+			name = RestaurantViewController;
 			sourceTree = "<group>";
 		};
 		D1C8807F1E6FF9D600947FFA /* FPBaseTableViewController */ = {
