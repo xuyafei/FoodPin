@@ -18,6 +18,7 @@
 #import "FPBaseTableView.h"
 #import "FPTableViewBaseItem.h"
 #import "RestaurantHelper.h"
+#import "FPRestaurantViewDataSource.h"
 
 @interface RestaurantViewController () <UISearchResultsUpdating,NSFetchedResultsControllerDelegate,FPTableViewDelegate> {
     NSMutableArray *_restaurants;
@@ -29,7 +30,7 @@
 @property (nonatomic, weak)   FPBaseTableView *foodRestaurantsTableView;
 @property (nonatomic, strong) NSManagedObjectContext *restaurantMOC;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultController;
-@property (nonatomic, strong) FPTableViewDataSource *dataSource;
+@property (nonatomic, strong) FPRestaurantViewDataSource *dataSource;
 @end
 
 @implementation RestaurantViewController
@@ -38,7 +39,7 @@
     [super viewDidLoad];
     [self configCoreData];
     [self initRestaurantArray];
-    self.dataSource = [[FPTableViewDataSource alloc] init];
+    self.dataSource = [[FPRestaurantViewDataSource alloc] init];
     [self fetchDataSuccess];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Food Pin";
@@ -100,7 +101,7 @@
             } else {
                 [self.dataSource clearAllItems];
                 _restaurants = [NSMutableArray arrayWithArray:self.fetchedResultController.fetchedObjects];
-                for( Restaurant *restaurant in self.fetchedResultController.fetchedObjects) {
+                for(Restaurant *restaurant in self.fetchedResultController.fetchedObjects) {
                     FPTableViewBaseItem *restaurantItem = [[FPTableViewBaseItem alloc] initWithImage:restaurant.image isVisited:restaurant.isVisited location:restaurant.location name:restaurant.name phoneNumber:restaurant.phoneNumber type:restaurant.type];
                     [self.dataSource appenItem:restaurantItem];
                 }

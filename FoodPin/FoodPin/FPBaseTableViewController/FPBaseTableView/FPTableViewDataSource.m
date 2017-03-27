@@ -30,7 +30,7 @@
 }
 
 - (Class)tableView:(UITableView *)tableView cellClassForObject:(FPTableViewBaseItem *)object {
-    return [RestaurantTableViewCell class];
+    return [FPTableViewBaseCell class];
 }
 
 - (void)clearAllItems {

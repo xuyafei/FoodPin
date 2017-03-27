@@ -47,7 +47,7 @@
 
 - (void)createTestCoreData {
     for(int i = 0; i < _testArray.count; i++)  {
-        Restaurant *restaurant    = [NSEntityDescription insertNewObjectForEntityForName:@"Restaurant" inManagedObjectContext:self.restaurantMOC];
+        Restaurant *restaurant = [NSEntityDescription insertNewObjectForEntityForName:@"Restaurant" inManagedObjectContext:self.restaurantMOC];
         restaurant.name = ((Restaurants *)_testArray[i]).name;
         restaurant.location = ((Restaurants *)_testArray[i]).location;
         restaurant.type = ((Restaurants *)_testArray[i]).type;
