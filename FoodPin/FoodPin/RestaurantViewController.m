@@ -153,44 +153,7 @@
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
-
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {*/
-    /*(UIAlertController *optionMenu = [UIAlertController alertControllerWithTitle:nil message:@"What do you want to do?" preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
-    [optionMenu addAction:cancelAction];
-    
-    UIAlertAction *callAction = [UIAlertAction actionWithTitle:@"Call" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        UIAlertController *alertMessage = [UIAlertController alertControllerWithTitle:@"Service Unavailable" message:@"Sorry, the call feature is not available yet. Please retry later." preferredStyle:UIAlertControllerStyleAlert];
-        [alertMessage addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertMessage animated:YES completion:nil];
-    }];
-    [optionMenu addAction:callAction];
-    
-    NSString *title = (self.restaurantIsVisited[indexPath.row]) ? @"I've not been here" : @"I've been here";
-    BOOL isSelected = self.mutableRestaurantIsVisited[indexPath.row] ? NO : YES;
-    UIAlertAction *isVisitedAction = [UIAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        RestaurantTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        //BOOL isSelected = self.mutableRestaurantIsVisited[indexPath.row] ? NO : YES;
-        //self.mutableRestaurantIsVisited[indexPath.row] = [NSNumber numberWithBool:isSelected];
-        //[self.mutableRestaurantIsVisited replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithBool:isSelected]];
-        cell.accessoryType = isSelected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
-       
-    }];
-    self.mutableRestaurantIsVisited[indexPath.row] = [NSNumber numberWithBool:isSelected];
-    [optionMenu addAction:isVisitedAction];
-    
-    [self presentViewController:optionMenu animated:YES completion:nil];*/
-    
-    
-    /*RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
-    detailViewController.restaurant = _restaurants[indexPath.row];
-    [detailViewController setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:detailViewController animated:YES];
-
-}*/
-
-/*- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if(editingStyle == UITableViewCellEditingStyleDelete) {
         [_restaurants removeObjectAtIndex:indexPath.row];
     }
@@ -206,8 +169,6 @@
     }];
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-//        [_restaurants removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
         
         Restaurant *restaurant = [self.fetchedResultController objectAtIndexPath:indexPath];
         [self.restaurantMOC deleteObject:restaurant];
@@ -222,7 +183,7 @@
     deleteAction.backgroundColor = [UIColor colorWithRed:202.0/255.0 green:202.0/255.0 blue:203.0/255.0 alpha:1.0];
     
     return @[shareAction, deleteAction];
-}*/
+}
 
 #pragma mark -RightBarButtonItem-
 - (void)presentPhontViewController:(UIButton *)sender {

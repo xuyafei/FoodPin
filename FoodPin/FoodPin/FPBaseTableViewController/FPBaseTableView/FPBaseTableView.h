@@ -18,6 +18,10 @@
 
 - (UIView *)headerViewForSectionObject:(FPTableViewSectionObject *)sectionObject atSection:(NSInteger)section;
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @interface FPBaseTableView : UITableView <UITableViewDelegate>

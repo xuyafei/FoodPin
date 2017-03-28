@@ -75,39 +75,18 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(editingStyle == UITableViewCellEditingStyleDelete) {
-       // [_restaurants removeObjectAtIndex:indexPath.row];
+    if([self.fpDelegate respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]) {
+        [self.fpDelegate tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
     }
-    
-    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewRowAction *shareAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Share" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        //NSString *defaultText =[NSString stringWithFormat:@"Just checking in at%@",((Restaurant*)_restaurants[indexPath.row]).name];
-        //UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObject:defaultText] applicationActivities:nil];
-        //[self presentViewController:activityController animated:YES completion:nil];
-    }];
-    
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        //        [_restaurants removeObjectAtIndex:indexPath.row];
-        //        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:0]]  withRowAnimation:UITableViewRowAnimationFade];
-        
-       /* Restaurant *restaurant = [self.fetchedResultController objectAtIndexPath:indexPath];
-        [self.restaurantMOC deleteObject:restaurant];
-        
-        NSError *error = nil;
-        if(![self.restaurantMOC save:&error]) {
-            NSLog(@"tableView delete cell error : %@", error);
-        }*/
-    }];
-    
-    shareAction.backgroundColor = [UIColor colorWithRed: 28.0/255.0 green:165.0/255.0 blue:253.0/255.0 alpha:1.0];
-    deleteAction.backgroundColor = [UIColor colorWithRed:202.0/255.0 green:202.0/255.0 blue:203.0/255.0 alpha:1.0];
-    
-    return @[shareAction, deleteAction];
-}
+    if([self.fpDelegate respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]) {
+        return [self.fpDelegate tableView:tableView editActionsForRowAtIndexPath:indexPath];
+    }
 
+    return nil;
+}
 
 #pragma mark - 传递原生协议
 
