@@ -11,13 +11,18 @@
 #import "ReviewViewController.h"
 #import "MapViewController.h"
 #import "FoodPhotoBrowseCollectionViewController.h"
+#import "FPBaseTableView.h"
+#import "FPDetailRestaurantTableViewDataSource.h"
+#import "FPDetailTableViewItem.h"
 
-@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate,UIViewControllerTransitioningDelegate>
-@property(nonatomic, weak) UITableView *restaurantDetailView;
+@interface RestaurantDetailViewController () <UITableViewDelegate, UITableViewDataSource, ReviewViewDelegate,UIViewControllerTransitioningDelegate,FPTableViewDelegate>
+@property(nonatomic, weak) FPBaseTableView *restaurantDetailView;
 @property(nonatomic, weak) UIButton *reviewButton;
 @property(nonatomic, weak) UIButton *mapButton;
 @property(nonatomic, weak) UIView *footView;
 @property(nonatomic, copy) NSArray *cellArray;
+@property(nonatomic, copy) NSArray *fieldArray;
+@property (nonatomic, strong) FPDetailRestaurantTableViewDataSource *dataSource;
 @end
 
 @implementation RestaurantDetailViewController
@@ -25,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = _baseItem.name;
+    
+    self.dataSource = [[FPDetailRestaurantTableViewDataSource alloc] init];
     [self initCellArray];
     
     self.presentAnimation = [[FoodPinPresentAnimation alloc] init];
@@ -47,13 +54,21 @@
 
 - (void)initCellArray {
     self.cellArray = [@[@"Name", @"Type", @"Location", @"Been here"] copy];
+    self.fieldArray = [@[_baseItem.name, _baseItem.type, _baseItem.location, (_baseItem.isVisited) ? @"Yes, I've been here before" : @"NO"] copy];
+    [self.dataSource clearAllItems];
+
+    for( int i = 0; i < self.cellArray.count; i++) {
+        FPDetailTableViewItem *restaurantItem = [[FPDetailTableViewItem alloc] initWithFieldText:self.cellArray[i] withNameText:self.fieldArray[i]];
+        [self.dataSource appenItem:restaurantItem];
+    }
+
 }
 
 - (UITableView *)restaurantDetailView {
     if(!_restaurantDetailView) {
-        UITableView *restaurantDetailView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
-        restaurantDetailView.delegate = self;
-        restaurantDetailView.dataSource = self;
+        FPBaseTableView *restaurantDetailView = [[FPBaseTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
+        restaurantDetailView.fpDataSource = self.dataSource;
+        restaurantDetailView.fpDelegate = self;
         restaurantDetailView.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.2];
         restaurantDetailView.separatorColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.8];
         _restaurantDetailView = restaurantDetailView;
@@ -137,45 +152,6 @@
     foodPhotoBrowse.transitioningDelegate = self;
     foodPhotoBrowse.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:foodPhotoBrowse animated:YES completion:nil];
-}
-
-#pragma mark -UITableViewDelegate-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
-}
-
-#pragma mark -UITableViewDataSource-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"restaurantDetailCell";
-    
-    RestaurantDetailTableViewCell *restaurantDetailCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!restaurantDetailCell) {
-        restaurantDetailCell = [[RestaurantDetailTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        restaurantDetailCell.selectionStyle = UITableViewCellSelectionStyleNone;
-    }
-    
-    restaurantDetailCell.backgroundColor = [UIColor clearColor];
-    restaurantDetailCell.nameLabel.text = _cellArray[indexPath.row];
-    
-    if(indexPath.row == 0) {
-        restaurantDetailCell.filedLabel.text = _baseItem.name;
-    } else if(indexPath.row == 1) {
-        restaurantDetailCell.filedLabel.text = _baseItem.type;
-    } else if(indexPath.row == 2) {
-        restaurantDetailCell.filedLabel.text = _baseItem.location;
-    } else if(indexPath.row == 3) {
-        restaurantDetailCell.filedLabel.text = (_baseItem.isVisited) ? @"Yes, I've been here before" : @"NO";
-    }
-    
-    return restaurantDetailCell;
 }
 
 #pragma mark -ButtonSender-

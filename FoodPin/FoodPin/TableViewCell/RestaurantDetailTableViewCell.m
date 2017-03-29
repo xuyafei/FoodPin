@@ -7,6 +7,7 @@
 //
 
 #import "RestaurantDetailTableViewCell.h"
+#import "FPDetailTableViewItem.h"
 
 @implementation RestaurantDetailTableViewCell
 
@@ -58,6 +59,11 @@
         make.width.mas_equalTo(100);
         make.height.mas_greaterThanOrEqualTo(0);
     }];
+}
+
+- (void)setObject:(FPDetailTableViewItem *)object {
+    self.nameLabel.text = object.fieldText;
+    self.filedLabel.text = object.nameText;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
