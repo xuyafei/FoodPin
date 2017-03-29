@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
 #import "FoodPinPresentAnimation.h"
+#import "FPTableViewBaseItem.h"
 
 @interface RestaurantDetailViewController : UIViewController
 
-@property(nonatomic, strong) Restaurant *restaurant;
 @property(nonatomic, weak)   UIImageView *headView;
 @property(nonatomic, strong) FoodPinPresentAnimation *presentAnimation;
+@property(nonatomic, strong) FPTableViewBaseItem *baseItem;
 
 @end

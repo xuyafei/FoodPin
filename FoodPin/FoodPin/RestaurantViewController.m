@@ -148,7 +148,7 @@
 #pragma mark -FPTableViewDelegate-
 - (void)didSelectObject:(id)object atIndexPath:(NSIndexPath *)indexPath {
     RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
-    detailViewController.restaurant = _restaurants[indexPath.row];
+    detailViewController.baseItem = (FPTableViewBaseItem *)object;
     [detailViewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }

@@ -7,7 +7,6 @@
 //
 
 #import "RestaurantDetailTableViewCell.h"
-#import "Masonry.h"
 
 @implementation RestaurantDetailTableViewCell
 

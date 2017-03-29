@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.restaurant.name;
+    self.title = _baseItem.name;
     [self initCellArray];
     
     self.presentAnimation = [[FoodPinPresentAnimation alloc] init];
@@ -65,7 +65,7 @@
 - (UIImageView *)headView {
     if(!_headView) {
         UIImageView *headView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewBackGroundColor:[UIColor redColor] imageViewClipsToBounds:YES imageViewUserInteractionEnabled:YES];
-        headView.image = [UIImage imageWithData:self.restaurant.image];
+        headView.image = [UIImage imageWithData:_baseItem.image];
        
         self.restaurantDetailView.tableHeaderView = headView;
         _headView = headView;
@@ -133,7 +133,7 @@
 -(void)tapImage:(UITapGestureRecognizer *)gesture {
     NSLog(@"tap the tableview headview");
     FoodPhotoBrowseCollectionViewController *foodPhotoBrowse = [[FoodPhotoBrowseCollectionViewController alloc] init];
-    foodPhotoBrowse.image = self.restaurant.image;
+    foodPhotoBrowse.image = _baseItem.image;
     foodPhotoBrowse.transitioningDelegate = self;
     foodPhotoBrowse.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:foodPhotoBrowse animated:YES completion:nil];
@@ -166,13 +166,13 @@
     restaurantDetailCell.nameLabel.text = _cellArray[indexPath.row];
     
     if(indexPath.row == 0) {
-        restaurantDetailCell.filedLabel.text = self.restaurant.name;
+        restaurantDetailCell.filedLabel.text = _baseItem.name;
     } else if(indexPath.row == 1) {
-        restaurantDetailCell.filedLabel.text = self.restaurant.type;
+        restaurantDetailCell.filedLabel.text = _baseItem.type;
     } else if(indexPath.row == 2) {
-        restaurantDetailCell.filedLabel.text = self.restaurant.location;
+        restaurantDetailCell.filedLabel.text = _baseItem.location;
     } else if(indexPath.row == 3) {
-        restaurantDetailCell.filedLabel.text = (self.restaurant.isVisited) ? @"Yes, I've been here before" : @"NO";
+        restaurantDetailCell.filedLabel.text = (_baseItem.isVisited) ? @"Yes, I've been here before" : @"NO";
     }
     
     return restaurantDetailCell;
@@ -189,7 +189,7 @@
 - (void)clickMap:(UIButton *)sender {
     NSLog(@"click the map");
     MapViewController *mapViewController = [[MapViewController alloc] init];
-    mapViewController.theRestaurant = self.restaurant;
+    //mapViewController.theRestaurant = self.restaurant;
     [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
