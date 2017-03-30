@@ -137,8 +137,8 @@
     _searchController.hidesNavigationBarDuringPresentation = YES;
     self.definesPresentationContext = YES;
     _searchController.searchBar.placeholder = @"Search restaurants...";
-    _searchController.searchBar.tintColor = [UIColor colorWithRed:100.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
-    _searchController.searchBar.barTintColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue: 240.0/255.0 alpha:0.6];
+    _searchController.searchBar.tintColor = RGB(100.0, 100.0, 100.0, 1.0);
+    _searchController.searchBar.barTintColor = RGB(240.0, 240.0, 240.0, 0.6);
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -179,8 +179,8 @@
         }
     }];
     
-    shareAction.backgroundColor = [UIColor colorWithRed: 28.0/255.0 green:165.0/255.0 blue:253.0/255.0 alpha:1.0];
-    deleteAction.backgroundColor = [UIColor colorWithRed:202.0/255.0 green:202.0/255.0 blue:203.0/255.0 alpha:1.0];
+    shareAction.backgroundColor = RGB(28.0, 165.0, 253.0, 1.0);
+    deleteAction.backgroundColor = RGB(202.0, 202.0, 203.0, 1.0);
     
     return @[shareAction, deleteAction];
 }

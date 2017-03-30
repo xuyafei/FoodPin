@@ -34,66 +34,72 @@
 
 - (UILabel *)nameLabel {
     if(!_nameLabel) {
-        UILabel *nameLabel = [FPPublicUIKit labelWithTextColor:[UIColor whiteColor] numberOfLines:1 text:nil labelFont:[UIFont systemFontOfSize:20.0]];
+        UILabel *nameLabel = [FPPublicUIKit labelWithTextColor:[UIColor blackColor] numberOfLines:1 text:nil labelFont:[UIFont systemFontOfSize:20.0]];
         _nameLabel = nameLabel;
         [self.contentView addSubview:nameLabel];
     }
     return _nameLabel;
 }
 
-- (UILabel *)locationLabel {
-    if(!_locationLabel) {
-        UILabel *locationLabel = [FPPublicUIKit labelWithTextColor:[UIColor whiteColor] numberOfLines:0 text:nil labelFont:[UIFont fontWithName:@"System-Light" size:14.0]];
-        _locationLabel = locationLabel;
-        [self.contentView addSubview:locationLabel];
-    }
-    return _locationLabel;
-}
-
 - (UILabel *)typeLabel {
-    if(_typeLabel) {
-        UILabel *typeLabel = [FPPublicUIKit labelWithTextColor:[UIColor whiteColor] numberOfLines:1 text:nil labelFont:[UIFont fontWithName:@"System-Light" size:14.0]];
+    if(!_typeLabel) {
+        UILabel *typeLabel = [FPPublicUIKit labelWithTextColor:[UIColor grayColor] numberOfLines:1 text:nil labelFont:[UIFont fontWithName:@"System-Light" size:14.0]];
        _typeLabel = typeLabel;
         [self.contentView addSubview:typeLabel];
     }
     return _typeLabel;
 }
 
+- (UILabel *)locationLabel {
+    if(!_locationLabel) {
+        UILabel *locationLabel = [FPPublicUIKit labelWithBackgroundColor:[UIColor clearColor] textColor:[UIColor blackColor] textAlignment:NSTextAlignmentCenter numberOfLines:0 text:nil labelFont:[UIFont fontWithName:@"System-Light" size:14.0]];
+        
+        CGFloat preferredMaxWidth = [UIScreen mainScreen].bounds.size.width - 30;
+        locationLabel.preferredMaxLayoutWidth = preferredMaxWidth;
+        
+        _locationLabel = locationLabel;
+        [self.contentView addSubview:locationLabel];
+    }
+    return _locationLabel;
+}
+
 - (void)configView {
     [self.bgImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(0);
         make.top.mas_equalTo(0);
-        make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width);
-        make.height.mas_equalTo(133);
+        make.width.mas_equalTo(ScreenWidth);
+        make.height.mas_equalTo(140);
+    }];
+    
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.bgImageView.mas_bottom).offset(10);
+        make.centerX.mas_equalTo(self.contentView.mas_centerX);
+        make.width.mas_greaterThanOrEqualTo(0);
+        make.height.mas_greaterThanOrEqualTo(0);
     }];
     
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.contentView.mas_top).offset(8);
-        make.left.mas_equalTo(self.contentView.mas_left).offset(8);
+        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(5);
+        make.centerX.mas_equalTo(self.contentView.mas_centerX);
         make.width.mas_greaterThanOrEqualTo(0);
         make.height.mas_greaterThanOrEqualTo(0);
     }];
     
     [self.locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-8);
-        make.left.mas_equalTo(self.contentView.mas_left).offset(8);
-        make.width.mas_equalTo(359);
-        make.height.mas_greaterThanOrEqualTo(0);
-    }];
-    
-    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.locationLabel.mas_top).offset(-3);
-        make.left.mas_equalTo(self.contentView.mas_left).offset(8);
-        make.width.mas_equalTo(359);
+        make.top.mas_equalTo(self.typeLabel.mas_bottom).offset(5);
+        make.left.mas_equalTo(self.contentView.mas_left).offset(15);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-5);
+        make.right.mas_equalTo(self.contentView.mas_right).offset(-15);
+        make.width.mas_greaterThanOrEqualTo(0);
         make.height.mas_greaterThanOrEqualTo(0);
     }];
 }
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
+
 
 @end

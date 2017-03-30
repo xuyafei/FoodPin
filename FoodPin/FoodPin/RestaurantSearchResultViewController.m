@@ -60,7 +60,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RestaurantDetailViewController *detailViewController = [[RestaurantDetailViewController alloc] init];
-    //detailViewController.restaurant = _searchResultRestaurants[indexPath.row];
     self.navigationController.definesPresentationContext = YES;
     [detailViewController setHidesBottomBarWhenPushed:YES];
     NSLog(@"%@", self.navigationController);

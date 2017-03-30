@@ -28,6 +28,8 @@
     _imageCache = [[NSCache alloc] init];
     [self layoutDiscoverTableView];
     [self getRecordsFormCloud:NO];
+    self.discoverTableView.estimatedRowHeight = 230;
+    self.discoverTableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (UITableView *)discoverTableView {
@@ -145,7 +147,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 133;
+    return UITableViewAutomaticDimension;
 }
 
 - (void)didReceiveMemoryWarning {

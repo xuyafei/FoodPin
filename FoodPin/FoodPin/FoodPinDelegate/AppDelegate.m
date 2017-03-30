@@ -26,12 +26,12 @@
     
     [self.window makeKeyAndVisible];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:242.0/255.0 green:116.0/255.0 blue:119.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:RGB(242.0, 116.0, 119.0, 1.0)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Avenir-Light" size:24.0], NSFontAttributeName, nil]];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
-    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:244.0/255.0 green:136.0/255.0 blue:139.0/255.0 alpha:1.0]];
+    [[UITabBar appearance] setTintColor:RGB(244.0, 136.0, 139.0, 1.0)];
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
     //[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabitem-selected"]];
      

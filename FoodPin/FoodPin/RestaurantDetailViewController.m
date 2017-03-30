@@ -22,7 +22,7 @@
 @property(nonatomic, weak) UIView *footView;
 @property(nonatomic, copy) NSArray *cellArray;
 @property(nonatomic, copy) NSArray *fieldArray;
-@property (nonatomic, strong) FPDetailRestaurantTableViewDataSource *dataSource;
+@property(nonatomic, strong) FPDetailRestaurantTableViewDataSource *dataSource;
 @end
 
 @implementation RestaurantDetailViewController
@@ -69,8 +69,8 @@
         FPBaseTableView *restaurantDetailView = [[FPBaseTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
         restaurantDetailView.fpDataSource = self.dataSource;
         restaurantDetailView.fpDelegate = self;
-        restaurantDetailView.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.2];
-        restaurantDetailView.separatorColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:0.8];
+        restaurantDetailView.backgroundColor = RGB(240.0, 240.0, 240.0, 0.2);
+        restaurantDetailView.separatorColor = RGB(240.0, 240.0, 240.0, 0.8);
         _restaurantDetailView = restaurantDetailView;
         [self.view addSubview:restaurantDetailView];
     }
