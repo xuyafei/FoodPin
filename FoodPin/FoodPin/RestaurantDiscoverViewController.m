@@ -8,6 +8,7 @@
 #import <CloudKit/CloudKit.h>
 #import "DiscoverTableViewCell.h"
 #import "RestaurantDiscoverViewController.h"
+#import "FoodPinUserAPIManager.h"
 #import "MJRefresh.h"
 
 @interface RestaurantDiscoverViewController () <UITableViewDelegate, UITableViewDataSource>{
@@ -15,6 +16,7 @@
     NSCache *_imageCache;
     MJRefreshGifHeader *_firstheader;
 }
+@property (strong, nonatomic) FoodPinUserAPIManager *apiManager;
 @property(nonatomic, weak) UITableView *discoverTableView;
 @end
 
@@ -23,11 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.apiManager = [FoodPinUserAPIManager new];
+
     self.title = @"Discover";
     _recordID = [NSMutableArray array];
     _imageCache = [[NSCache alloc] init];
     [self layoutDiscoverTableView];
-    [self getRecordsFormCloud:NO];
+    //[self getRecordsFormCloud:NO];
+    [self fetchData];
     self.discoverTableView.estimatedRowHeight = 230;
     self.discoverTableView.rowHeight = UITableViewAutomaticDimension;
 }
@@ -48,6 +53,16 @@
         [self getRecordsFormCloud:NO];
     }];
     self.discoverTableView.mj_header = _firstheader;
+}
+
+- (void)fetchData {
+    [self.apiManager fetchUserInfoWithUserID:1 CompletionHandler:^(NSError *error, id result) {
+        if(!error) {
+            [_recordID removeAllObjects];
+            [_recordID addObjectsFromArray:result];
+            [self.discoverTableView reloadData];
+        }
+    }];
 }
 
 

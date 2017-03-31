@@ -29,6 +29,10 @@
 		D150EAD41E7A917B004289B3 /* FPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD31E7A917B004289B3 /* FPBaseViewController.m */; };
 		D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */; };
 		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
+		D1B049291E8E8DF8005807B2 /* FoodPinUserAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049281E8E8DF8005807B2 /* FoodPinUserAPIManager.m */; };
+		D1B0492D1E8EA17E005807B2 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0492C1E8EA17E005807B2 /* DiscoverController.m */; };
+		D1B049311E8EA1E7005807B2 /* DiscoverPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049301E8EA1E7005807B2 /* DiscoverPresenter.m */; };
+		D1B049341E8EA4A5005807B2 /* DiscoverCellPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049331E8EA4A5005807B2 /* DiscoverCellPresenter.m */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 		D1C880CF1E73A1DD00947FFA /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
 		D1C880D01E73A1DD00947FFA /* FoodPinPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */; };
@@ -161,6 +165,14 @@
 		D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchResultViewController.m; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		D1AB40F41E4EF142006476E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D1B049271E8E8DF8005807B2 /* FoodPinUserAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinUserAPIManager.h; sourceTree = "<group>"; };
+		D1B049281E8E8DF8005807B2 /* FoodPinUserAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinUserAPIManager.m; sourceTree = "<group>"; };
+		D1B0492B1E8EA17E005807B2 /* DiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverController.h; sourceTree = "<group>"; };
+		D1B0492C1E8EA17E005807B2 /* DiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverController.m; sourceTree = "<group>"; };
+		D1B0492F1E8EA1E7005807B2 /* DiscoverPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverPresenter.h; sourceTree = "<group>"; };
+		D1B049301E8EA1E7005807B2 /* DiscoverPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverPresenter.m; sourceTree = "<group>"; };
+		D1B049321E8EA4A5005807B2 /* DiscoverCellPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCellPresenter.h; sourceTree = "<group>"; };
+		D1B049331E8EA4A5005807B2 /* DiscoverCellPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCellPresenter.m; sourceTree = "<group>"; };
 		D1B173D91E0922310019CBE0 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		D1B173DC1E0BADF30019CBE0 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
@@ -250,6 +262,7 @@
 		0C97FE241DD9B33D0099113F /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				D1B049261E8E8D79005807B2 /* FoodPinApi */,
 				D14B7F311E8C95B50053F36B /* DiscoverViewController */,
 				D13A2C091E88F13400FF6D90 /* FoodPinDelegate */,
 				D13A2C0F1E89540E00FF6D90 /* FoodPinRootViewController */,
@@ -407,6 +420,8 @@
 		D14B7F311E8C95B50053F36B /* DiscoverViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D1B0492E1E8EA19D005807B2 /* DiscoverPresent */,
+				D1B0492A1E8EA131005807B2 /* DiscoverController */,
 				D14B7F321E8C9BEB0053F36B /* DiscoverDataSource */,
 				0C4AF2171DE5D6B000AB074F /* RestaurantDiscoverViewController.h */,
 				0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */,
@@ -423,6 +438,35 @@
 				D14B7F371E8C9F580053F36B /* FPDiscoverDataSource.m */,
 			);
 			name = DiscoverDataSource;
+			sourceTree = "<group>";
+		};
+		D1B049261E8E8D79005807B2 /* FoodPinApi */ = {
+			isa = PBXGroup;
+			children = (
+				D1B049271E8E8DF8005807B2 /* FoodPinUserAPIManager.h */,
+				D1B049281E8E8DF8005807B2 /* FoodPinUserAPIManager.m */,
+			);
+			name = FoodPinApi;
+			sourceTree = "<group>";
+		};
+		D1B0492A1E8EA131005807B2 /* DiscoverController */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0492B1E8EA17E005807B2 /* DiscoverController.h */,
+				D1B0492C1E8EA17E005807B2 /* DiscoverController.m */,
+			);
+			name = DiscoverController;
+			sourceTree = "<group>";
+		};
+		D1B0492E1E8EA19D005807B2 /* DiscoverPresent */ = {
+			isa = PBXGroup;
+			children = (
+				D1B0492F1E8EA1E7005807B2 /* DiscoverPresenter.h */,
+				D1B049301E8EA1E7005807B2 /* DiscoverPresenter.m */,
+				D1B049321E8EA4A5005807B2 /* DiscoverCellPresenter.h */,
+				D1B049331E8EA4A5005807B2 /* DiscoverCellPresenter.m */,
+			);
+			name = DiscoverPresent;
 			sourceTree = "<group>";
 		};
 		D1C8807F1E6FF9D600947FFA /* FPBaseTableViewController */ = {
@@ -701,16 +745,19 @@
 				D1C880D71E73A1DD00947FFA /* ReviewViewController.m in Sources */,
 				D1C880D81E73A1DD00947FFA /* MapViewController.m in Sources */,
 				D150EAD41E7A917B004289B3 /* FPBaseViewController.m in Sources */,
+				D1B049311E8EA1E7005807B2 /* DiscoverPresenter.m in Sources */,
 				D1C880D91E73A1DD00947FFA /* AddRestaurantViewController.m in Sources */,
 				D1C880DA1E73A1DD00947FFA /* WebViewController.m in Sources */,
 				D150EABF1E7A6F8D004289B3 /* Restaurant+CoreDataProperties.m in Sources */,
 				D150EAC81E7A7784004289B3 /* FPTableViewBaseCell.m in Sources */,
 				D1C880DB1E73A1DD00947FFA /* WalkthroughContentViewController.m in Sources */,
+				D1B049341E8EA4A5005807B2 /* DiscoverCellPresenter.m in Sources */,
 				D13A2C121E896C0A00FF6D90 /* FPRestaurantViewDataSource.m in Sources */,
 				D1C880DC1E73A1DD00947FFA /* WalkthroughPageViewController.m in Sources */,
 				D150EAC21E7A7013004289B3 /* FPTableViewBaseItem.m in Sources */,
 				D1C880DD1E73A1DD00947FFA /* Restaurants.m in Sources */,
 				D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */,
+				D1B049291E8E8DF8005807B2 /* FoodPinUserAPIManager.m in Sources */,
 				D1C880DF1E73A1DD00947FFA /* Restaurant.m in Sources */,
 				D14B7F351E8C9C470053F36B /* FPDiscoverViewItem.m in Sources */,
 				D14B7F2F1E8BF23E0053F36B /* FPDetailTableViewItem.m in Sources */,
@@ -718,6 +765,7 @@
 				D1C880E11E73A1DD00947FFA /* RestaurantDetailTableViewCell.m in Sources */,
 				D1C880E21E73A1DD00947FFA /* AddPhotoTableViewCell.m in Sources */,
 				D14B7F381E8C9F580053F36B /* FPDiscoverDataSource.m in Sources */,
+				D1B0492D1E8EA17E005807B2 /* DiscoverController.m in Sources */,
 				D1C880E31E73A1DD00947FFA /* AddRestaurantInfoTableViewCell.m in Sources */,
 				D1C880E41E73A1DD00947FFA /* DiscoverTableViewCell.m in Sources */,
 				D1C880E51E73A1DD00947FFA /* FoodPhotoBrowserCollectionViewCell.m in Sources */,
