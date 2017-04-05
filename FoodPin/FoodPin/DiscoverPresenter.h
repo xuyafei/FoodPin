@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FoodPinUserAPIManager.h"
+#import "DiscoverCellPresenter.h"
 
 @interface DiscoverPresenter : NSObject
 
++ (instancetype)presentWithUserId:(NSUInteger)userID;
+- (NSArray<DiscoverPresenter *> *)allDatas;
+- (void)refreshDataPage:(NSInteger)page withRequireArray:(NSArray *)array WithCompletionHandler:(CloudworkCompletionHandler)completionHander;
 @end

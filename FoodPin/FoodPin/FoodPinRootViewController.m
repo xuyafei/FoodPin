@@ -10,6 +10,7 @@
 #import "RestaurantViewController.h"
 #import "RestaurantAboutViewController.h"
 #import "RestaurantDiscoverViewController.h"
+#import "FoodPinViewController.h"
 
 @interface FoodPinRootViewController ()
 
@@ -24,11 +25,12 @@
 
 - (void)initNavigationControllers {
     RestaurantViewController *restaurantViewController = [[RestaurantViewController alloc] init];
-    RestaurantDiscoverViewController *restaurantDiscoverViewController = [[RestaurantDiscoverViewController alloc] init];
+    //RestaurantDiscoverViewController *restaurantDiscoverViewController = [[RestaurantDiscoverViewController alloc] init];
     RestaurantAboutViewController *restaurantAboutViewController = [[RestaurantAboutViewController alloc] init];
+    FoodPinViewController *discoverViewController = [[FoodPinViewController alloc] init];
     
     self.favoritesNav = [[UINavigationController alloc] initWithRootViewController:restaurantViewController];
-    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:restaurantDiscoverViewController];
+    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:/*restaurantDiscoverViewController*/discoverViewController];
     self.aboutNav = [[UINavigationController alloc] initWithRootViewController:restaurantAboutViewController];
     
     NSArray *tabController  = @[self.favoritesNav, self.discoverNav, self.aboutNav];
@@ -46,7 +48,7 @@
     [discoverItem setImage:[[UIImage imageNamed:@"discover"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [discoverItem setSelectedImage:[[UIImage imageNamed:@"discover"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     
-    [aboutItem setTitle:@"Discover"];
+    [aboutItem setTitle:@"About"];
     [aboutItem setImage:[[UIImage imageNamed:@"about"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     [aboutItem setSelectedImage:[[UIImage imageNamed:@"about"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
 }

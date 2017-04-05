@@ -101,5 +101,14 @@
     // Configure the view for the selected state
 }
 
+- (void)setPresenter:(DiscoverCellPresenter *)presenter {
+    _presenter = presenter;
+    
+    self.typeLabel.text = presenter.type;
+    self.locationLabel.text = presenter.location;
+    self.nameLabel.text = presenter.name;
+    self.bgImageView.image = presenter.image;
+}
+
 
 @end

@@ -18,6 +18,7 @@ typedef enum : NSUInteger {
 
 @interface FoodPinUserAPIManager : NSObject
 
-- (void)fetchUserInfoWithUserID:(NSUInteger)userID CompletionHandler:(CloudworkCompletionHandler)completionHandler;
+- (void)fetchWithPage:(NSInteger)page withRequireArray:(NSArray *)array CompletionHandler:(CloudworkCompletionHandler)completionHandler;
+- (void)refreshWithPage:(NSInteger)page withRequireArray:(NSArray *)array completionHandler:(CloudworkCompletionHandler)completionHandler;
 
 @end

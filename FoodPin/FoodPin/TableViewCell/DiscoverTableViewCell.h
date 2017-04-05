@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DiscoverPresenter.h"
 
 @interface DiscoverTableViewCell : UITableViewCell
 
@@ -14,5 +15,7 @@
 @property (nonatomic, weak)UILabel *nameLabel;
 @property (nonatomic, weak)UILabel *locationLabel;
 @property (nonatomic, weak)UILabel *typeLabel;
+
+@property (nonatomic, strong) DiscoverCellPresenter *presenter;
 
 @end

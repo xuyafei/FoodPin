@@ -20,7 +20,6 @@
 		D14B7F351E8C9C470053F36B /* FPDiscoverViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D14B7F341E8C9C470053F36B /* FPDiscoverViewItem.m */; };
 		D14B7F381E8C9F580053F36B /* FPDiscoverDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D14B7F371E8C9F580053F36B /* FPDiscoverDataSource.m */; };
 		D150EABA1E77CAC4004289B3 /* FPPublicUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAB91E77CAC4004289B3 /* FPPublicUIKit.m */; };
-		D150EABF1E7A6F8D004289B3 /* Restaurant+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */; };
 		D150EAC21E7A7013004289B3 /* FPTableViewBaseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAC11E7A7013004289B3 /* FPTableViewBaseItem.m */; };
 		D150EAC51E7A7413004289B3 /* FPTableViewSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAC41E7A7413004289B3 /* FPTableViewSectionObject.m */; };
 		D150EAC81E7A7784004289B3 /* FPTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAC71E7A7784004289B3 /* FPTableViewBaseCell.m */; };
@@ -33,6 +32,8 @@
 		D1B0492D1E8EA17E005807B2 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0492C1E8EA17E005807B2 /* DiscoverController.m */; };
 		D1B049311E8EA1E7005807B2 /* DiscoverPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049301E8EA1E7005807B2 /* DiscoverPresenter.m */; };
 		D1B049341E8EA4A5005807B2 /* DiscoverCellPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049331E8EA4A5005807B2 /* DiscoverCellPresenter.m */; };
+		D1B049391E8F5E9D005807B2 /* Restaurant+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C684D171DFE931E00D61B78 /* Restaurant+CoreDataProperties.m */; };
+		D1B0493A1E8F7F9A005807B2 /* FoodPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049361E8F566C005807B2 /* FoodPinViewController.m */; };
 		D1B173D81E08184C0019CBE0 /* FoodPin.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = D193BB1B1DFE39B7004D1573 /* FoodPin.xcdatamodeld */; };
 		D1C880CF1E73A1DD00947FFA /* FPAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC541E1C917600B8C08E /* FPAlertController.m */; };
 		D1C880D01E73A1DD00947FFA /* FoodPinPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */; };
@@ -173,6 +174,8 @@
 		D1B049301E8EA1E7005807B2 /* DiscoverPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverPresenter.m; sourceTree = "<group>"; };
 		D1B049321E8EA4A5005807B2 /* DiscoverCellPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverCellPresenter.h; sourceTree = "<group>"; };
 		D1B049331E8EA4A5005807B2 /* DiscoverCellPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverCellPresenter.m; sourceTree = "<group>"; };
+		D1B049351E8F566C005807B2 /* FoodPinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinViewController.h; sourceTree = "<group>"; };
+		D1B049361E8F566C005807B2 /* FoodPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinViewController.m; sourceTree = "<group>"; };
 		D1B173D91E0922310019CBE0 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
 		D1B173DC1E0BADF30019CBE0 /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
 		D1B173DD1E0BADF30019CBE0 /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				D14B7F321E8C9BEB0053F36B /* DiscoverDataSource */,
 				0C4AF2171DE5D6B000AB074F /* RestaurantDiscoverViewController.h */,
 				0C4AF2181DE5D6B000AB074F /* RestaurantDiscoverViewController.m */,
+				D1B049351E8F566C005807B2 /* FoodPinViewController.h */,
+				D1B049361E8F566C005807B2 /* FoodPinViewController.m */,
 			);
 			name = DiscoverViewController;
 			sourceTree = "<group>";
@@ -740,6 +745,7 @@
 				D1C880D31E73A1DD00947FFA /* RestaurantViewController.m in Sources */,
 				D1C880D41E73A1DD00947FFA /* RestaurantDiscoverViewController.m in Sources */,
 				D1C880D51E73A1DD00947FFA /* RestaurantAboutViewController.m in Sources */,
+				D1B049391E8F5E9D005807B2 /* Restaurant+CoreDataProperties.m in Sources */,
 				D1C880D61E73A1DD00947FFA /* RestaurantDetailViewController.m in Sources */,
 				D13A2C0C1E88F13400FF6D90 /* AppDelegate.m in Sources */,
 				D1C880D71E73A1DD00947FFA /* ReviewViewController.m in Sources */,
@@ -748,12 +754,12 @@
 				D1B049311E8EA1E7005807B2 /* DiscoverPresenter.m in Sources */,
 				D1C880D91E73A1DD00947FFA /* AddRestaurantViewController.m in Sources */,
 				D1C880DA1E73A1DD00947FFA /* WebViewController.m in Sources */,
-				D150EABF1E7A6F8D004289B3 /* Restaurant+CoreDataProperties.m in Sources */,
 				D150EAC81E7A7784004289B3 /* FPTableViewBaseCell.m in Sources */,
 				D1C880DB1E73A1DD00947FFA /* WalkthroughContentViewController.m in Sources */,
 				D1B049341E8EA4A5005807B2 /* DiscoverCellPresenter.m in Sources */,
 				D13A2C121E896C0A00FF6D90 /* FPRestaurantViewDataSource.m in Sources */,
 				D1C880DC1E73A1DD00947FFA /* WalkthroughPageViewController.m in Sources */,
+				D1B0493A1E8F7F9A005807B2 /* FoodPinViewController.m in Sources */,
 				D150EAC21E7A7013004289B3 /* FPTableViewBaseItem.m in Sources */,
 				D1C880DD1E73A1DD00947FFA /* Restaurants.m in Sources */,
 				D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */,

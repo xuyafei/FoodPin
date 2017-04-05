@@ -32,7 +32,7 @@
     _imageCache = [[NSCache alloc] init];
     [self layoutDiscoverTableView];
     //[self getRecordsFormCloud:NO];
-    [self fetchData];
+    //[self fetchData];
     self.discoverTableView.estimatedRowHeight = 230;
     self.discoverTableView.rowHeight = UITableViewAutomaticDimension;
 }
@@ -55,7 +55,7 @@
     self.discoverTableView.mj_header = _firstheader;
 }
 
-- (void)fetchData {
+/*- (void)fetchData {
     [self.apiManager fetchUserInfoWithUserID:1 CompletionHandler:^(NSError *error, id result) {
         if(!error) {
             [_recordID removeAllObjects];
@@ -63,7 +63,7 @@
             [self.discoverTableView reloadData];
         }
     }];
-}
+}*/
 
 
 - (void)getRecordsFormCloud:(BOOL)isMoreData {

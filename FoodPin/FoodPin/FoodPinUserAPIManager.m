@@ -3,7 +3,7 @@
 //  FoodPin
 //
 //  Created by polycom on 2017/3/31.
-//  Copyright © 2017年 永康范. All rights reserved.
+//  Copyright © 2017年 xuyafei. All rights reserved.
 //
 
 #import "FoodPinUserAPIManager.h"
@@ -11,7 +11,11 @@
 
 @implementation FoodPinUserAPIManager
 
-- (void)fetchUserInfoWithUserID:(NSUInteger)userID CompletionHandler:(CloudworkCompletionHandler)completionHandler {
+- (void)fetchWithPage:(NSInteger)page withRequireArray:(NSArray *)array CompletionHandler:(CloudworkCompletionHandler)completionHandler {
+    [self refreshWithPage:page withRequireArray:array completionHandler:completionHandler];
+}
+
+- (void)refreshWithPage:(NSInteger)page withRequireArray:(NSArray *)array completionHandler:(CloudworkCompletionHandler)completionHandler {
     CKContainer *defaultContainer = [CKContainer defaultContainer];
     CKDatabase *publicDatabase = [defaultContainer publicCloudDatabase];
     
@@ -19,10 +23,11 @@
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Restaurant" predicate:predicate];
     query.sortDescriptors = @ [[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
-    queryOperation.desiredKeys = @[@"name", @"type", @"location"];
+    //queryOperation.desiredKeys = @[@"name", @"type", @"location", @"image"];
+    queryOperation.desiredKeys = array;
     queryOperation.queuePriority = NSOperationQueuePriorityVeryHigh;
     queryOperation.qualityOfService = NSQualityOfServiceUserInteractive;
-    queryOperation.resultsLimit = 50;
+    queryOperation.resultsLimit = page;
     
     NSMutableArray *restaurants = [NSMutableArray array];
     
