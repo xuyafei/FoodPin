@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FoodPinViewController : UIViewController
+@interface FoodPinDiscoverViewController : UIViewController
 
 @end

@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) DiscoverPresenter *presenter;
 
-@property (copy, nonatomic) void(^didSelectedRowhandler)(CKRecord *);
+@property (copy, nonatomic) void(^didSelectedRowHandler)(CKRecord *);
 
 @end
 
@@ -80,7 +80,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    !self.didSelectedRowhandler ?: self.didSelectedRowhandler(self.presenter.allDatas[indexPath.row].draft);
+    !self.didSelectedRowHandler ?: self.didSelectedRowHandler(self.presenter.allDatas[indexPath.row].draft);
 }
 
 @end

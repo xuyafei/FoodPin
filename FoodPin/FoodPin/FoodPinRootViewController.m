@@ -10,7 +10,7 @@
 #import "RestaurantViewController.h"
 #import "RestaurantAboutViewController.h"
 #import "RestaurantDiscoverViewController.h"
-#import "FoodPinViewController.h"
+#import "FoodPinDiscoverViewController.h"
 
 @interface FoodPinRootViewController ()
 
@@ -25,12 +25,11 @@
 
 - (void)initNavigationControllers {
     RestaurantViewController *restaurantViewController = [[RestaurantViewController alloc] init];
-    //RestaurantDiscoverViewController *restaurantDiscoverViewController = [[RestaurantDiscoverViewController alloc] init];
     RestaurantAboutViewController *restaurantAboutViewController = [[RestaurantAboutViewController alloc] init];
-    FoodPinViewController *discoverViewController = [[FoodPinViewController alloc] init];
+    FoodPinDiscoverViewController *discoverViewController = [[FoodPinDiscoverViewController alloc] init];
     
     self.favoritesNav = [[UINavigationController alloc] initWithRootViewController:restaurantViewController];
-    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:/*restaurantDiscoverViewController*/discoverViewController];
+    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:discoverViewController];
     self.aboutNav = [[UINavigationController alloc] initWithRootViewController:restaurantAboutViewController];
     
     NSArray *tabController  = @[self.favoritesNav, self.discoverNav, self.aboutNav];

@@ -6,16 +6,17 @@
 //  Copyright © 2017年 xuyafei. All rights reserved.
 //
 
-#import "FoodPinViewController.h"
+#import "FoodPinDiscoverViewController.h"
+#import "DiscoverDetailViewController.h"
 #import "DiscoverController.h"
 
-@interface FoodPinViewController ()
+@interface FoodPinDiscoverViewController ()
 
 @property (strong, nonatomic) DiscoverController *discoverController;
 
 @end
 
-@implementation FoodPinViewController
+@implementation FoodPinDiscoverViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +37,8 @@
     self.discoverController = [DiscoverController inistanceWithPresenter:[DiscoverPresenter presentWithUserId:100]];
     [self.discoverController setDidSelectedRowHandler:^(CKRecord *draft) {
         __strong typeof(self) strongSelf = weakWelf;
-        //[strongSelf.navigationController pushViewController: animated:<#(BOOL)#>]
+        DiscoverDetailViewController *discoverDetailViewController = [[DiscoverDetailViewController alloc] init];
+        [strongSelf.navigationController pushViewController:discoverDetailViewController animated:YES];
     }];
     
     self.discoverController.discoverTableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeigth);
