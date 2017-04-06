@@ -13,6 +13,6 @@
 @interface DiscoverPresenter : NSObject
 
 + (instancetype)presentWithUserId:(NSUInteger)userID;
-- (NSArray<DiscoverPresenter *> *)allDatas;
+- (NSArray<DiscoverCellPresenter *> *)allDatas;
 - (void)refreshDataPage:(NSInteger)page withRequireArray:(NSArray *)array WithCompletionHandler:(CloudworkCompletionHandler)completionHander;
 @end

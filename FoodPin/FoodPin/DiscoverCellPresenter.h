@@ -16,6 +16,8 @@
 @property (nonatomic, copy)NSString *location;
 @property (nonatomic, copy)NSString *type;
 
+- (CKRecord *)draft;
+
 + (instancetype)presenterWithPorperty:(CKRecord *)result;
 
 @end

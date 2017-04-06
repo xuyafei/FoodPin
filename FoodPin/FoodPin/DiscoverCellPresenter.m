@@ -8,10 +8,17 @@
 
 #import "DiscoverCellPresenter.h"
 
+@interface DiscoverCellPresenter()
+
+@property (strong, nonatomic) CKRecord *draft;
+
+@end
+
 @implementation DiscoverCellPresenter
 
 + (instancetype)presenterWithPorperty:(CKRecord *)result {
     DiscoverCellPresenter *presenter = [DiscoverCellPresenter new];
+    presenter.draft = result;
     presenter.name = [result objectForKey:@"name"];
     presenter.type = [result objectForKey:@"type"];
     presenter.location = [result objectForKey:@"location"];

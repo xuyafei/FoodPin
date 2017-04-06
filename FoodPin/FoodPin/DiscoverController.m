@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) DiscoverPresenter *presenter;
 
+@property (copy, nonatomic) void(^didSelectedRowhandler)(CKRecord *);
+
 @end
 
 @implementation DiscoverController
@@ -75,6 +77,10 @@
     discoverRestaurantCell.presenter = self.presenter.allDatas[indexPath.row];
     
     return discoverRestaurantCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    !self.didSelectedRowhandler ?: self.didSelectedRowhandler(self.presenter.allDatas[indexPath.row].draft);
 }
 
 @end

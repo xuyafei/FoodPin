@@ -23,7 +23,6 @@
     CKQuery *query = [[CKQuery alloc] initWithRecordType:@"Restaurant" predicate:predicate];
     query.sortDescriptors = @ [[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     CKQueryOperation *queryOperation = [[CKQueryOperation alloc] initWithQuery:query];
-    //queryOperation.desiredKeys = @[@"name", @"type", @"location", @"image"];
     queryOperation.desiredKeys = array;
     queryOperation.queuePriority = NSOperationQueuePriorityVeryHigh;
     queryOperation.qualityOfService = NSQualityOfServiceUserInteractive;

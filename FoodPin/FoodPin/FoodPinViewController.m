@@ -32,7 +32,13 @@
 }
 
 - (void)configurationDiscoverView {
+    __weak typeof(self) weakWelf = self;
     self.discoverController = [DiscoverController inistanceWithPresenter:[DiscoverPresenter presentWithUserId:100]];
+    [self.discoverController setDidSelectedRowHandler:^(CKRecord *draft) {
+        __strong typeof(self) strongSelf = weakWelf;
+        //[strongSelf.navigationController pushViewController: animated:<#(BOOL)#>]
+    }];
+    
     self.discoverController.discoverTableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeigth);
     [self.view addSubview:self.discoverController.discoverTableView];
 }
