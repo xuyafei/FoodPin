@@ -27,6 +27,7 @@
 		D150EACE1E7A84D7004289B3 /* FPBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EACD1E7A84D7004289B3 /* FPBaseTableView.m */; };
 		D150EAD41E7A917B004289B3 /* FPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD31E7A917B004289B3 /* FPBaseViewController.m */; };
 		D150EAD71E7BD2A0004289B3 /* RestaurantHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */; };
+		D1847C561E963F5400D019E9 /* DiscoverDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1847C551E963F5400D019E9 /* DiscoverDetailController.m */; };
 		D1AB40F51E4EF142006476E2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AB40F41E4EF142006476E2 /* CloudKit.framework */; };
 		D1B049291E8E8DF8005807B2 /* FoodPinUserAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B049281E8E8DF8005807B2 /* FoodPinUserAPIManager.m */; };
 		D1B0492D1E8EA17E005807B2 /* DiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B0492C1E8EA17E005807B2 /* DiscoverController.m */; };
@@ -165,6 +166,8 @@
 		D150EAD61E7BD2A0004289B3 /* RestaurantHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantHelper.m; sourceTree = "<group>"; };
 		D1658B8B1E5D5AEC00757693 /* RestaurantSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantSearchResultViewController.h; sourceTree = "<group>"; };
 		D1658B8C1E5D5AEC00757693 /* RestaurantSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantSearchResultViewController.m; sourceTree = "<group>"; };
+		D1847C541E963F5400D019E9 /* DiscoverDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverDetailController.h; sourceTree = "<group>"; };
+		D1847C551E963F5400D019E9 /* DiscoverDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverDetailController.m; sourceTree = "<group>"; };
 		D193BB1C1DFE39B7004D1573 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		D1AB40F41E4EF142006476E2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1B049271E8E8DF8005807B2 /* FoodPinUserAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinUserAPIManager.h; sourceTree = "<group>"; };
@@ -426,6 +429,7 @@
 		D14B7F311E8C95B50053F36B /* DiscoverViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D1847C531E963F0C00D019E9 /* DiscoverDetailController */,
 				D1B0492E1E8EA19D005807B2 /* DiscoverPresent */,
 				D1B0492A1E8EA131005807B2 /* DiscoverController */,
 				D14B7F321E8C9BEB0053F36B /* DiscoverDataSource */,
@@ -448,6 +452,15 @@
 				D14B7F371E8C9F580053F36B /* FPDiscoverDataSource.m */,
 			);
 			name = DiscoverDataSource;
+			sourceTree = "<group>";
+		};
+		D1847C531E963F0C00D019E9 /* DiscoverDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				D1847C541E963F5400D019E9 /* DiscoverDetailController.h */,
+				D1847C551E963F5400D019E9 /* DiscoverDetailController.m */,
+			);
+			name = DiscoverDetailController;
 			sourceTree = "<group>";
 		};
 		D1B049261E8E8D79005807B2 /* FoodPinApi */ = {
@@ -773,6 +786,7 @@
 				D1C880DF1E73A1DD00947FFA /* Restaurant.m in Sources */,
 				D14B7F351E8C9C470053F36B /* FPDiscoverViewItem.m in Sources */,
 				D14B7F2F1E8BF23E0053F36B /* FPDetailTableViewItem.m in Sources */,
+				D1847C561E963F5400D019E9 /* DiscoverDetailController.m in Sources */,
 				D1C880E01E73A1DD00947FFA /* RestaurantTableViewCell.m in Sources */,
 				D1C880E11E73A1DD00947FFA /* RestaurantDetailTableViewCell.m in Sources */,
 				D1C880E21E73A1DD00947FFA /* AddPhotoTableViewCell.m in Sources */,

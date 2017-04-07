@@ -7,8 +7,12 @@
 //
 
 #import "DiscoverDetailViewController.h"
+#import "DiscoverDetailController.h"
 
 @interface DiscoverDetailViewController ()
+
+@property (nonatomic, strong) DiscoverDetailController *discoverDetailController;
+@property (nonatomic, strong) UITableView *discoverDetailTableView;
 
 @end
 
@@ -17,22 +21,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:YES];
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    [self configDiscoverDetailView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)configDiscoverDetailView {
+    UIView * view = [[UIView alloc] initWithFrame:CGRectZero];
+    [self.view addSubview:view];
+    
+    self.discoverDetailController = [DiscoverDetailController initWithPresenter];
+    self.discoverDetailController.discoverDetailTableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeigth);
+    [self.view addSubview:self.discoverDetailController.discoverDetailTableView];
+    
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 230)];
+    headView.backgroundColor = [UIColor redColor];
+    self.discoverDetailController.discoverDetailTableView.tableHeaderView = headView;
 }
-*/
+
 
 @end
