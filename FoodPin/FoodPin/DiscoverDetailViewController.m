@@ -37,10 +37,6 @@
     self.discoverDetailController = [DiscoverDetailController initWithPresenter];
     self.discoverDetailController.discoverDetailTableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeigth);
     [self.view addSubview:self.discoverDetailController.discoverDetailTableView];
-    
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 230)];
-    headView.backgroundColor = [UIColor redColor];
-    self.discoverDetailController.discoverDetailTableView.tableHeaderView = headView;
 }
 
 

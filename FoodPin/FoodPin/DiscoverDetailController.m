@@ -29,7 +29,7 @@
         self.discoverDetailTableView.delegate = self;
         self.discoverDetailTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.discoverDetailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        //self.headView.backgroundColor = [UIColor redColor];
+        self.headView.backgroundColor = [UIColor redColor];
     }
     
     return self;
@@ -37,7 +37,7 @@
 
 - (UIView *)headView {
     if(!_headView) {
-        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 170)];
+        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 230)];
         self.discoverDetailTableView.tableHeaderView = headView;
         _headView = headView;
     }
@@ -54,6 +54,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat yOffset = scrollView.contentOffset.y;
+    
+    if (yOffset < 0) {
+        CGFloat totalOffset = 200 + ABS(yOffset);
+        CGFloat f = totalOffset / 200;
+        
+        _headView.frame = CGRectMake(- (width * f - width) / 2, yOffset, width * f, totalOffset);
+    }
 }
 
 
