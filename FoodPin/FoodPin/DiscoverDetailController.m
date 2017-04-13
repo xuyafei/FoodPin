@@ -7,10 +7,13 @@
 //
 
 #import "DiscoverDetailController.h"
+#import "FoodPinCycleScrollView.h"
 
 @interface DiscoverDetailController()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIView *headView;
+@property (nonatomic, weak) FoodPinCycleScrollView *cycleHeadView;
+@property (nonatomic, strong) NSMutableArray *imageArray;
 
 @end
 
@@ -24,24 +27,35 @@
 - (instancetype)initWithPresenter {
     if(self = [super init]) {
         self.discoverDetailTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeigth)];
-        self.discoverDetailTableView.backgroundColor = [UIColor blackColor];
+        self.discoverDetailTableView.backgroundColor = [UIColor whiteColor];
         self.discoverDetailTableView.dataSource = self;
         self.discoverDetailTableView.delegate = self;
         self.discoverDetailTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.discoverDetailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-        self.headView.backgroundColor = [UIColor redColor];
+        [self configImageArray];
+        self.cycleHeadView.backgroundColor = [UIColor grayColor];
     }
     
     return self;
 }
 
-- (UIView *)headView {
-    if(!_headView) {
-        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 230)];
-        self.discoverDetailTableView.tableHeaderView = headView;
-        _headView = headView;
+- (void)configImageArray {
+    NSArray *array = @[@"cafedeadend.jpg", @"homei.jpg", @"teakha.jpg",@"cafeloisl.jpg", @"petiteoyster.jpg"];
+    self.imageArray = [NSMutableArray array];
+    for(NSString *imageString in array) {
+        UIImage *image = [UIImage imageNamed:imageString];
+        [self.imageArray addObject:image];
     }
-    return _headView;
+}
+
+- (UIView *)cycleHeadView {
+    if(!_cycleHeadView) {
+        FoodPinCycleScrollView *cycleHeadView = [[FoodPinCycleScrollView alloc] initWithImages:self.imageArray];
+        self.discoverDetailTableView.tableHeaderView = cycleHeadView;
+        _cycleHeadView = cycleHeadView;
+    }
+    
+    return _cycleHeadView;
 }
 
 /*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

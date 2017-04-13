@@ -10,14 +10,14 @@
 
 #define FP_CYCLEINDEX_CALCULATE(x,y) (x+y)%y
 #define FP_DEFAULT_DURATION_TIME 2.0f
-#define FP_DEFAULT_DURATION_FRAME CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height/4)
+#define FP_DEFAULT_DURATION_FRAME CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,230)
 
 @interface FoodPinCycleScrollView ()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIImageView *leftImageView;
-@property (nonatomic, strong) UIImageView *middleImageView;
-@property (nonatomic, strong) UIImageView *rightImageView;
-@property (nonatomic, strong) UIScrollView *containerView;
+@property (nonatomic, weak) UIImageView *leftImageView;
+@property (nonatomic, weak) UIImageView *middleImageView;
+@property (nonatomic, weak) UIImageView *rightImageView;
+@property (nonatomic, weak) UIScrollView *containerView;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) NSInteger currentNumber;
 
@@ -43,42 +43,76 @@
         _currentNumber = 0;
         
         [self cycleViewConfig];
-        [self pageControlConfig];
+         [self pageControlPosition:_pageLocation];
         [self cycleImageConfig];
     }
     return self;
 }
 
+- (UIScrollView *)containerView {
+    if(!_containerView) {
+        UIScrollView *containerView = [[UIScrollView alloc] initWithFrame:self.bounds];
+        containerView.contentSize = CGSizeMake(3 * containerView.frame.size.width, containerView.frame.size.height);
+        containerView.contentOffset = CGPointMake(containerView.frame.size.width, containerView.frame.origin.y);
+        containerView.backgroundColor = [UIColor grayColor];
+        _containerView = containerView;
+        [self addSubview:containerView];
+    }
+    
+    return _containerView;
+}
+
+- (UIImageView *)leftImageView {
+    if(!_leftImageView) {
+        UIImageView *leftImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewCornerRadius:0 imageViewClipsToBounds:YES];
+        _leftImageView = leftImageView;
+        [self.containerView addSubview:leftImageView];
+    }
+    return _leftImageView;
+}
+
+- (UIImageView *)middleImageView {
+    if(!_middleImageView) {
+        UIImageView *middleImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewCornerRadius:0 imageViewClipsToBounds:YES];
+        _middleImageView = middleImageView;
+        [self.containerView addSubview:middleImageView];
+    }
+    return _middleImageView;
+}
+
+- (UIImageView *)rightImageView {
+    if(!_rightImageView) {
+        UIImageView *rightImageView = [FPPublicUIKit imageViewContentMode:UIViewContentModeScaleAspectFill imageViewCornerRadius:0 imageViewClipsToBounds:YES];
+        _rightImageView = rightImageView;
+        [self.containerView addSubview:_rightImageView];
+    }
+    return _rightImageView;
+}
+
+
 - (void)cycleViewConfig {
-    self.containerView = [[UIScrollView alloc] initWithFrame:self.bounds];
-    self.containerView.contentSize = CGSizeMake(3 * _containerView.frame.size.width, _containerView.frame.size.height);
-    self.containerView.contentOffset = CGPointMake(_containerView.frame.size.width, _containerView.frame.origin.y);
-    self.containerView.backgroundColor = [UIColor grayColor];
-    
-    self.leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height)];
-    self.middleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(_containerView.frame.size.width, 0, _containerView.frame.size.width, _containerView.frame.size.height)];
-    self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(2 * _containerView.frame.size.width, 0, _containerView.frame.size.width, _containerView.frame.size.height)];
-    
-    self.containerView.delegate = self;
-    [self.containerView addSubview:self.leftImageView];
-    [self.containerView addSubview:self.rightImageView];
-    [self.containerView addSubview:self.middleImageView];
-    
     self.containerView.scrollEnabled = YES;
     self.containerView.showsHorizontalScrollIndicator = NO;
     self.containerView.showsVerticalScrollIndicator = NO;
     self.containerView.pagingEnabled = YES;
     
-    [self addSubview:self.containerView];
+    self.leftImageView.frame = CGRectMake(0, 0, _containerView.frame.size.width, _containerView.frame.size.height);
+    self.middleImageView.frame = CGRectMake(_containerView.frame.size.width, 0, _containerView.frame.size.width, _containerView.frame.size.height);
+    self.rightImageView.frame = CGRectMake(2 * _containerView.frame.size.width, 0, _containerView.frame.size.width, _containerView.frame.size.height);
 }
 
-- (void)pageControlConfig {
-    _pageControl = [[UIPageControl alloc] init];
-    _pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-    _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
-    _pageControl.currentPage = 0;
-    [self pageControlPosition:_pageLocation];
-    _pageControl.numberOfPages = _images.count;
+- (UIPageControl *)pageControl {
+    if(!_pageControl) {
+        UIPageControl *pageControl = [[UIPageControl alloc] init];
+        pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+        pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+        pageControl.currentPage = 0;
+        pageControl.numberOfPages = _images.count;
+        [self addSubview:pageControl];
+        _pageControl = pageControl;
+    }
+    
+    return _pageControl;
 }
 
 - (void)cycleImageConfig {
@@ -87,9 +121,9 @@
         return;
     }
     
-    _middleImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber, _images.count)];
-    _leftImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber - 1, _images.count)];
-    _rightImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber + 1, _images.count)];
+    self.middleImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber, _images.count)];
+    self.leftImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber - 1, _images.count)];
+    self.rightImageView.image = (UIImage *)_images[FP_CYCLEINDEX_CALCULATE(_currentNumber + 1, _images.count)];
     
     [self timeSetter];
 }
@@ -135,16 +169,16 @@
 
 - (void)pageControlPosition:(FPCycleScrollPageViewPosition)position {
     if(position == FPCycleScrollPageViewPositionBottomCenter) {
-        _pageControl.frame = CGRectMake(self.center.x - 50, self.frame.size.height - 30, 100, 30);
+        self.pageControl.frame = CGRectMake(self.center.x - 50, self.frame.size.height - 30, 100, 30);
     } else if(position == FPCycleScrollPageViewPositionBottomLeft) {
-        _pageControl.frame = CGRectMake(50, self.frame.size.height - 30, 100, 30);
+        self.pageControl.frame = CGRectMake(50, self.frame.size.height - 30, 100, 30);
     } else if(position == FPCycleScrollPageViewPositionBottomRight) {
-        _pageControl.frame = CGRectMake(self.frame.size.width - 100 - 20, self.frame.size.height - 30, 100, 30);
+        self.pageControl.frame = CGRectMake(self.frame.size.width - 100 - 20, self.frame.size.height - 30, 100, 30);
     }
     
     self.pageControl.currentPage = self.currentNumber;
     [self changeImageViewWith:self.currentNumber];
-    self.containerView.contentOffset = CGPointMake(_containerView.frame.size.width, _containerView.frame.origin.y);
+    self.containerView.contentOffset = CGPointMake(self.containerView.frame.size.width, self.containerView.frame.origin.y);
 }
 
 - (void)changeImageViewWith:(NSInteger)imageNumber {

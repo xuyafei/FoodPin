@@ -17,7 +17,7 @@ typedef NS_ENUM(int, FPCycleScrollPageViewPosition) {
 @interface FoodPinCycleScrollView : UIView
 
 @property (nonatomic, strong) NSArray *images;
-@property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, weak) UIPageControl *pageControl;
 @property (nonatomic, assign) NSTimeInterval pageChangeTime;
 @property (nonatomic, assign) FPCycleScrollPageViewPosition pageLocation;
 
