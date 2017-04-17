@@ -14,7 +14,6 @@
 		0C97FE401DD9B33D0099113F /* FoodPinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE3F1DD9B33D0099113F /* FoodPinTests.m */; };
 		0C97FE4B1DD9B33D0099113F /* FoodPinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE4A1DD9B33D0099113F /* FoodPinUITests.m */; };
 		7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */; };
-		D11C20721EA065FB00D16C54 /* FoodPinDiscoverTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */; };
 		D11C20751EA2607A00D16C54 /* FoodPinDiscoverHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */; };
 		D11C20781EA368A400D16C54 /* FoodPinSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20771EA368A400D16C54 /* FoodPinSegmentControl.m */; };
 		D1302A701E9E68F900D769B8 /* FoodPinCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1302A6F1E9E68F900D769B8 /* FoodPinCycleScrollView.m */; };
@@ -135,8 +134,6 @@
 		0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailTableViewCell.m; sourceTree = "<group>"; };
 		33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B3E33A90B8E8063FE3C876 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
-		D11C20701EA065FB00D16C54 /* FoodPinDiscoverTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinDiscoverTitleView.h; sourceTree = "<group>"; };
-		D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinDiscoverTitleView.m; sourceTree = "<group>"; };
 		D11C20731EA2607A00D16C54 /* FoodPinDiscoverHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinDiscoverHeadView.h; sourceTree = "<group>"; };
 		D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinDiscoverHeadView.m; sourceTree = "<group>"; };
 		D11C20761EA368A400D16C54 /* FoodPinSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinSegmentControl.h; sourceTree = "<group>"; };
@@ -378,8 +375,6 @@
 			children = (
 				D1302A6E1E9E68F900D769B8 /* FoodPinCycleScrollView.h */,
 				D1302A6F1E9E68F900D769B8 /* FoodPinCycleScrollView.m */,
-				D11C20701EA065FB00D16C54 /* FoodPinDiscoverTitleView.h */,
-				D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */,
 				D11C20731EA2607A00D16C54 /* FoodPinDiscoverHeadView.h */,
 				D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */,
 				D11C20761EA368A400D16C54 /* FoodPinSegmentControl.h */,
@@ -777,7 +772,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D11C20721EA065FB00D16C54 /* FoodPinDiscoverTitleView.m in Sources */,
 				D150EACE1E7A84D7004289B3 /* FPBaseTableView.m in Sources */,
 				D11C20751EA2607A00D16C54 /* FoodPinDiscoverHeadView.m in Sources */,
 				D11C20781EA368A400D16C54 /* FoodPinSegmentControl.m in Sources */,

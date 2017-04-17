@@ -7,7 +7,6 @@
 //
 
 #import "DiscoverDetailController.h"
-#import "FoodPinDiscoverTitleView.h"
 #import "FoodPinDiscoverHeadView.h"
 #import "FoodPinSegmentControl.h"
 

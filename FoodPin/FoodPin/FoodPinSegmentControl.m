@@ -45,7 +45,7 @@
     if(!_segmentControl) {
         UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:self.segmentArray];
         segmentControl.frame = CGRectMake(0, 0, ScreenWidth, 45);
-        segmentControl.tintColor = [UIColor clearColor];
+        segmentControl.tintColor = [UIColor whiteColor];
         [segmentControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName: [UIColor blackColor]} forState:UIControlStateNormal];
         [segmentControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:RGB(244.0, 136.0, 139.0, 1.0)} forState:UIControlStateSelected];
         segmentControl.selectedSegmentIndex = 0;

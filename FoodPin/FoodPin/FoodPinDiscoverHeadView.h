@@ -11,7 +11,12 @@
 
 @interface FoodPinDiscoverHeadView : UIView
 
-@property (nonatomic, strong) FoodPinCycleScrollView *cycleScrollView;
-@property (nonatomic, strong) UIImageView *personImageView;
+@property (nonatomic, weak) FoodPinCycleScrollView *cycleScrollView;
+@property (nonatomic, weak) UIImageView *personImageView;
+@property (nonatomic, weak) UILabel *hostLabel;
+@property (nonatomic, weak) UILabel *locationLable;
+@property (nonatomic, weak) UILabel *nameLabel;
+@property (nonatomic, weak) UILabel *numberLabel;
+@property (nonatomic, weak) UIImageView *slideImageView;
 
 @end
