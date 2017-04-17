@@ -66,12 +66,20 @@
 }
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    self.segmentControl = [[FoodPinSegmentControl alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 47)];
-    return self.segmentControl;
+    if(section == 0) {
+        self.segmentControl = [[FoodPinSegmentControl alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 47)];
+        return self.segmentControl;
+    } else {
+        return nil;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 47.0f;
+    if(section == 0) {
+        return 47.0f;
+    } else {
+        return 20.0f;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -89,11 +97,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 2;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

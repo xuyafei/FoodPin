@@ -16,7 +16,9 @@
 @property (nonatomic, weak) UILabel *hostLabel;
 @property (nonatomic, weak) UILabel *locationLable;
 @property (nonatomic, weak) UILabel *nameLabel;
+@property (nonatomic, weak) UILabel *priceLabel;
 @property (nonatomic, weak) UILabel *numberLabel;
 @property (nonatomic, weak) UIImageView *slideImageView;
+@property (nonatomic, weak) UIButton *mapButton;
 
 @end

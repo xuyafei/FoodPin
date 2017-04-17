@@ -72,6 +72,44 @@
     return _slideImageView;
 }
 
+- (UILabel *)locationLable {
+    if(!_locationLable) {
+        UILabel *locationLable = [FPPublicUIKit labelWithTextColor:[UIColor blackColor] numberOfLines:1 text:@"Firenze, Italie" labelFont:[UIFont systemFontOfSize:14.0]];
+        [self addSubview:locationLable];
+        _locationLable = locationLable;
+    }
+    
+    return _locationLable;
+}
+
+- (UILabel *)priceLabel {
+    if(!_priceLabel) {
+        UILabel *priceLabel = [FPPublicUIKit labelWithTextColor:[UIColor redColor] numberOfLines:1 text:@"36 $" labelFont:[UIFont systemFontOfSize:16.0]];
+        [self addSubview:priceLabel];
+        _priceLabel = priceLabel;
+    }
+    return _priceLabel;
+}
+
+- (UIButton *)mapButton {
+    if(!_mapButton) {
+        UIButton *mapButton = [FPPublicUIKit buttonWithBackGroundColor:[UIColor redColor] buttonType:UIButtonTypeSystem buttonTintColor:[UIColor whiteColor] buttonCornerRadius:0 buttonWithImage:[[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [mapButton addTarget:self action:@selector(clickMap:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:mapButton];
+        _mapButton = mapButton;
+    }
+    return _mapButton;
+}
+
+- (UILabel *)numberLabel {
+    if(!_numberLabel) {
+        UILabel *numberLabel = [FPPublicUIKit labelWithTextColor:[UIColor blackColor] numberOfLines:1.0 text:@"per guest" labelFont:[UIFont systemFontOfSize:14.0]];
+        [self addSubview:numberLabel];
+        _numberLabel = numberLabel;
+    }
+    return _numberLabel;
+}
+
 - (void)configArrays {
     NSArray *array = @[@"cafedeadend.jpg", @"homei.jpg", @"teakha.jpg",@"cafeloisl.jpg", @"petiteoyster.jpg"];
     self.imagesArray = [NSMutableArray array];
@@ -105,9 +143,37 @@
     
     [self.slideImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
-        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(10);
+        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(15);
         make.width.mas_equalTo(1);
         make.height.mas_equalTo(50);
+    }];
+    
+    [self.locationLable mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(15);
+        make.right.mas_equalTo(self.slideImageView.mas_left).offset(-30);
+        make.width.mas_greaterThanOrEqualTo(0);
+        make.height.mas_greaterThanOrEqualTo(0);
+    }];
+    
+    [self.mapButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.locationLable.mas_centerY);
+        make.right.mas_equalTo(self.locationLable.mas_left).offset(-5);
+        make.width.mas_equalTo(12);
+        make.height.mas_equalTo(12);
+    }];
+    
+    [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.locationLable.mas_centerY);
+        make.centerX.mas_equalTo(self.mas_centerX).offset(ScreenWidth / 4);
+        make.width.mas_greaterThanOrEqualTo(0);
+        make.height.mas_greaterThanOrEqualTo(0);
+    }];
+    
+    [self.numberLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.priceLabel.mas_centerX);
+        make.top.mas_equalTo(self.priceLabel.mas_bottom).offset(10);
+        make.width.mas_greaterThanOrEqualTo(0);
+        make.height.mas_greaterThanOrEqualTo(0);
     }];
 }
 
