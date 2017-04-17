@@ -3,7 +3,7 @@
 //  FoodPin
 //
 //  Created by polycom on 2017/4/12.
-//  Copyright © 2017年 永康范. All rights reserved.
+//  Copyright © 2017年 xuyafei. All rights reserved.
 //
 
 #import "FoodPinCycleScrollView.h"
@@ -43,7 +43,7 @@
         _currentNumber = 0;
         
         [self cycleViewConfig];
-         [self pageControlPosition:_pageLocation];
+        [self pageControlPosition:_pageLocation];
         [self cycleImageConfig];
     }
     return self;
@@ -169,7 +169,7 @@
 
 - (void)pageControlPosition:(FPCycleScrollPageViewPosition)position {
     if(position == FPCycleScrollPageViewPositionBottomCenter) {
-        self.pageControl.frame = CGRectMake(self.center.x - 50, self.frame.size.height - 30, 100, 30);
+        self.pageControl.frame = CGRectMake(self.center.x - 50, 30, 100, 30);
     } else if(position == FPCycleScrollPageViewPositionBottomLeft) {
         self.pageControl.frame = CGRectMake(50, self.frame.size.height - 30, 100, 30);
     } else if(position == FPCycleScrollPageViewPositionBottomRight) {

@@ -14,6 +14,9 @@
 		0C97FE401DD9B33D0099113F /* FoodPinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE3F1DD9B33D0099113F /* FoodPinTests.m */; };
 		0C97FE4B1DD9B33D0099113F /* FoodPinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C97FE4A1DD9B33D0099113F /* FoodPinUITests.m */; };
 		7A051019829F82B2C25DB32C /* libPods-FoodPin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */; };
+		D11C20721EA065FB00D16C54 /* FoodPinDiscoverTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */; };
+		D11C20751EA2607A00D16C54 /* FoodPinDiscoverHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */; };
+		D11C20781EA368A400D16C54 /* FoodPinSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C20771EA368A400D16C54 /* FoodPinSegmentControl.m */; };
 		D1302A701E9E68F900D769B8 /* FoodPinCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1302A6F1E9E68F900D769B8 /* FoodPinCycleScrollView.m */; };
 		D13A2C0C1E88F13400FF6D90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A2C0B1E88F13400FF6D90 /* AppDelegate.m */; };
 		D13A2C121E896C0A00FF6D90 /* FPRestaurantViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A2C111E896C0A00FF6D90 /* FPRestaurantViewDataSource.m */; };
@@ -132,6 +135,12 @@
 		0C97FE641DDC9CD50099113F /* RestaurantDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailTableViewCell.m; sourceTree = "<group>"; };
 		33328673DFFAB1B2DDE40BA3 /* libPods-FoodPin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoodPin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B3E33A90B8E8063FE3C876 /* Pods-FoodPin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodPin/Pods-FoodPin.debug.xcconfig"; sourceTree = "<group>"; };
+		D11C20701EA065FB00D16C54 /* FoodPinDiscoverTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinDiscoverTitleView.h; sourceTree = "<group>"; };
+		D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinDiscoverTitleView.m; sourceTree = "<group>"; };
+		D11C20731EA2607A00D16C54 /* FoodPinDiscoverHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinDiscoverHeadView.h; sourceTree = "<group>"; };
+		D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinDiscoverHeadView.m; sourceTree = "<group>"; };
+		D11C20761EA368A400D16C54 /* FoodPinSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPinSegmentControl.h; sourceTree = "<group>"; };
+		D11C20771EA368A400D16C54 /* FoodPinSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinSegmentControl.m; sourceTree = "<group>"; };
 		D122EC3E1E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPhotoBrowserCollectionViewCell.h; sourceTree = "<group>"; };
 		D122EC3F1E1216D300B8C08E /* FoodPhotoBrowserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPhotoBrowserCollectionViewCell.m; sourceTree = "<group>"; };
 		D122EC431E124B9B00B8C08E /* FoodPinPresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPinPresentAnimation.m; sourceTree = "<group>"; };
@@ -364,6 +373,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D11C206F1EA0652B00D16C54 /* DiscoverView */ = {
+			isa = PBXGroup;
+			children = (
+				D1302A6E1E9E68F900D769B8 /* FoodPinCycleScrollView.h */,
+				D1302A6F1E9E68F900D769B8 /* FoodPinCycleScrollView.m */,
+				D11C20701EA065FB00D16C54 /* FoodPinDiscoverTitleView.h */,
+				D11C20711EA065FB00D16C54 /* FoodPinDiscoverTitleView.m */,
+				D11C20731EA2607A00D16C54 /* FoodPinDiscoverHeadView.h */,
+				D11C20741EA2607A00D16C54 /* FoodPinDiscoverHeadView.m */,
+				D11C20761EA368A400D16C54 /* FoodPinSegmentControl.h */,
+				D11C20771EA368A400D16C54 /* FoodPinSegmentControl.m */,
+			);
+			name = DiscoverView;
+			sourceTree = "<group>";
+		};
 		D122EC411E124A4400B8C08E /* Transitiondelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +456,7 @@
 		D14B7F311E8C95B50053F36B /* DiscoverViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D11C206F1EA0652B00D16C54 /* DiscoverView */,
 				D1847C531E963F0C00D019E9 /* DiscoverDetailController */,
 				D1B0492E1E8EA19D005807B2 /* DiscoverPresent */,
 				D1B0492A1E8EA131005807B2 /* DiscoverController */,
@@ -442,8 +467,6 @@
 				D1B049361E8F566C005807B2 /* FoodPinDiscoverViewController.m */,
 				D1B0494E1E960CE1005807B2 /* DiscoverDetailViewController.h */,
 				D1B0494F1E960CE1005807B2 /* DiscoverDetailViewController.m */,
-				D1302A6E1E9E68F900D769B8 /* FoodPinCycleScrollView.h */,
-				D1302A6F1E9E68F900D769B8 /* FoodPinCycleScrollView.m */,
 			);
 			name = DiscoverViewController;
 			sourceTree = "<group>";
@@ -754,7 +777,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11C20721EA065FB00D16C54 /* FoodPinDiscoverTitleView.m in Sources */,
 				D150EACE1E7A84D7004289B3 /* FPBaseTableView.m in Sources */,
+				D11C20751EA2607A00D16C54 /* FoodPinDiscoverHeadView.m in Sources */,
+				D11C20781EA368A400D16C54 /* FoodPinSegmentControl.m in Sources */,
 				D1C880E61E73A22400947FFA /* main.m in Sources */,
 				D1C880E71E73A22400947FFA /* FoodPhotoBrowseCollectionViewController.m in Sources */,
 				D1C880E81E73A22400947FFA /* RestaurantSearchResultViewController.m in Sources */,

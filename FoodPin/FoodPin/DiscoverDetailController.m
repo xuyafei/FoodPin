@@ -7,13 +7,20 @@
 //
 
 #import "DiscoverDetailController.h"
-#import "FoodPinCycleScrollView.h"
+#import "FoodPinDiscoverTitleView.h"
+#import "FoodPinDiscoverHeadView.h"
+#import "FoodPinSegmentControl.h"
+
 
 @interface DiscoverDetailController()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, weak) UIView *headView;
-@property (nonatomic, weak) FoodPinCycleScrollView *cycleHeadView;
+@property (nonatomic, weak) FoodPinDiscoverHeadView *headView;
+@property (nonatomic, weak) UIView *backGroundView;
+
 @property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, strong) NSArray *segmentArray;
+@property (nonatomic, strong) FoodPinSegmentControl *segmentControl;
+
 
 @end
 
@@ -33,7 +40,7 @@
         self.discoverDetailTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.discoverDetailTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         [self configImageArray];
-        self.cycleHeadView.backgroundColor = [UIColor grayColor];
+        self.headView.backgroundColor = [UIColor whiteColor];
     }
     
     return self;
@@ -46,28 +53,48 @@
         UIImage *image = [UIImage imageNamed:imageString];
         [self.imageArray addObject:image];
     }
-}
-
-- (UIView *)cycleHeadView {
-    if(!_cycleHeadView) {
-        FoodPinCycleScrollView *cycleHeadView = [[FoodPinCycleScrollView alloc] initWithImages:self.imageArray];
-        self.discoverDetailTableView.tableHeaderView = cycleHeadView;
-        _cycleHeadView = cycleHeadView;
-    }
     
-    return _cycleHeadView;
+    self.segmentArray = @[@"HOST", @"EVENT", @"LOCATION"];
 }
 
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
-}*/
+- (FoodPinDiscoverHeadView *)headView {
+    if(!_headView) {
+        FoodPinDiscoverHeadView *headView = [[FoodPinDiscoverHeadView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 385)];
+        self.discoverDetailTableView.tableHeaderView = headView;
+        _headView = headView;
+    }
+    return _headView;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    self.segmentControl = [[FoodPinSegmentControl alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 47)];
+    return self.segmentControl;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 47.0f;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"discoverDetailRestaurantCell";
+    
+    UITableViewCell *discoverRestaurantCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!discoverRestaurantCell) {
+        discoverRestaurantCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        discoverRestaurantCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    discoverRestaurantCell.textLabel.text = @"123456";
+    
+    return discoverRestaurantCell;
+
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 100;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
