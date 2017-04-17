@@ -65,7 +65,7 @@
 - (UIImageView *)slideImageView {
     if(!_slideImageView) {
         UIImageView *slideImageView = [[UIImageView alloc] init];
-        slideImageView.backgroundColor = [UIColor grayColor] al;
+        slideImageView.backgroundColor = [UIColor grayColor];
         [self addSubview:slideImageView];
         _slideImageView = slideImageView;
     }
