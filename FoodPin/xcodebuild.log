@@ -1,0 +1,416 @@
+=== BUILD TARGET Masonry OF PROJECT Pods WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/armv7/libMasonry.a normal armv7
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=6.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/armv7/Masonry.LinkFileList -framework Foundation -framework UIKit -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/armv7/libMasonry.a
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/arm64/libMasonry.a normal arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=6.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only arm64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/arm64/Masonry.LinkFileList -framework Foundation -framework UIKit -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/arm64/libMasonry.a
+
+CreateUniversalBinary /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/libMasonry.a normal armv7\ arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/armv7/libMasonry.a /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Masonry.build/Objects-normal/arm64/libMasonry.a -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/libMasonry.a
+
+CpHeader Masonry/Masonry/MASCompositeConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASCompositeConstraint.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASCompositeConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASConstraint+Private.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASConstraint+Private.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASConstraint+Private.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASConstraintMaker.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASConstraintMaker.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASConstraintMaker.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASConstraint.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASLayoutConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASLayoutConstraint.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASLayoutConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/Masonry.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/Masonry.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/Masonry.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASUtilities.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASUtilities.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASUtilities.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASViewConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASViewConstraint.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASViewConstraint.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/MASViewAttribute.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/MASViewAttribute.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/MASViewAttribute.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/NSArray+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/NSArray+MASAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/NSArray+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/NSArray+MASShorthandAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/NSArray+MASShorthandAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/NSArray+MASShorthandAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/View+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/View+MASAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/View+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/NSLayoutConstraint+MASDebugAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/NSLayoutConstraint+MASDebugAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/NSLayoutConstraint+MASDebugAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/View+MASShorthandAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/View+MASShorthandAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/View+MASShorthandAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+CpHeader Masonry/Masonry/ViewController+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry/ViewController+MASAdditions.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/Masonry/Masonry/ViewController+MASAdditions.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry
+
+=== BUILD TARGET MJRefresh OF PROJECT Pods WITH CONFIGURATION Debug ===
+Check dependencies
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/armv7/libMJRefresh.a normal armv7
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=6.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/armv7/MJRefresh.LinkFileList -framework Foundation -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/armv7/libMJRefresh.a
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/arm64/libMJRefresh.a normal arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=6.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only arm64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/arm64/MJRefresh.LinkFileList -framework Foundation -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/arm64/libMJRefresh.a
+
+CreateUniversalBinary /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/libMJRefresh.a normal armv7\ arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/armv7/libMJRefresh.a /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/MJRefresh.build/Objects-normal/arm64/libMJRefresh.a -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/libMJRefresh.a
+
+CpHeader MJRefresh/MJRefresh/MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefresh.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Base/MJRefreshAutoFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshAutoFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Base/MJRefreshAutoFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshAutoGifFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshAutoNormalFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshAutoStateFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Base/MJRefreshBackFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshBackFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Base/MJRefreshBackFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshBackNormalFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshBackGifFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshBackStateFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/MJRefreshConst.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshConst.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/MJRefreshConst.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Base/MJRefreshFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshFooter.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Base/MJRefreshFooter.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Base/MJRefreshComponent.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshComponent.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Base/MJRefreshComponent.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Header/MJRefreshGifHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshGifHeader.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Header/MJRefreshGifHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Base/MJRefreshHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshHeader.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Base/MJRefreshHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Header/MJRefreshNormalHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshNormalHeader.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Header/MJRefreshNormalHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/Custom/Header/MJRefreshStateHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/MJRefreshStateHeader.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/Custom/Header/MJRefreshStateHeader.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/NSBundle+MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/NSBundle+MJRefresh.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/NSBundle+MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/UIScrollView+MJExtension.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/UIScrollView+MJExtension.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/UIScrollView+MJExtension.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/UIScrollView+MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/UIScrollView+MJRefresh.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/UIScrollView+MJRefresh.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+CpHeader MJRefresh/MJRefresh/UIView+MJExtension.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh/UIView+MJExtension.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/UIView+MJExtension.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh
+
+=== BUILD TARGET Pods-FoodPin OF PROJECT Pods WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/armv7/libPods-FoodPin.a normal armv7
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=8.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only armv7 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/armv7/Pods-FoodPin.LinkFileList -framework Foundation -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/armv7/libPods-FoodPin.a
+
+Libtool /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/arm64/libPods-FoodPin.a normal arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export IPHONEOS_DEPLOYMENT_TARGET=8.0
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only arm64 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/arm64/Pods-FoodPin.LinkFileList -framework Foundation -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/arm64/libPods-FoodPin.a
+
+CreateUniversalBinary /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/libPods-FoodPin.a normal armv7\ arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/armv7/libPods-FoodPin.a /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-FoodPin.build/Objects-normal/arm64/libPods-FoodPin.a -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/libPods-FoodPin.a
+
+=== BUILD TARGET FoodPin OF PROJECT FoodPin WITH CONFIGURATION Debug ===
+
+Check dependencies
+
+PhaseScriptExecution [CP]\ Check\ Pods\ Manifest.lock /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-26A4BFCB0495BC39905E8147.sh
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    /bin/sh -c /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-26A4BFCB0495BC39905E8147.sh
+
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    DataModelCodegen --sdkroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk --iphoneos-deployment-target 9.3 --module FoodPin /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FoodPin.xcdatamodeld /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataClass.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Restaurant+CoreDataClass.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataClass.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataClass.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Restaurant+CoreDataClass.m
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataClass.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataProperties.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Restaurant+CoreDataProperties.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataProperties.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataProperties.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Restaurant+CoreDataProperties.m
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/Restaurant+CoreDataProperties.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/FoodPin+CoreDataModel.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/FoodPin+CoreDataModel.h
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/FoodPin+CoreDataModel.h /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+DataModelCompile /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/ FoodPin/FoodPin.xcdatamodeld
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/usr/bin/momc --sdkroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk --iphoneos-deployment-target 9.3 --module FoodPin /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FoodPin.xcdatamodeld /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/
+
+CpResource /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/FoodPin+CoreDataModel.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/FoodPin+CoreDataModel.m
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/DerivedSources/CoreDataGenerated/FoodPin/FoodPin+CoreDataModel.m /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+CompileStoryboard FoodPin/Base.lproj/LaunchScreen.storyboard
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..
+    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module FoodPin --output-partial-info-plist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/LaunchScreen-SBPartialInfo.plist --auto-activate-custom-fonts --target-device iphone --minimum-deployment-target 9.3 --output-format human-readable-text --compilation-directory /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Base.lproj /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Base.lproj/LaunchScreen.storyboard
+/* com.apple.ibtool.document.warnings */
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Base.lproj/LaunchScreen.storyboard:01J-lp-oVM: warning: “View Controller“ is unreachable because it has no entry points, and no identifier for runtime access via -[UIStoryboard instantiateViewControllerWithIdentifier:].
+
+CompileAssetCatalog /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app FoodPin/Assets.xcassets
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/assetcatalog_dependencies --output-partial-info-plist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/assetcatalog_generated_info.plist --app-icon AppIcon --launch-image LaunchImage --compress-pngs --enable-on-demand-resources YES --sticker-pack-identifier-prefix com.yafeixu.FoodPinSearch.sticker-pack. --target-device iphone --minimum-deployment-target 9.3 --platform iphoneos --product-type com.apple.product-type.application --compile /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets
+/* com.apple.actool.document.warnings */
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][][2x][portrait][][7.0][2d][(null)]: warning: The launch image set "LaunchImage" has 2 unassigned children.
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][736h][3x][landscape][full-screen][8.0]: warning: LaunchImage.launchimage/6p-1.png is 1242x2208 but should be 2208x1242.
+/* com.apple.actool.document.notices */
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][][2x][portrait][full-screen][]: notice: This launch image only applies to iOS 6.x and prior but the minimum deployment is 7.0 or later.
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][retina4][2x][portrait][full-screen][]: notice: This launch image only applies to iOS 6.x and prior but the minimum deployment is 7.0 or later.
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][736h][3x][portrait][full-screen][8.0]: notice: This launch image only applies to iOS 6.x and prior but the minimum deployment is 7.0 or later.
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Assets.xcassets:./LaunchImage.launchimage/[iphone][667h][2x][portrait][full-screen][8.0]: notice: This launch image only applies to iOS 6.x and prior but the minimum deployment is 7.0 or later.
+/* com.apple.actool.compilation-results */
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon29x29@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon29x29@3x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon40x40@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon40x40@3x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon60x60@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/AppIcon60x60@3x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage-568h@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage-800-Portrait-736h@3x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage-800-667h@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage-700@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/LaunchImage-700-568h@2x.png
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Assets.car
+/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/assetcatalog_generated_info.plist
+
+
+ProcessInfoPlistFile /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Info.plist FoodPin/Info.plist
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-infoPlistUtility /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Info.plist -genpkginfo /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/assetcatalog_generated_info.plist -additionalcontentfile /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/LaunchScreen-SBPartialInfo.plist -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Info.plist
+
+LinkStoryboards
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..
+    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --module FoodPin --target-device iphone --minimum-deployment-target 9.3 --output-format human-readable-text --link /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Base.lproj/LaunchScreen.storyboardc
+
+PhaseScriptExecution [CP]\ Embed\ Pods\ Frameworks /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-8F04B8D6FB46D0027126FFDA.sh
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    /bin/sh -c /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-8F04B8D6FB46D0027126FFDA.sh
+mkdir -p /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/Frameworks
+
+PhaseScriptExecution [CP]\ Copy\ Pods\ Resources /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-009E21C9349420235739CC57.sh
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    /bin/sh -c /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Script-009E21C9349420235739CC57.sh
+/Users/polycom/Documents/FoodPin/FoodPin/FoodPin/Pods/MJRefresh/MJRefresh/MJRefresh.bundle
+building file list ... done
+
+sent 279 bytes  received 20 bytes  598.00 bytes/sec
+total size is 4372  speedup is 14.62
+
+Ld /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin normal armv7
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export IPHONEOS_DEPLOYMENT_TARGET=9.3
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -F/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -miphoneos-version-min=9.3 -dead_strip -Xlinker -object_path_lto -Xlinker /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin_lto.o -Xlinker -no_deduplicate -fobjc-arc -fobjc-link-runtime -ObjC -lMJRefresh -lMasonry -framework Foundation -framework UIKit -ObjC -lMasonry -framework Foundation -framework UIKit -framework SafariServices -framework CloudKit -framework MapKit -lPods-FoodPin -Xlinker -dependency_info -Xlinker /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin_dependency_info.dat -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin
+
+Ld /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin normal arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export IPHONEOS_DEPLOYMENT_TARGET=9.3
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/MJRefresh -L/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/Masonry -F/Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos -filelist /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -miphoneos-version-min=9.3 -dead_strip -Xlinker -object_path_lto -Xlinker /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin_lto.o -Xlinker -no_deduplicate -fobjc-arc -fobjc-link-runtime -ObjC -lMJRefresh -lMasonry -framework Foundation -framework UIKit -ObjC -lMasonry -framework Foundation -framework UIKit -framework SafariServices -framework CloudKit -framework MapKit -lPods-FoodPin -Xlinker -dependency_info -Xlinker /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin_dependency_info.dat -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin
+
+CreateUniversalBinary /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/FoodPin normal armv7\ arm64
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/armv7/FoodPin /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/Objects-normal/arm64/FoodPin -output /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/FoodPin
+
+ProcessProductPackaging /Users/polycom/Library/MobileDevice/Provisioning\ Profiles/bcb9a1a0-a45c-440b-a47b-9af8f056435e.mobileprovision /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/embedded.mobileprovision
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    builtin-productPackagingUtility /Users/polycom/Library/MobileDevice/Provisioning\ Profiles/bcb9a1a0-a45c-440b-a47b-9af8f056435e.mobileprovision -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app/embedded.mobileprovision
+
+Touch /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    /usr/bin/touch -c /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+ProcessProductPackaging "" /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/FoodPin.app.xcent
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    
+
+Entitlements:
+
+{
+    "application-identifier" = "5UUHKU5P3B.com.yafeixu.FoodPinSearch";
+    "aps-environment" = development;
+    "com.apple.developer.icloud-container-identifiers" =     (
+        "iCloud.com.yafeixu.FoodPinSearch"
+    );
+    "com.apple.developer.icloud-services" =     (
+        CloudKit
+    );
+    "com.apple.developer.team-identifier" = 5UUHKU5P3B;
+    "com.apple.developer.ubiquity-kvstore-identifier" = "5UUHKU5P3B.com.yafeixu.FoodPinSearch";
+    "get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/FoodPin.app.xcent
+
+CodeSign /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    
+Signing Identity:     "iPhone Developer: Yafei Xu (A8Z4727ECL)"
+Provisioning Profile: "iOS Team Provisioning Profile: com.yafeixu.FoodPinSearch"
+                      (bcb9a1a0-a45c-440b-a47b-9af8f056435e)
+
+    /usr/bin/codesign --force --sign CE18E8C38497F4CF9B8DA06E684B02423B9D6E33 --entitlements /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Intermediates/FoodPin.build/Debug-iphoneos/FoodPin.build/FoodPin.app.xcent --timestamp=none /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+Validate /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+    cd /Users/polycom/Documents/FoodPin/FoodPin/FoodPin
+    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/polycom/Desktop/oclint-0.12/bin:/Users/polycom/.rvm/gems/ruby-2.3.0/bin:/Users/polycom/.rvm/gems/ruby-2.3.0@global/bin:/Users/polycom/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/polycom/.rvm/bin"
+    export PRODUCT_TYPE=com.apple.product-type.application
+    builtin-validationUtility /Users/polycom/Library/Developer/Xcode/DerivedData/FoodPin-fbbydndmyrgdvaaqzfritiodcpgu/Build/Products/Debug-iphoneos/FoodPin.app
+
+** BUILD SUCCEEDED **
+

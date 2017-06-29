@@ -4,6 +4,7 @@ target 'FoodPin' do
 # Pods for FoodPin
   pod 'Masonry'
   pod 'MJRefresh'
+  pod 'FBMemoryProfiler'
 # use_frameworks!
 # pod 'ReactiveCocoa'
 end

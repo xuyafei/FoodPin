@@ -27,11 +27,11 @@
 - (void)initNavigationControllers {
     RestaurantViewController *restaurantViewController = [[RestaurantViewController alloc] init];
     RestaurantAboutViewController *restaurantAboutViewController = [[RestaurantAboutViewController alloc] init];
-    //FoodPinDiscoverViewController *discoverViewController = [[FoodPinDiscoverViewController alloc] init];
-    DiscoverDetailViewController *discoverDetailController = [[DiscoverDetailViewController alloc] init];
+    FoodPinDiscoverViewController *discoverViewController = [[FoodPinDiscoverViewController alloc] init];
+    //DiscoverDetailViewController *discoverDetailController = [[DiscoverDetailViewController alloc] init];
     
     self.favoritesNav = [[UINavigationController alloc] initWithRootViewController:restaurantViewController];
-    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:discoverDetailController];
+    self.discoverNav = [[UINavigationController alloc] initWithRootViewController:discoverViewController];
     self.aboutNav = [[UINavigationController alloc] initWithRootViewController:restaurantAboutViewController];
     
     NSArray *tabController  = @[self.favoritesNav, self.discoverNav, self.aboutNav];

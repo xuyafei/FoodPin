@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FBAllocationTracker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBMemoryProfiler.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBRetainCycleDetector.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +42,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>04E0E7A2B33BC0D24C83A16EE9C83F59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>39FF4552F574CA30CFC8B6288C9BF88C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A59F973FDC52A11FB0AE6A8EBA29EBF2</key>
+		<key>D1AA95A8DA436B45CD0E63B9C81A39FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F96DD83CD2C54670E67D0758C8A399E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

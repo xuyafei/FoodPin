@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantViewController.m \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPUtilsMacro.pch \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/PublicUI/FPPublicUIKit.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/PublicUI/FPAlertController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantModel/Restaurant.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantModel/Restaurant+CoreDataProperties.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Restaurants/Restaurants.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPBaseTableViewController/FPBaseViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPBaseTableViewController/FPBaseTableView/FPBaseTableView.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPBaseTableViewController/FPBaseTableView/FPTableViewDataSource.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/TableViewCell/RestaurantTableViewCell.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPBaseTableViewController/FPBaseTableView/FPTableViewBaseCell.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantDetailViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/Transitiondelegate/FoodPinPresentAnimation.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPBaseTableViewController/FPBaseTableView/FPTableViewBaseItem.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/AddRestaurantViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/WalkthroughPageViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantSearchResultViewController.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/RestaurantModel/RestaurantHelper.h \
+  /Users/polycom/Documents/FoodPin/FoodPin/FoodPin/FoodPin/FPRestaurantViewDataSource.h

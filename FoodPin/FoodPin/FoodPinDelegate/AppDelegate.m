@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TempViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     self.restaurantViewController.title = @"FoodPin";
     //self.navController = [[UINavigationController alloc] initWithRootViewController:self.restaurantViewController];
     self.foodRootViewController = [[FoodPinRootViewController alloc] init];
+    //TempViewController *tempView = [[TempViewController alloc] init];;
+    //self.window.rootViewController = tempView;
     self.window.rootViewController = self.foodRootViewController;
     
     [self.window makeKeyAndVisible];
